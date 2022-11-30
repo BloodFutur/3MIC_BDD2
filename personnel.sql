@@ -8,6 +8,12 @@ CREATE TABLE Personnel
     date_de_recrutement date,
 );
 
+CREATE Preside(
+    idCongres INT NOT NULL,
+    idScientifique INT NOT NULL,
+    FOREIGN KEY (idCongres) REFERENCES Congres(idCongres),
+    FOREIGN KEY (idScientifique) REFERENCES Scientifique(idScientifique)
+);
 
 CREATE Publie_Scientifique(
     idPublication INT NOT NULL,
