@@ -8,6 +8,20 @@ CREATE TABLE Personnel
     date_de_recrutement date,
 );
 
+CREATE TABLE Publie_Externe(
+    idPublication INT NOT NULL,
+    idAuteurExterne INT NOT NULL,
+    FOREIGN KEY (idPublication) REFERENCES Publication(idPublication),
+    FOREIGN KEY (idAuteurExterne) REFERENCES Auteur_Externe(idAuteur)
+
+);
+
+CREATE TABLE Participe_Externe(
+    idProjet INT NOT NULL,
+    idPartenaire INT NOT NULL,
+    FOREIGN KEY (idProjet) REFERENCES Projet(idProjet),
+    FOREIGN KEY (idPartenaire) REFERENCES Partenaire(idPartenaire)
+);
 
 CREATE TABLE Organise (
     idPortesOuverte INT NOT NULL,
