@@ -8,6 +8,13 @@ CREATE TABLE Personnel
     date_de_recrutement date,
 );
 
+CREATE Publie_Doctorant(
+    idPublication INT NOT NULL,
+    idDoctorant INT NOT NULL,
+    FOREIGN KEY (idPublication) REFERENCES Publication(idPublication),
+    FOREIGN KEY (idDoctorant) REFERENCES Doctorant(idDoctorant)
+);
+
 CREATE TABLE Publie_Externe(
     idPublication INT NOT NULL,
     idAuteurExterne INT NOT NULL,
