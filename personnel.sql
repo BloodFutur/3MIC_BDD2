@@ -2,6 +2,13 @@ CREATE TABLE Personnel
 ();
 
 
+CREATE TABLE Participe_Externe(
+    idProjet INT NOT NULL,
+    idPartenaire INT NOT NULL,
+    FOREIGN KEY (idProjet) REFERENCES Projet(idProjet),
+    FOREIGN KEY (idPartenaire) REFERENCES Partenaire(idPartenaire)
+);
+
 CREATE TABLE Organise (
     idPortesOuverte INT NOT NULL,
     idPersonnel INT NOT NULL,
