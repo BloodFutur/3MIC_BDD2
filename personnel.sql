@@ -1,5 +1,12 @@
 CREATE TABLE Personnel
-();
+(
+    idPersonnel int CONSTRAINT UnePersonne PRIMARY KEY,
+    nom char,
+    prenom char,
+    date_de_naissance date,
+    adress char,
+    date_de_recrutement date,
+);
 
 
 CREATE TABLE Organise (
