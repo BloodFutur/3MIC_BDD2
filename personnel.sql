@@ -1,6 +1,13 @@
 CREATE TABLE Personnel
 ();
 
+CREATE TABLE Publie_Externe(
+    idPublication INT NOT NULL,
+    idAuteurExterne INT NOT NULL,
+    FOREIGN KEY (idPublication) REFERENCES Publication(idPublication),
+    FOREIGN KEY (idAuteurExterne) REFERENCES Auteur_Externe(idAuteur)
+
+);
 
 CREATE TABLE Participe_Externe(
     idProjet INT NOT NULL,
