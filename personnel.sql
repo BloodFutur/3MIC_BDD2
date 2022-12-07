@@ -111,7 +111,7 @@ CREATE TABLE Auteur_Externe (
     PRIMARY KEY (idAuteur)
 );
 
--- NathanCREATE TABLE Enseignant_Chercheuration INT NOT NULL,
+-- Nathan
 CREATE TABLE Publication(
     idPublication INT NOT NULL,
     titre VARCHAR,
@@ -132,9 +132,7 @@ CREATE TABLE Participe(
 );
 
 -- Ronan
-CREATE TABLE PreCREATE TABLE Enseignant_Chercheurside(
-e_fin DATE,
-);es(    idScientifique INT NOT NULL,
+CREATE TABLE Preside(
     FOREIGN KEY (idCongres) REFERENCES Congres(idCongres),
     FOREIGN KEY (idScientifique) REFERENCES Scientifique(idScientifique),
     PRIMARY KEY (idCongres, idScientifique)
@@ -149,7 +147,7 @@ CREATE TABLE Publie_Scientifique(
     PRIMARY KEY (idPublication, idScientifique)
 );
 
--- RonanCREATE TABLE Enseignant_Chercheur
+-- Ronan
 CREATE TABLE Publie_Doctorant(
     idPublication INT NOT NULL,
     idDoctorant INT NOT NULL,
@@ -162,10 +160,9 @@ CREATE TABLE Publie_Doctorant(
 CREATE TABLE Publie_Externe(
     idPublication INT NOT NULL,
     idAuteurExterne INT NOT NULL,
-    s dFOREIGN KEY (idPublication) REFERENCES Publication(idPublication),
+    FOREIGN KEY (idPublication) REFERENCES Publication(idPublication),
     FOREIGN KEY (idAuteurExterne) REFERENCES Auteur_Externe(idAuteur),
     PRIMARY KEY (idPublication, idAuteurExterne)
-CREATE TABLE Enseignant_Chercheur
 );
 
 -- Ronan
