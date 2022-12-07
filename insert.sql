@@ -8,31 +8,6 @@ INSERT INTO Personnel (
 );
 
 
---Axel
-INSERT INTO Etablissement(
-    01,
-    'Institut National des Sciences Appliquées',
-    'INSA',
-    'Toulouse'
-);
-
---Axel
-INSERT INTO Etablissement(
-    02,
-    'Ecole Nationale de l Aviation Civile',
-    'ENAC',
-    'Toulouse'
-);
-
-
---Axel
-INSERT INTO Etablissement(
-    03,
-    'Ecole Polytechnique',
-    'X',
-    'Paris'    
-);
-
 INSERT INTO Personnel (
     1,
     'Bonnet',
@@ -76,11 +51,6 @@ INSERT INTO Personnel (
     DATE '1878-12-25',
     'au chantier',
     '2020-9-15'
-);--Axel
-INSERT INTO Partenaire(
-    01,
-    'GFGH',
-    'Allemagne'
 );
 
 
@@ -121,11 +91,6 @@ INSERT INTO Labo_externe (
 );
 
 
-<<<<<<< HEAD
-
--- Ronan
-=======
->>>>>>> ebb8e0ebb042c8e6526d6db68553636d759f3b9a
 INSERT INTO Labo_externe (
     6,
     'BRBN',
@@ -156,43 +121,6 @@ INSERT INTO Projet (
   	002
 );
 
-<<<<<<< HEAD
-
---Axel
-INSERT INTO Partenaire(
-    01,
-    'GFGH',
-    'Allemagne'
-);
-
---Axel
-INSERT INTO Partenaire(
-    02,
-    'LMC',
-    'Australie'
-);
-
---Axel
-INSERT INTO Partenaire(
-    03,
-    'ESHT',
-    'USA'
-);
-
---Axel
-INSERT INTO Partenaire(
-    01,
-    'HLMY',
-    'Japon'
-);
-
---Axel
-INSERT INTO Partenaire(
-    01,
-    'MAKL',
-    'France'
-);
-=======
 INSERT INTO Projet (
     03,
     'Programation web',
@@ -205,7 +133,6 @@ INSERT INTO Projet (
   	003
 );
 
->>>>>>> ebb8e0ebb042c8e6526d6db68553636d759f3b9a
 INSERT INTO Publication (
     001,
     'recherche scientifique sur la chimie organique',
@@ -224,6 +151,16 @@ INSERT INTO Publication (
   	220
 );
 
+INSERT INTO Publication (
+    003,
+    'chaine de markov',
+    DATE '2022-12-03',
+    'Mathematiques appliqués',
+    113,
+  	500
+);
+
+
 
 INSERT INTO Evenememnt (
     0001,
@@ -235,5 +172,11 @@ INSERT INTO Evenememnt (
     0002,
     DATE '2022-01-07',
     DATE '2023-07-12',	
+);
+
+INSERT INTO Evenememnt (
+    0003,
+    DATE '2022-02-10',
+    DATE '2023-03-12',	
 );
 
