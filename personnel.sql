@@ -176,6 +176,14 @@ CREATE TABLE Publie_Externe(
     PRIMARY KEY (idPublication, idAuteurExterne)
 );
 
+--Yasmine
+CREATE TABLE Partenaire(
+    idPartenaire INT NOT NULL,
+    nom VARCHAR,
+    pays VARCHAR,
+    PRIMARY KEY(idPartenaire)
+);
+
 -- Ronan
 CREATE TABLE Participe_Externe(
     idProjet INT NOT NULL,
@@ -203,11 +211,3 @@ CREATE TABLE Encadrement (
     PRIMARY KEY(idScientifique,idDoctorant)
 );
 
---Yasmine
-
-CREATE TABLE Partenaire(
-    idPartenaire INT NOT NULL,
-    nom VARCHAR,
-    pays VARCHAR,
-    PRIMARY KEY(idPartenaire)
-);
