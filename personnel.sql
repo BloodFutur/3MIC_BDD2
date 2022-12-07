@@ -52,6 +52,15 @@ CREATE TYPE grade AS ENUM (
     'mcf hors classe'
 );
 
+--Axel
+CREATE TABLE Etablissement(
+    idEtablissement INT CONSTRAINT UnEtablissement PRIMARY Key,
+    nom VARCHAR,
+    acronyme VARCHAR,
+    adresse VARCHAR,
+);
+
+CREATE TABLE Enseignant_Chercheur
 -- Nathan
 CREATE TABLE Evenement(
     idEvenement INT NOT NULL,
