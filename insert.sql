@@ -171,3 +171,26 @@ INSERT INTO Projet (
     60,
   	002
 );
+
+INSERT INTO Publication (
+    001,
+    'recherche scientifique',
+    DATE '2022-07-07',
+    'conference des sciences',
+    112,
+  	220
+);
+
+
+INSERT INTO Evenememnt (
+    0001,
+    DATE '2022-07-07',
+    DATE '2023-07-07',	
+);
+
+INSERT INTO Evenememnt (
+    0002,
+    DATE '2022-01-07',
+    DATE '2023-07-12',	
+);
+
