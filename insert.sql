@@ -165,18 +165,18 @@ INSERT INTO Publication VALUES (
 INSERT INTO Evenememnt VALUES (
     0001,
     DATE '2022-07-07',
-    DATE '2023-07-07',	
+    DATE '2023-07-07'	
 );
 
 INSERT INTO Evenememnt VALUES (
     0002,
     DATE '2022-01-07',
-    DATE '2023-07-12',	
+    DATE '2023-07-12'	
 );
 
 INSERT INTO Evenememnt VALUES (
     0003,
     DATE '2022-02-10',
-    DATE '2023-03-12',	
+    DATE '2023-03-12'
 );
 
