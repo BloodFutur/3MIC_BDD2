@@ -29,14 +29,6 @@ CREATE TABLE Scientifique(
 
 
 -- Nathan
-CREATE Auteur_Externe (
-    idAuteur INT NOT NULL,
-    nom VARCHAR,
-    pays VARCHAR,
-    PRIMARY KEY(idPartenaire)
-);
-
--- Nathan
 CREATE TYPE echelon AS ENUM (
     'A*',
     'A',
