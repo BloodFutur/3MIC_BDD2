@@ -14,7 +14,7 @@ CREATE TABLE Doctorant(
     idDoctorant INT NOT NULL,
     date_debut_these DATE,
     date_soutenance DATE
-    FOREIGN KEY (idDoctorant) REFERENCES Personnel(idPersonnel),
+    FOREIGN KEY (id) REFERENCES Personnel(idPersonnel),
     PRIMARY KEY(idPersonnel)
 );
 
@@ -178,3 +178,30 @@ CREATE TABLE Organise (
     FOREIGN KEY (idPersonnel) REFERENCES Personnel(idPersonnel),
     PRIMARY KEY(idPortesOuverte, idPersonnel)
 );
+--Yasmine
+CREATE TABLE Projet (
+    titre char,
+    acronyme char,
+    annee_debut date,
+    annee_fin char,
+    duree INT NOT NULL,
+    budget_Laas INT NOT NULL,
+    cout INT NOT NULL,
+    FOREIGN KEY (idScientifique) REFERENCES Scientifique(idScientifique),
+    PRIMARY KEY(idProjet),
+);
+--Yasmine
+CREATE TABLE Encadrement (
+    FOREIGN KEY (idDoctorant) REFERENCES Doctorant(idDoctorant),
+    FOREIGN KEY (idScientifique) REFERENCES Scientifique(idScientifique),
+    PRIMARY KEY(idScientifique,idDoctorant),
+);
+
+--Yasmine
+CREATE TABLE Etablissement (
+    nom char,
+    acronyme char,
+    adresse char,
+    PRIMARY KEY(idEtablissement),
+);
+
