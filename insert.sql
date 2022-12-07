@@ -7,48 +7,6 @@ INSERT INTO Personnel (
     '2020-9-15'
 );
 
-INSERT INTO Labo_externe (
-    0,
-    'LAAS',
-    'France'
-);
-
-INSERT INTO Labo_externe (
-    1,
-    'CNES',
-    'France'
-);
-
-INSERT INTO Labo_externe (
-    2,
-    'GEAS',
-    'Allemagne'
-);
-
-INSERT INTO Labo_externe (
-    3,
-    'RUAF',
-    'Russie'
-);
-
-INSERT INTO Labo_externe (
-    4,
-    'ENFD',
-    'Angleterre'
-);
-
-INSERT INTO Labo_externe (
-    5,
-    'LUBN',
-    'Luxembourg'
-);
-
-
-INSERT INTO Labo_externe (
-    6,
-    'BRBN',
-    'Bresil'
-);
 
 INSERT INTO Personnel (
     1,
@@ -93,6 +51,50 @@ INSERT INTO Personnel (
     DATE '1878-12-25',
     'au chantier',
     '2020-9-15'
+);
+
+
+INSERT INTO Labo_externe (
+    0,
+    'LAAS',
+    'France'
+);
+
+INSERT INTO Labo_externe (
+    1,
+    'CNES',
+    'France'
+);
+
+INSERT INTO Labo_externe (
+    2,
+    'GEAS',
+    'Allemagne'
+);
+
+INSERT INTO Labo_externe (
+    3,
+    'RUAF',
+    'Russie'
+);
+
+INSERT INTO Labo_externe (
+    4,
+    'ENFD',
+    'Angleterre'
+);
+
+INSERT INTO Labo_externe (
+    5,
+    'LUBN',
+    'Luxembourg'
+);
+
+
+INSERT INTO Labo_externe (
+    6,
+    'BRBN',
+    'Bresil'
 );
 
 INSERT INTO Projet (
