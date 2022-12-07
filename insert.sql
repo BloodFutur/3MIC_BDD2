@@ -174,9 +174,18 @@ INSERT INTO Projet (
 
 INSERT INTO Publication (
     001,
-    'recherche scientifique',
+    'recherche scientifique sur la chimie organique',
     DATE '2022-07-07',
     'conference des sciences',
+    112,
+  	220
+);
+
+INSERT INTO Publication (
+    002,
+    'Page rank',
+    DATE '2022-07-07',
+    'conference des sciences et technologies',
     112,
   	220
 );
