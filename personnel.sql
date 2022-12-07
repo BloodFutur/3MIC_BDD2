@@ -204,6 +204,7 @@ CREATE TABLE Etablissement (
     adresse char,
     PRIMARY KEY(idEtablissement),
 );
+--Yasmine
 
 CREATE TABLE Partenaire(
     PRIMARY KEY(idPartenaire),
