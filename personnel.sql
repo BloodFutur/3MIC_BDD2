@@ -17,6 +17,14 @@ CREATE TABLE Scientifique(
     PRIMARY KEY(idPersonnel)
 );
 
+-- Ronan
+CREATE Partenaire(
+    idPartenaire INT NOT NULL,
+    nom VARCHAR,
+    pays VARCHAR,
+    PRIMARY KEY(idPartenaire)
+);
+
 -- Nathan
 CREATE TYPE echelon AS ENUM (
     'A*',
@@ -41,6 +49,23 @@ CREATE Evenement(
     PRIMARY KEY (idEvenement)
 );
 
+-- Ronan
+CREATE Congres(
+    idCongres INT NOT NULL,
+    nb_inscriptions INT NOT NULL,
+    class VARCHAR,
+    FOREIGN KEY (idCongres) REFERENCES Evenement(idEvenement),
+    PRIMARY KEY (idCongres)
+);
+
+-- Ronan
+CREATE Labo_externe(
+    idLabo INT NOT NULL,
+    nom VARCHAR,
+    pays VARCHAR,
+    PRIMARY KEY(idLabo)
+);
+
 -- Nathan
 CREATE Journee_Porte_Ouvertes(
     idPorteOuverte INT NOT NULL,
@@ -57,14 +82,6 @@ CREATE Auteur_Externe (
     idLabo INT NOT NULL,
     FOREIGN KEY (idLabo) REFERENCES LaboExterne(idLabo),
     PRIMARY KEY (idAuteur)
-
-);
-
-CREATE Labo_externe(
-    idLabo INT NOT NULL,
-    nom VARCHAR,
-    pays VARCHAR,
-    PRIMARY KEY(idLabo)
 );
 
 -- Nathan
