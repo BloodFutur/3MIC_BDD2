@@ -31,7 +31,7 @@ CREATE TABLE Doctorant(
     date_debut_these DATE,
     date_soutenance DATE,
     FOREIGN KEY (idDoctorant) REFERENCES Personnel(idPersonnel),
-    PRIMARY KEY(idPersonnel)
+    PRIMARY KEY(idDoctorant)
 );
 
 --Yasmine
@@ -43,25 +43,25 @@ CREATE TABLE Scientifique(
     PRIMARY KEY(idPersonnel)
 );
 
---Axel
-CREATE TABLE Enseignant_Chercheur(
-    idEnseignant INT NOT NULL,
-    echelon ECHELON,
-    FOREIGN KEY (idEtablissement) REFERENCES Etablissement(idEtablissement),
-    FOREIN KEY (idEnseignant) REFERENCES Personnel(idPersonnel),
-    PRIMARY KEY (idEnseignant)
-);
-
 
 --Axel
 CREATE TABLE Etablissement(
     idEtablissement INT CONSTRAINT UnEtablissement PRIMARY Key,
     nom VARCHAR,
     acronyme VARCHAR,
-    adresse VARCHAR,
+    adresse VARCHAR
 );
 
-CREATE TABLE Enseignant_Chercheur
+--Axel
+CREATE TABLE Enseignant_Chercheur(
+    idEnseignant INT NOT NULL,
+    echelon ECHELON,
+    FOREIGN KEY (idEtablissement) REFERENCES UnEtablissement,
+    FOREIGN KEY (idEnseignant) REFERENCES Personnel(idPersonnel),
+    PRIMARY KEY (idEnseignant)
+);
+
+
 -- Nathan
 CREATE TABLE Evenement(
     idEvenement INT NOT NULL,
