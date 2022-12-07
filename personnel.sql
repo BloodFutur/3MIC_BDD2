@@ -14,7 +14,7 @@ CREATE TABLE Doctorant(
     idDoctorant INT NOT NULL,
     date_debut_these DATE,
     date_soutenance DATE
-    FOREIGN KEY (idPersonnel) REFERENCES Personnel(idPersonnel),
+    FOREIGN KEY (id) REFERENCES Personnel(idPersonnel),
     PRIMARY KEY(idPersonnel)
 );
 
@@ -27,6 +27,14 @@ CREATE TABLE Scientifique(
     PRIMARY KEY(idPersonnel)
 );
 
+--Axel
+CREATE TABLE Enseignant_Chercheur(
+    idEnseignant INT NOT NULL,
+    echelon ECHELON,
+    FOREIGN KEY (idEtablissement) REFERENCES Etablissement(idEtablissement),
+    FOREIN KEY (idEnseignant) REFERENCES Personnel(idPersonnel),
+    PRIMARY KEY (idEnseignant)
+);
 
 -- Nathan
 CREATE Auteur_Externe (
@@ -149,7 +157,7 @@ CREATE TABLE Publie_Externe(
     s dFOREIGN KEY (idPublication) REFERENCES Publication(idPublication),
     FOREIGN KEY (idAuteurExterne) REFERENCES Auteur_Externe(idAuteur),
     PRIMARY KEY (idPublication, idAuteurExterne)
-
+CREATE TABLE Enseignant_Chercheur
 );
 
 -- Ronan
