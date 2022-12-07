@@ -8,27 +8,6 @@ INSERT INTO Personnel (
 );
 
 
---Axel
-INSERT INTO Etablissement(
-    01,
-    'Institut National des Sciences Appliquées',
-    'INSA',
-    'Toulouse'
-);
-
-INSERT INTO Etablissement(
-    02,
-    "Ecole Nationale de l'Aviation Civile",
-    'ENAC',
-    'Toulouse'
-);
-
-INSERT INTO Etablissement(
-    03,
-    "Ecole Polytechnique",
-    "X",
-    'Paris'    
-);
 INSERT INTO Personnel (
     1,
     'Bonnet',
@@ -74,17 +53,6 @@ INSERT INTO Personnel (
     '2020-9-15'
 );
 
-INSERT INTO DOCTORANT(
-    0,
-    DATE '2022-08-17',
-    DATE '2023-01-30'
-);
-
-INSERT INTO DOCTORANT(
-    4,
-    DATE '2022-07-30',
-    DATE '2023-02-20'
-);
 
 INSERT INTO Labo_externe (
     0,
@@ -138,7 +106,7 @@ INSERT INTO Projet (
     30,
     1000,
     500,
-    001
+  	001
 );
 
 INSERT INTO Projet (
@@ -150,5 +118,15 @@ INSERT INTO Projet (
     40,
     100,
     60,
-    002
+  	002
 );
+
+INSERT INTO Publication (
+    001,
+    'recherche scientifique',
+    DATE '2022-07-07',
+    'conference des sciences',
+    112,
+  	220
+);
+
