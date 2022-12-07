@@ -2,10 +2,10 @@
 CREATE TABLE Personnel
 (
     idPersonnel INT CONSTRAINT UnePersonne PRIMARY KEY,
-    nom CHAR,
-    prenom CHAR,
+    nom VARCHAR,
+    prenom VARCHAR,
     date_de_naissance DATE,
-    adress CHAR,
+    adress VARCHAR,
     date_de_recrutement DATE,
 );
 
@@ -13,7 +13,7 @@ CREATE TABLE Personnel
 CREATE TABLE Scientifique(
     idScientique INT NOT NULL,
     idPersonnel INT NOT NULL,
-    grade CHAR,
+    grade VARCHAR,
     PRIMARY KEY(idPersonnel)
 );
 
@@ -26,6 +26,14 @@ CREATE Auteur_Externe (
     idLabo INT NOT NULL,
     FOREIGN KEY (idLabo) REFERENCES LaboExterne(idLabo),
     PRIMARY KEY (idAuteur)
+
+);
+
+CREATE Labo_externe(
+    idLabo INT NOT NULL,
+    nom VARCHAR,
+    pays VARCHAR,
+    PRIMARY KEY(idLabo)
 );
 
 -- Nathan
