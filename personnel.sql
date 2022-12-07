@@ -18,6 +18,14 @@ CREATE TABLE Scientifique(
 );
 
 -- Nathan
+CREATE Evenement(
+    idEvenement INT NOT NULL,
+    dateDebut DATE,
+    dateFin DATE,
+    PRIMARY KEY (idEvenement)
+);
+
+-- Nathan
 CREATE Journee_Porte_Ouvertes(
     idPorteOuverte INT NOT NULL,
     FOREIGN KEY (idPorteOuverte) REFERENCES Evenement(idEvenement),
