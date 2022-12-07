@@ -88,6 +88,12 @@ CREATE TABLE Labo_externe(
 );
 
 -- Nathan
+CREATE TABLE Evenement(
+    PRIMARY KEY(idEvenement),
+    date_debut DATE,
+    date_fin DATE,
+);
+
 CREATE TABLE Journee_Porte_Ouvertes(
     idPorteOuverte INT NOT NULL,
     FOREIGN KEY (idPorteOuverte) REFERENCES Evenement(idEvenement),
@@ -105,8 +111,8 @@ CREATE TABLE Auteur_Externe (
     PRIMARY KEY (idAuteur)
 );
 
--- Nathan
-CREATE TABLE Publication (
+-- NathanCREATE TABLE Enseignant_Chercheuration INT NOT NULL,
+CREATE TABLE Publication(
     idPublication INT NOT NULL,
     titre VARCHAR,
     annee DATE,
@@ -126,9 +132,9 @@ CREATE TABLE Participe(
 );
 
 -- Ronan
-CREATE TABLE Preside(
-    idCongres INT NOT NULL,
-    idScientifique INT NOT NULL,
+CREATE TABLE PreCREATE TABLE Enseignant_Chercheurside(
+e_fin DATE,
+);es(    idScientifique INT NOT NULL,
     FOREIGN KEY (idCongres) REFERENCES Congres(idCongres),
     FOREIGN KEY (idScientifique) REFERENCES Scientifique(idScientifique),
     PRIMARY KEY (idCongres, idScientifique)
@@ -143,7 +149,7 @@ CREATE TABLE Publie_Scientifique(
     PRIMARY KEY (idPublication, idScientifique)
 );
 
--- Ronan
+-- RonanCREATE TABLE Enseignant_Chercheur
 CREATE TABLE Publie_Doctorant(
     idPublication INT NOT NULL,
     idDoctorant INT NOT NULL,
@@ -199,19 +205,13 @@ CREATE TABLE Encadrement (
 );
 
 --Yasmine
-CREATE TABLE Etablissement (
-    nom char,
-    acronyme char,
-    adresse char,
-    PRIMARY KEY(idEtablissement),
-);
---Yasmine
 
 CREATE TABLE Partenaire(
     PRIMARY KEY(idPartenaire),
     nom char,
     pays char,
 );
+
 
 
 
