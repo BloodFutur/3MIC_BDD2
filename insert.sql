@@ -16,19 +16,23 @@ INSERT INTO Etablissement(
     'Toulouse'
 );
 
+--Axel
 INSERT INTO Etablissement(
     02,
-    "Ecole Nationale de l'Aviation Civile",
+    'Ecole Nationale de l Aviation Civile',
     'ENAC',
     'Toulouse'
 );
 
+
+--Axel
 INSERT INTO Etablissement(
     03,
-    "Ecole Polytechnique",
-    "X",
+    'Ecole Polytechnique',
+    'X',
     'Paris'    
 );
+
 INSERT INTO Personnel (
     1,
     'Bonnet',
@@ -112,7 +116,7 @@ INSERT INTO Labo_externe (
 );
 
 
-INSERT INTO Labo_externe (
+INSERT INTO Lab--Axelo_externe (
     6,
     'BRBN',
     'Bresil'
@@ -140,4 +144,40 @@ INSERT INTO Projet (
     100,
     60,
   	002
+);
+
+
+--Axel
+INSERT INTO Partenaire(
+    01,
+    'GFGH',
+    'Allemagne'
+);
+
+--Axel
+INSERT INTO Partenaire(
+    02,
+    'LMC',
+    'Australie'
+);
+
+--Axel
+INSERT INTO Partenaire(
+    03,
+    'ESHT',
+    'USA'
+);
+
+--Axel
+INSERT INTO Partenaire(
+    01,
+    'HLMY',
+    'Japon'
+);
+
+--Axel
+INSERT INTO Partenaire(
+    01,
+    'MAKL',
+    'France'
 );
