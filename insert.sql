@@ -1,4 +1,4 @@
-INSERT INTO Personnel (
+INSERT INTO Personnel VALUES (
     0,
     'Billard',
     'Nathan',
@@ -8,7 +8,7 @@ INSERT INTO Personnel (
 );
 
 
-INSERT INTO Personnel (
+INSERT INTO Personnel VALUES (
     1,
     'Bonnet',
     'Ronan',
@@ -17,7 +17,7 @@ INSERT INTO Personnel (
     '2020-9-15'
 );
 
-INSERT INTO Personnel (
+INSERT INTO Personnel VALUES (
     2,
     'Olougouna',
     'Axel',
@@ -26,7 +26,7 @@ INSERT INTO Personnel (
     '2020-9-15'
 );
 
-INSERT INTO Personnel (
+INSERT INTO Personnel VALUES (
     3,
     'Grane',
     'Yasmine',
@@ -35,7 +35,7 @@ INSERT INTO Personnel (
     '2020-9-15'
 );
 
-INSERT INTO Personnel (
+INSERT INTO Personnel VALUES (
     4,
     'Wonderland',
     'Alice',
@@ -44,7 +44,7 @@ INSERT INTO Personnel (
     '2020-9-15'
 );
 
-INSERT INTO Personnel (
+INSERT INTO Personnel VALUES (
     4,
     'Le Bricoleur',
     'Bob',
@@ -54,50 +54,50 @@ INSERT INTO Personnel (
 );
 
 
-INSERT INTO Labo_externe (
+INSERT INTO Labo_externe VALUES (
     0,
     'LAAS',
     'France'
 );
 
-INSERT INTO Labo_externe (
+INSERT INTO Labo_externe VALUES (
     1,
     'CNES',
     'France'
 );
 
-INSERT INTO Labo_externe (
+INSERT INTO Labo_externe VALUES (
     2,
     'GEAS',
     'Allemagne'
 );
 
-INSERT INTO Labo_externe (
+INSERT INTO Labo_externe VALUES (
     3,
     'RUAF',
     'Russie'
 );
 
-INSERT INTO Labo_externe (
+INSERT INTO Labo_externe VALUES (
     4,
     'ENFD',
     'Angleterre'
 );
 
-INSERT INTO Labo_externe (
+INSERT INTO Labo_externe VALUES (
     5,
     'LUBN',
     'Luxembourg'
 );
 
 
-INSERT INTO Labo_externe (
+INSERT INTO Labo_externe VALUES (
     6,
     'BRBN',
     'Bresil'
 );
 
-INSERT INTO Projet (
+INSERT INTO Projet VALUES (
     01,
     'BaseDeDonnee',
     'BDD',
@@ -109,7 +109,7 @@ INSERT INTO Projet (
   	001
 );
 
-INSERT INTO Projet (
+INSERT INTO Projet VALUES (
     02,
     'langC',
     'C',
@@ -121,7 +121,7 @@ INSERT INTO Projet (
   	002
 );
 
-INSERT INTO Projet (
+INSERT INTO Projet VALUES (
     03,
     'Programation web',
     'ProgWeb',
@@ -133,7 +133,7 @@ INSERT INTO Projet (
   	003
 );
 
-INSERT INTO Publication (
+INSERT INTO Publication VALUES (
     001,
     'recherche scientifique sur la chimie organique',
     DATE '2022-07-07',
@@ -142,7 +142,7 @@ INSERT INTO Publication (
   	220
 );
 
-INSERT INTO Publication (
+INSERT INTO Publication VALUES (
     002,
     'Page rank',
     DATE '2022-07-07',
@@ -151,7 +151,7 @@ INSERT INTO Publication (
   	220
 );
 
-INSERT INTO Publication (
+INSERT INTO Publication VALUES (
     003,
     'chaine de markov',
     DATE '2022-12-03',
@@ -162,19 +162,19 @@ INSERT INTO Publication (
 
 
 
-INSERT INTO Evenememnt (
+INSERT INTO Evenememnt VALUES (
     0001,
     DATE '2022-07-07',
     DATE '2023-07-07',	
 );
 
-INSERT INTO Evenememnt (
+INSERT INTO Evenememnt VALUES (
     0002,
     DATE '2022-01-07',
     DATE '2023-07-12',	
 );
 
-INSERT INTO Evenememnt (
+INSERT INTO Evenememnt VALUES (
     0003,
     DATE '2022-02-10',
     DATE '2023-03-12',	
