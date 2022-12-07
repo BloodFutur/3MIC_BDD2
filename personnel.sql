@@ -46,7 +46,7 @@ CREATE TABLE Scientifique(
 
 --Axel
 CREATE TABLE Etablissement(
-    idEtablissement INT CONSTRAINT UnEtablissement PRIMARY Key,
+    idEtablissement INT NOT NULL CONSTRAINT UnEtablissement PRIMARY Key,
     nom VARCHAR,
     acronyme VARCHAR,
     adresse VARCHAR
@@ -55,8 +55,9 @@ CREATE TABLE Etablissement(
 --Axel
 CREATE TABLE Enseignant_Chercheur(
     idEnseignant INT NOT NULL,
+    idEtablissement INT NOT NULL,
     echelon ECHELON,
-    FOREIGN KEY (idEtablissement) REFERENCES UnEtablissement,
+    FOREIGN KEY (idEtablissement) REFERENCES Etablissement(idEtablissement),
     FOREIGN KEY (idEnseignant) REFERENCES Personnel(idPersonnel),
     PRIMARY KEY (idEnseignant)
 );
@@ -87,12 +88,6 @@ CREATE TABLE Labo_externe(
     PRIMARY KEY(idLabo)
 );
 
--- Nathan
-CREATE TABLE Evenement(
-    PRIMARY KEY(idEvenement),
-    date_debut DATE,
-    date_fin DATE,
-);
 
 CREATE TABLE Journee_Porte_Ouvertes(
     idPorteOuverte INT NOT NULL,
