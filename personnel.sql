@@ -1,3 +1,19 @@
+-- Nathan
+CREATE TYPE echelon AS ENUM (
+    'A*',
+    'A',
+    'B',
+    'C'
+);
+
+-- Nathan
+CREATE TYPE grade AS ENUM (
+    'cr1',
+    'cr2',
+    'mcf',
+    'mcf hors classe'
+);
+
 -- Axel
 CREATE TABLE Personnel
 (
@@ -6,14 +22,14 @@ CREATE TABLE Personnel
     prenom VARCHAR,
     date_de_naissance DATE,
     adress VARCHAR,
-    date_de_recrutement DATE,
+    date_de_recrutement DATE
 );
 
 --Axel
 CREATE TABLE Doctorant(
     idDoctorant INT NOT NULL,
     date_debut_these DATE,
-    date_soutenance DATE
+    date_soutenance DATE,
     FOREIGN KEY (idDoctorant) REFERENCES Personnel(idPersonnel),
     PRIMARY KEY(idPersonnel)
 );
@@ -36,21 +52,6 @@ CREATE TABLE Enseignant_Chercheur(
     PRIMARY KEY (idEnseignant)
 );
 
--- Nathan
-CREATE TYPE echelon AS ENUM (
-    'A*',
-    'A',
-    'B',
-    'C'
-);
-
--- Nathan
-CREATE TYPE grade AS ENUM (
-    'cr1',
-    'cr2',
-    'mcf',
-    'mcf hors classe'
-);
 
 -- Nathan
 CREATE TABLE Evenement(
@@ -91,7 +92,7 @@ CREATE TABLE Auteur_Externe (
     prenom VARCHAR,
     adresseMail VARCHAR,
     idLabo INT NOT NULL,
-    FOREIGN KEY (idLabo) REFERENCES LaboExterne(idLabo),
+    FOREIGN KEY (idLabo) REFERENCES Labo_Externe(idLabo),
     PRIMARY KEY (idAuteur)
 );
 
@@ -164,7 +165,7 @@ CREATE TABLE Participe_Externe(
 -- Ronan
 CREATE TABLE Organise (
     idPortesOuverte INT NOT NULL,
-    idPersonnel INT NOT NULL,s d
+    idPersonnel INT NOT NULL,
     FOREIGN KEY (idPortesOuverte) REFERENCES Journee_Portes_Ouvertes(idPorte_Ouverte),
     FOREIGN KEY (idPersonnel) REFERENCES Personnel(idPersonnel),
     PRIMARY KEY(idPortesOuverte, idPersonnel)
