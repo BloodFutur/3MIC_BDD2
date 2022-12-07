@@ -94,3 +94,27 @@ INSERT INTO Personnel (
     'au chantier',
     '2020-9-15'
 );
+
+INSERT INTO Projet (
+    01,
+    'BaseDeDonnee',
+    'BDD',
+    DATE '2022-12-07',
+    DATE '2022-01-07',
+    30,
+    1000,
+    500,
+  	001
+);
+
+INSERT INTO Projet (
+    02,
+    'langC',
+    'C',
+    DATE '2022-11-07',
+    DATE '2022-04-07',
+    40,
+    100,
+    60,
+  	002
+);
