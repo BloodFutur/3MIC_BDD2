@@ -18,6 +18,22 @@ CREATE TABLE Scientifique(
 );
 
 -- Nathan
+CREATE TYPE echelon AS ENUM (
+    'A*',
+    'A',
+    'B',
+    'C'
+);
+
+-- Nathan
+CREATE TYPE grade AS ENUM (
+    'cr1',
+    'cr2',
+    'mcf',
+    'mcf hors classe'
+);
+
+-- Nathan
 CREATE Evenement(
     idEvenement INT NOT NULL,
     dateDebut DATE,
