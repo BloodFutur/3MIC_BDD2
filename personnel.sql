@@ -205,3 +205,10 @@ CREATE TABLE Etablissement (
     PRIMARY KEY(idEtablissement),
 );
 
+CREATE TABLE Partenaire(
+    PRIMARY KEY(idPartenaire),
+    nom char,
+    pays char,
+);
+
+
