@@ -204,5 +204,14 @@ CREATE TABLE Encadrement (
     PRIMARY KEY(idScientifique,idDoctorant),
 );
 
+--Yasmine
+
+CREATE TABLE Partenaire(
+    PRIMARY KEY(idPartenaire),
+    nom char,
+    pays char,
+);
+
+
 
 
