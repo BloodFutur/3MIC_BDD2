@@ -130,3 +130,16 @@ INSERT INTO Publication (
   	220
 );
 
+
+INSERT INTO Evenememnt (
+    0001,
+    DATE '2022-07-07',
+    DATE '2023-07-07',	
+);
+
+INSERT INTO Evenememnt (
+    0002,
+    DATE '2022-01-07',
+    DATE '2023-07-12',	
+);
+
