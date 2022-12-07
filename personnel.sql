@@ -197,5 +197,30 @@ CREATE TABLE Encadrement (
     PRIMARY KEY(idScientifique,idDoctorant),
 );
 
+<<<<<<< HEAD
+=======
+--Yasmine
+CREATE TABLE Etablissement (
+    nom char,
+    acronyme char,
+    adresse char,
+    PRIMARY KEY(idEtablissement),
+);
+--Yasmine
+
+CREATE TABLE Partenaire(
+    PRIMARY KEY(idPartenaire),
+    nom char,
+    pays char,
+);
+
+--Yasmine
+
+CREATE TABLE Evenement(
+    PRIMARY KEY(idEvenement),
+    date_debut DATE,
+    date_fin DATE,
+);
+>>>>>>> bf20107d8311bdd2e5d4f7c6711bc1553813f4ac
 
 
