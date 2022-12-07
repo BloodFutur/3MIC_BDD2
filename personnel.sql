@@ -1,18 +1,25 @@
 CREATE TABLE Personnel
 (
     idPersonnel INT CONSTRAINT UnePersonne PRIMARY KEY,
-    nom CHAR,
-    prenom CHAR,
+    nom VARCHAR,
+    prenom VARCHAR,
     date_de_naissance DATE,
-    adress CHAR,
+    adress VARCHAR,
     date_de_recrutement DATE,
 );
 
 CREATE TABLE Scientifique(
     idScientique INT NOT NULL,
     idPersonnel INT NOT NULL,
-    grade CHAR,
+    grade VARCHAR,
     PRIMARY KEY(idPersonnel)
+);
+
+CREATE Labo_externe(
+    idLabo INT NOT NULL,
+    nom VARCHAR,
+    pays VARCHAR,
+    PRIMARY KEY(idLabo)
 );
 
 CREATE Publication (
