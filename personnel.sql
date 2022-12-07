@@ -187,13 +187,15 @@ CREATE TABLE Projet (
     budget_Laas INT NOT NULL,
     cout INT NOT NULL,
     FOREIGN KEY (idScientifique) REFERENCES Scientifique(idScientifique),
-    PRIMARY KEY(idProjet),
+    PRIMARY KEY(idProjet)
 );
 --Yasmine
 CREATE TABLE Encadrement (
+    idDoctorant INT NOT NULL,
+    idScientifique INT NOT NULL,
     FOREIGN KEY (idDoctorant) REFERENCES Doctorant(idDoctorant),
     FOREIGN KEY (idScientifique) REFERENCES Scientifique(idScientifique),
-    PRIMARY KEY(idScientifique,idDoctorant),
+    PRIMARY KEY(idScientifique,idDoctorant)
 );
 
 --Yasmine
@@ -201,7 +203,7 @@ CREATE TABLE Encadrement (
 CREATE TABLE Partenaire(
     PRIMARY KEY(idPartenaire),
     nom char,
-    pays char,
+    pays char
 );
 
 
