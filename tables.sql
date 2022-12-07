@@ -74,24 +74,31 @@ CREATE TABLE Evenement(
 CREATE TABLE Congres(
     idCongres INT NOT NULL,
     nb_inscriptions INT NOT NULL,
-    class VARCHAR,
-    FOREIGN KEY (idCongres) REFERENCES Evenement(idEvenement) ON DELETE CASCADE,
-    PRIMARY KEY (idCongres)
+    classe VARCHAR(15),
+    PRIMARY KEY (idCongres),
+    CONSTRAINT fk_congres
+        FOREIGN KEY (idCongres) 
+            REFERENCES Evenement(idEvenement) 
+            ON DELETE CASCADE
+            ON UPDATE CASCADE
 );
 
 -- Ronan
 CREATE TABLE Labo_externe(
-    idLabo INT NOT NULL,
-    nom VARCHAR,
-    pays VARCHAR,
-    PRIMARY KEY(idLabo)
+    idLabo SERIAL PRIMARY KEY,
+    nom VARCHAR(255),
+    pays VARCHAR(255),
 );
 
-
+-- Ronan
 CREATE TABLE Journee_Portes_Ouvertes(
     idPorteOuverte INT NOT NULL,
-    FOREIGN KEY (idPorteOuverte) REFERENCES Evenement(idEvenement) ON DELETE CASCADE,
-    PRIMARY KEY (idPorteOuverte)
+    PRIMARY KEY (idPorteOuverte),
+    CONSTRAINT fk_jpo
+        FOREIGN KEY (idPorteOuverte) 
+            REFERENCES Evenement(idEvenement) 
+            ON DELETE CASCADE
+            ON UPDATE CASCADE
 );
 
 -- Nathan
@@ -135,45 +142,86 @@ CREATE TABLE Projet (
 CREATE TABLE Participe(
     idProjet INT NOT NULL,
     idScientifique INT NOT NULL,
-    FOREIGN KEY (idProjet) REFERENCES Projet(idProjet) ON DELETE CASCADE,
-    FOREIGN KEY (idScientifique) REFERENCES Scientifique(idScientifique) ON DELETE CASCADE,
-    PRIMARY KEY (idProjet, idScientifique)
+    PRIMARY KEY (idProjet, idScientifique),
+    CONSTRAINT fk_Projet
+        FOREIGN KEY (idProjet) 
+            REFERENCES Projet(idProjet) 
+            ON DELETE CASCADE
+            ON UPDATE CASCADE,
+    CONSTRAINT fk_Scientifique
+        FOREIGN KEY (idScientifique) 
+            REFERENCES Scientifique(idScientifique) 
+            ON DELETE CASCADE
+            ON UPDATE CASCADE
 );
 
 -- Ronan
 CREATE TABLE Preside(
     idCongres INT NOT NULL,
     idScientifique INT NOT NULL,
-    FOREIGN KEY (idCongres) REFERENCES Congres(idCongres) ON DELETE CASCADE,
-    FOREIGN KEY (idScientifique) REFERENCES Scientifique(idScientifique) ON DELETE CASCADE,
-    PRIMARY KEY (idCongres, idScientifique)
+    PRIMARY KEY (idCongres, idScientifique),
+    CONSTRAINT fk_Congres
+        FOREIGN KEY (idCongres) 
+            REFERENCES Congres(idCongres) 
+            ON DELETE CASCADE
+            ON UPDATE CASCADE,
+    CONSTRAINT fk_Scientifique
+        FOREIGN KEY (idScientifique) 
+        REFERENCES Scientifique(idScientifique) 
+        ON DELETE CASCADE
+        ON UPDATE CASCADE
 );
 
 -- Ronan
 CREATE TABLE Publie_Scientifique(
     idPublication INT NOT NULL,
     idScientifique INT NOT NULL,
-    FOREIGN KEY (idPublication) REFERENCES Publication(idPublication) ON DELETE CASCADE,
-    FOREIGN KEY (idScientifique) REFERENCES Scientifique(idScientifique) ON DELETE CASCADE,
-    PRIMARY KEY (idPublication, idScientifique)
+    PRIMARY KEY (idPublication, idScientifique),
+    
+    CONSTRAINT fk_Publication
+        FOREIGN KEY (idPublication) 
+            REFERENCES Publication(idPublication) 
+            ON DELETE CASCADE
+            ON UPDATE CASCADE,
+    CONSTRAINT fk_Scientifique
+        FOREIGN KEY (idScientifique) 
+            REFERENCES Scientifique(idScientifique) 
+            ON DELETE CASCADE
+            ON UPDATE CASCADE
 );
 
 -- Ronan
 CREATE TABLE Publie_Doctorant(
     idPublication INT NOT NULL,
     idDoctorant INT NOT NULL,
-    FOREIGN KEY (idPublication) REFERENCES Publication(idPublication) ON DELETE CASCADE,
-    FOREIGN KEY (idDoctorant) REFERENCES Doctorant(idDoctorant) ON DELETE CASCADE,
-    PRIMARY KEY (idPublication, idDoctorant)
+    PRIMARY KEY (idPublication, idDoctorant),
+    CONSTRAINT fk_Publication
+        FOREIGN KEY (idPublication) 
+            REFERENCES Publication(idPublication) 
+            ON DELETE CASCADE
+            ON UPDATE CASCADE,
+    CONSTRAINT fk_Doctorant
+        FOREIGN KEY (idDoctorant) 
+            REFERENCES Doctorant(idDoctorant) 
+            ON DELETE CASCADE
+            ON UPDATE CASCADE
 );
 
 -- Ronan
 CREATE TABLE Publie_Externe(
     idPublication INT NOT NULL,
     idAuteurExterne INT NOT NULL,
-    FOREIGN KEY (idPublication) REFERENCES Publication(idPublication) ON DELETE CASCADE,
-    FOREIGN KEY (idAuteurExterne) REFERENCES Auteur_Externe(idAuteur) ON DELETE CASCADE,
-    PRIMARY KEY (idPublication, idAuteurExterne)
+    PRIMARY KEY (idPublication, idAuteurExterne),
+    CONSTRAINT fk_Publication
+        FOREIGN KEY (idPublication) 
+            REFERENCES Publication(idPublication) 
+            ON DELETE CASCADE
+            ON UPDATE CASCADE,
+    CONSTRAINT fk_AuteurExterne
+        FOREIGN KEY (idAuteurExterne) 
+            REFERENCES Auteur_Externe(idAuteur) 
+            ON DELETE CASCADE
+            ON UPDATE
 );
 
 --Yasmine
@@ -188,18 +236,34 @@ CREATE TABLE Partenaire(
 CREATE TABLE Participe_Externe(
     idProjet INT NOT NULL,
     idPartenaire INT NOT NULL,
-    FOREIGN KEY (idProjet) REFERENCES Projet(idProjet) ON DELETE CASCADE,
-    FOREIGN KEY (idPartenaire) REFERENCES Partenaire(idPartenaire) ON DELETE CASCADE,
-    PRIMARY KEY (idProjet, idPartenaire)
+    PRIMARY KEY (idProjet, idPartenaire),
+    CONSTRAINT fk_Projet
+        FOREIGN KEY (idProjet) 
+            REFERENCES Projet(idProjet) 
+            ON DELETE CASCADE
+            ON UPDATE CASCADE,
+    CONSTRAINT fk_Partenaire
+        FOREIGN KEY (idPartenaire) 
+            REFERENCES Partenaire(idPartenaire) 
+            ON DELETE CASCADE
+            ON UPDATE CASCADE
 );
 
 -- Ronan
 CREATE TABLE Organise (
     idPortesOuverte INT NOT NULL,
     idPersonnel INT NOT NULL,
-    FOREIGN KEY (idPortesOuverte) REFERENCES Journee_Portes_Ouvertes(idPorteOuverte) ON DELETE CASCADE,
-    FOREIGN KEY (idPersonnel) REFERENCES Personnel(idPersonnel) ON DELETE CASCADE,
-    PRIMARY KEY(idPortesOuverte, idPersonnel)
+    PRIMARY KEY(idPortesOuverte, idPersonnel),
+    CONSTRAINT fk_jpo
+        FOREIGN KEY (idPortesOuverte) 
+            REFERENCES Journee_Portes_Ouvertes(idPorteOuverte) 
+            ON DELETE CASCADE
+            ON UPDATE CASCADE,
+    CONSTRAINT fk_Personnel
+        FOREIGN KEY (idPersonnel) 
+            REFERENCES Personnel(idPersonnel) 
+            ON DELETE CASCADE
+            ON UPDATE CASCADE
 );
 
 --Yasmine
