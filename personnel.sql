@@ -27,6 +27,7 @@ CREATE TABLE Scientifique(
     PRIMARY KEY(idPersonnel)
 );
 
+CREATE TABLE Enseignant_Chercheur
 -- Nathan
 CREATE Auteur_Externe (
     idAuteur INT NOT NULL,
@@ -115,7 +116,7 @@ CREATE TABLE Participe_Externe(
 -- Ronan
 CREATE TABLE Organise (
     idPortesOuverte INT NOT NULL,
-    idPersonnel INT NOT NULL,
+    idPersonnel INT NOT NULL,s d
     FOREIGN KEY (idPortesOuverte) REFERENCES Journee_Portes_Ouvertes(idPorte_Ouverte),
     FOREIGN KEY (idPersonnel) REFERENCES Personnel(idPersonnel),
     PRIMARY KEY(idPortesOuverte, idPersonnel)
