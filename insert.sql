@@ -54,48 +54,99 @@ INSERT INTO Personnel (
 );
 
 
+-- Ronan
 INSERT INTO Labo_externe (
     0,
     'LAAS',
     'France'
 );
 
+-- Ronan
 INSERT INTO Labo_externe (
     1,
     'CNES',
     'France'
 );
 
+-- Ronan
 INSERT INTO Labo_externe (
     2,
     'GEAS',
     'Allemagne'
 );
 
+-- Ronan
 INSERT INTO Labo_externe (
     3,
     'RUAF',
     'Russie'
 );
 
+-- Ronan
 INSERT INTO Labo_externe (
     4,
     'ENFD',
     'Angleterre'
 );
 
+-- Ronan
 INSERT INTO Labo_externe (
     5,
     'LUBN',
     'Luxembourg'
 );
 
-
+-- Ronan
 INSERT INTO Labo_externe (
     6,
     'BRBN',
     'Bresil'
 );
+
+-- Ronan
+INSERT INTO Auteur_Externe (
+    0,
+    'Jean',
+    'Dupont',
+    'dupont@mail.com',
+    0
+); 
+
+-- Ronan
+INSERT INTO Auteur_Externe (
+    1,
+    'Jacques',
+    'Tondu',
+    'tondu@mail.com',
+    0
+); 
+
+-- Ronan
+INSERT INTO Auteur_Externe (
+    2,
+    'Leonardo',
+    'Paulo',
+    'paulo@mail.com',
+    6
+); 
+
+-- Ronan
+INSERT INTO Auteur_Externe (
+    3,
+    'Otto',
+    'Schaofe',
+    'schaofe@mail.com',
+    2
+); 
+
+-- Ronan
+INSERT INTO Auteur_Externe (
+    4,
+    'Igor',
+    'Medvedev',
+    'medvedev@mail.com',
+    3
+); 
 
 INSERT INTO Projet (
     01,
