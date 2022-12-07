@@ -38,7 +38,7 @@ CREATE TABLE Doctorant(
 CREATE TABLE Scientifique(
     idScientique INT NOT NULL,
     idPersonnel INT NOT NULL,
-    grade CHAR,
+    grade VARCHAR,
     FOREIGN KEY (idScientifique) REFERENCES Personnel(idPersonnel),
     PRIMARY KEY (idScientifique)
 );
@@ -179,10 +179,10 @@ CREATE TABLE Organise (
 );
 --Yasmine
 CREATE TABLE Projet (
-    titre char,
-    acronyme char,
+    titre VARCHAR,
+    acronyme VARCHAR,
     annee_debut date,
-    annee_fin char,
+    annee_fin VARCHAR,
     duree INT NOT NULL,
     budget_Laas INT NOT NULL,
     cout INT NOT NULL,
@@ -201,11 +201,8 @@ CREATE TABLE Encadrement (
 --Yasmine
 
 CREATE TABLE Partenaire(
-    PRIMARY KEY(idPartenaire),
-    nom char,
-    pays char
+    idPartenaire INT NOT NULL,
+    nom VARCHAR,
+    pays VARCHAR,
+    PRIMARY KEY(idPartenaire)
 );
-
-
-
-
