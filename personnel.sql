@@ -36,8 +36,7 @@ CREATE TABLE Doctorant(
 
 --Yasmine
 CREATE TABLE Scientifique(
-    idScientique INT NOT NULL,
-    idPersonnel INT NOT NULL,
+    idScientifique INT NOT NULL,
     grade VARCHAR,
     FOREIGN KEY (idScientifique) REFERENCES Personnel(idPersonnel),
     PRIMARY KEY (idScientifique)
@@ -89,7 +88,7 @@ CREATE TABLE Labo_externe(
 );
 
 
-CREATE TABLE Journee_Porte_Ouvertes(
+CREATE TABLE Journee_Portes_Ouvertes(
     idPorteOuverte INT NOT NULL,
     FOREIGN KEY (idPorteOuverte) REFERENCES Evenement(idEvenement),
     PRIMARY KEY (idPorteOuverte)
@@ -117,6 +116,21 @@ CREATE TABLE Publication(
     PRIMARY KEY (idPublication)
 );
 
+--Yasmine
+CREATE TABLE Projet (
+    idProjet INT NOT NULL,
+    titre VARCHAR,
+    acronyme VARCHAR,
+    annee_debut DATE,
+    annee_fin DATE,
+    duree INT NOT NULL,
+    budget_Laas INT NOT NULL,
+    cout INT NOT NULL,
+    idMeneurProjet INT NOT NULL,
+    FOREIGN KEY (idMeneurProjet) REFERENCES Scientifique(idScientifique),
+    PRIMARY KEY(idProjet)
+);
+
 -- Ronan
 CREATE TABLE Participe(
     idProjet INT NOT NULL,
@@ -128,6 +142,8 @@ CREATE TABLE Participe(
 
 -- Ronan
 CREATE TABLE Preside(
+    idCongres INT NOT NULL,
+    idScientifique INT NOT NULL,
     FOREIGN KEY (idCongres) REFERENCES Congres(idCongres),
     FOREIGN KEY (idScientifique) REFERENCES Scientifique(idScientifique),
     PRIMARY KEY (idCongres, idScientifique)
@@ -173,22 +189,11 @@ CREATE TABLE Participe_Externe(
 CREATE TABLE Organise (
     idPortesOuverte INT NOT NULL,
     idPersonnel INT NOT NULL,
-    FOREIGN KEY (idPortesOuverte) REFERENCES Journee_Portes_Ouvertes(idPorte_Ouverte),
+    FOREIGN KEY (idPortesOuverte) REFERENCES Journee_Portes_Ouvertes(idPorteOuverte),
     FOREIGN KEY (idPersonnel) REFERENCES Personnel(idPersonnel),
     PRIMARY KEY(idPortesOuverte, idPersonnel)
 );
---Yasmine
-CREATE TABLE Projet (
-    titre VARCHAR,
-    acronyme VARCHAR,
-    annee_debut date,
-    annee_fin VARCHAR,
-    duree INT NOT NULL,
-    budget_Laas INT NOT NULL,
-    cout INT NOT NULL,
-    FOREIGN KEY (idScientifique) REFERENCES Scientifique(idScientifique),
-    PRIMARY KEY(idProjet)
-);
+
 --Yasmine
 CREATE TABLE Encadrement (
     idDoctorant INT NOT NULL,
