@@ -39,8 +39,8 @@ CREATE TABLE Scientifique(
     idScientique INT NOT NULL,
     idPersonnel INT NOT NULL,
     grade CHAR,
-    FOREIGN KEY (idPersonnel) REFERENCES Personnel(idPersonnel),
-    PRIMARY KEY(idPersonnel)
+    FOREIGN KEY (idScientifique) REFERENCES Personnel(idPersonnel),
+    PRIMARY KEY (idScientifique)
 );
 
 
