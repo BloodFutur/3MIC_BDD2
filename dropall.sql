@@ -1,3 +1,5 @@
+DROP TYPE echelon;
+DROP TYPE grade;
 DROP TABLE Personnel;
 DROP TABLE Doctorant;
 DROP TABLE Scientifique;
