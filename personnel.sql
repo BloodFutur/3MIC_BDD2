@@ -67,7 +67,7 @@ CREATE TABLE Evenement(
     idEvenement INT NOT NULL,
     dateDebut DATE,
     dateFin DATE,
-    PRIMARY KEY (idEvenement) ON DELETE CASCADE
+    PRIMARY KEY (idEvenement)
 );
 
 -- Ronan
