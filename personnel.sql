@@ -45,7 +45,7 @@ CREATE TYPE grade AS ENUM (
 );
 
 -- Nathan
-CREATE Evenement(
+CREATE TABLE Evenement(
     idEvenement INT NOT NULL,
     dateDebut DATE,
     dateFin DATE,
@@ -53,7 +53,7 @@ CREATE Evenement(
 );
 
 -- Ronan
-CREATE Congres(
+CREATE TABLE Congres(
     idCongres INT NOT NULL,
     nb_inscriptions INT NOT NULL,
     class VARCHAR,
@@ -62,7 +62,7 @@ CREATE Congres(
 );
 
 -- Ronan
-CREATE Labo_externe(
+CREATE TABLE Labo_externe(
     idLabo INT NOT NULL,
     nom VARCHAR,
     pays VARCHAR,
@@ -70,14 +70,14 @@ CREATE Labo_externe(
 );
 
 -- Nathan
-CREATE Journee_Porte_Ouvertes(
+CREATE TABLE Journee_Porte_Ouvertes(
     idPorteOuverte INT NOT NULL,
     FOREIGN KEY (idPorteOuverte) REFERENCES Evenement(idEvenement),
     PRIMARY KEY (idPorteOuverte)
 );
 
 -- Nathan
-CREATE Auteur_Externe (
+CREATE TABLE Auteur_Externe (
     idAuteur INT NOT NULL,
     nom VARCHAR,
     prenom VARCHAR,
@@ -88,7 +88,7 @@ CREATE Auteur_Externe (
 );
 
 -- Nathan
-CREATE Publication (
+CREATE TABLE Publication (
     idPublication INT NOT NULL,
     titre VARCHAR,
     annee DATE,
@@ -99,7 +99,7 @@ CREATE Publication (
 );
 
 -- Ronan
-CREATE Participe(
+CREATE TABLE Participe(
     idProjet INT NOT NULL,
     idScientifique INT NOT NULL,
     FOREIGN KEY (idProjet) REFERENCES Projet(idProjet),
@@ -108,7 +108,7 @@ CREATE Participe(
 );
 
 -- Ronan
-CREATE Preside(
+CREATE TABLE Preside(
     idCongres INT NOT NULL,
     idScientifique INT NOT NULL,
     FOREIGN KEY (idCongres) REFERENCES Congres(idCongres),
@@ -117,7 +117,7 @@ CREATE Preside(
 );
 
 -- Ronan
-CREATE Publie_Scientifique(
+CREATE TABLE Publie_Scientifique(
     idPublication INT NOT NULL,
     idScientifique INT NOT NULL,
     FOREIGN KEY (idPublication) REFERENCES Publication(idPublication),
@@ -126,7 +126,7 @@ CREATE Publie_Scientifique(
 );
 
 -- Ronan
-CREATE Publie_Doctorant(
+CREATE TABLE Publie_Doctorant(
     idPublication INT NOT NULL,
     idDoctorant INT NOT NULL,
     FOREIGN KEY (idPublication) REFERENCES Publication(idPublication),
