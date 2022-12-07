@@ -8,10 +8,19 @@ CREATE TABLE Personnel
     date_de_recrutement DATE,
 );
 
+CREATE TABLE Doctorant(
+    idDoctorant INT NOT NULL,
+    date_debut_these DATE,
+    date_soutenance DATE
+    FOREIGN KEY (idPersonnel) REFERENCES Personnel(idPersonnel),
+    PRIMARY KEY(idPersonnel)
+);
+
 CREATE TABLE Scientifique(
     idScientique INT NOT NULL,
     idPersonnel INT NOT NULL,
     grade CHAR,
+    FOREIGN KEY (idPersonnel) REFERENCES Personnel(idPersonnel),
     PRIMARY KEY(idPersonnel)
 );
 
