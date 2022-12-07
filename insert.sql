@@ -51,3 +51,15 @@ INSERT INTO Personnel (
     'au chantier',
     '2020-9-15'
 );
+
+INSERT INTO DOCTORANT(
+    0,
+    DATE '2022-08-17',
+    DATE '2023-01-30'
+);
+
+INSERT INTO DOCTORANT(
+    4,
+    DATE '2022-07-30',
+    DATE '2023-02-20'
+);
