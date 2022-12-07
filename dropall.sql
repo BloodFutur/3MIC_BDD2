@@ -9,7 +9,7 @@ DROP TABLE Enseignant_Chercheur CASCADE;
 DROP TABLE Evenement CASCADE;
 DROP TABLE Congres CASCADE;
 DROP TABLE Labo_externe CASCADE;
-DROP TABLE Journee_Porte_Ouvertes CASCADE;
+DROP TABLE Journee_Portes_Ouvertes CASCADE;
 DROP TABLE Auteur_Externe  CASCADE;
 DROP TABLE Publication  CASCADE;
 DROP TABLE Participe CASCADE;
