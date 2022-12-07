@@ -13,8 +13,8 @@ CREATE TABLE Personnel
 CREATE TABLE Doctorant(
     idDoctorant INT NOT NULL,
     date_debut_these DATE,
-    date_soutenance DATE
-    FOREIGN KEY (id) REFERENCES Personnel(idPersonnel),
+    date_soutenance DATE,
+    FOREIGN KEY (idDoctorant) REFERENCES Personnel(idPersonnel),
     PRIMARY KEY(idPersonnel)
 );
 
@@ -60,7 +60,7 @@ CREATE TABLE Etablissement(
     adresse VARCHAR,
 );
 
-CREATE TABLE Enseignant_Chercheur
+
 -- Nathan
 CREATE TABLE Evenement(
     idEvenement INT NOT NULL,
@@ -104,8 +104,8 @@ CREATE TABLE Auteur_Externe (
     PRIMARY KEY (idAuteur)
 );
 
--- Nathan
-CREATE TABLE Publication (
+-- NathanCREATE TABLE Enseignant_Chercheuration INT NOT NULL,--Corrigé Axel :)
+CREATE TABLE Publication(
     idPublication INT NOT NULL,
     titre VARCHAR,
     annee DATE,
@@ -125,7 +125,7 @@ CREATE TABLE Participe(
 );
 
 -- Ronan
-CREATE TABLE Preside(
+CREATE TABLE PreCREATE TABLE Enseignant_Chercheurside(
     idCongres INT NOT NULL,
     idScientifique INT NOT NULL,
     FOREIGN KEY (idCongres) REFERENCES Congres(idCongres),
@@ -142,7 +142,7 @@ CREATE TABLE Publie_Scientifique(
     PRIMARY KEY (idPublication, idScientifique)
 );
 
--- Ronan
+-- RonanCREATE TABLE Enseignant_Chercheur
 CREATE TABLE Publie_Doctorant(
     idPublication INT NOT NULL,
     idDoctorant INT NOT NULL,
@@ -197,11 +197,5 @@ CREATE TABLE Encadrement (
     PRIMARY KEY(idScientifique,idDoctorant),
 );
 
---Yasmine
-CREATE TABLE Etablissement (
-    nom char,
-    acronyme char,
-    adresse char,
-    PRIMARY KEY(idEtablissement),
-);
+
 
