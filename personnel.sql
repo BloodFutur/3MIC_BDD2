@@ -14,7 +14,7 @@ CREATE TABLE Doctorant(
     idDoctorant INT NOT NULL,
     date_debut_these DATE,
     date_soutenance DATE
-    FOREIGN KEY (id) REFERENCES Personnel(idPersonnel),
+    FOREIGN KEY (idDoctorant) REFERENCES Personnel(idPersonnel),
     PRIMARY KEY(idPersonnel)
 );
 
