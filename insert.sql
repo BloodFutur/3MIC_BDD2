@@ -8,6 +8,27 @@ INSERT INTO Personnel (
 );
 
 
+--Axel
+INSERT INTO Etablissement(
+    01,
+    'Institut National des Sciences Appliquées',
+    'INSA',
+    'Toulouse'
+);
+
+INSERT INTO Etablissement(
+    02,
+    "Ecole Nationale de l'Aviation Civile",
+    'ENAC',
+    'Toulouse'
+);
+
+INSERT INTO Etablissement(
+    03,
+    "Ecole Polytechnique",
+    "X",
+    'Paris'    
+);
 INSERT INTO Personnel (
     1,
     'Bonnet',
