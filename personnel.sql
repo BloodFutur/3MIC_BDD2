@@ -30,7 +30,7 @@ CREATE TABLE Doctorant(
     idDoctorant INT NOT NULL,
     date_debut_these DATE,
     date_soutenance DATE,
-    FOREIGN KEY (idDoctorant) REFERENCES Personnel(idPersonnel),
+    FOREIGN KEY (idDoctorant) REFERENCES Personnel(idPersonnel) ON DELETE CASCADE,
     PRIMARY KEY(idDoctorant)
 );
 
@@ -38,7 +38,7 @@ CREATE TABLE Doctorant(
 CREATE TABLE Scientifique(
     idScientifique INT NOT NULL,
     grade VARCHAR,
-    FOREIGN KEY (idScientifique) REFERENCES Personnel(idPersonnel),
+    FOREIGN KEY (idScientifique) REFERENCES Personnel(idPersonnel) ON DELETE CASCADE,
     PRIMARY KEY (idScientifique)
 );
 
@@ -56,8 +56,8 @@ CREATE TABLE Enseignant_Chercheur(
     idEnseignant INT NOT NULL,
     idEtablissement INT NOT NULL,
     echelon ECHELON,
-    FOREIGN KEY (idEtablissement) REFERENCES Etablissement(idEtablissement),
-    FOREIGN KEY (idEnseignant) REFERENCES Personnel(idPersonnel),
+    FOREIGN KEY (idEtablissement) REFERENCES Etablissement(idEtablissement) ON DELETE CASCADE,
+    FOREIGN KEY (idEnseignant) REFERENCES Personnel(idPersonnel) ON DELETE CASCADE,
     PRIMARY KEY (idEnseignant)
 );
 
@@ -67,7 +67,7 @@ CREATE TABLE Evenement(
     idEvenement INT NOT NULL,
     dateDebut DATE,
     dateFin DATE,
-    PRIMARY KEY (idEvenement)
+    PRIMARY KEY (idEvenement) ON DELETE CASCADE
 );
 
 -- Ronan
@@ -75,7 +75,7 @@ CREATE TABLE Congres(
     idCongres INT NOT NULL,
     nb_inscriptions INT NOT NULL,
     class VARCHAR,
-    FOREIGN KEY (idCongres) REFERENCES Evenement(idEvenement),
+    FOREIGN KEY (idCongres) REFERENCES Evenement(idEvenement) ON DELETE CASCADE,
     PRIMARY KEY (idCongres)
 );
 
@@ -90,7 +90,7 @@ CREATE TABLE Labo_externe(
 
 CREATE TABLE Journee_Portes_Ouvertes(
     idPorteOuverte INT NOT NULL,
-    FOREIGN KEY (idPorteOuverte) REFERENCES Evenement(idEvenement),
+    FOREIGN KEY (idPorteOuverte) REFERENCES Evenement(idEvenement) ON DELETE CASCADE,
     PRIMARY KEY (idPorteOuverte)
 );
 
@@ -101,7 +101,7 @@ CREATE TABLE Auteur_Externe (
     prenom VARCHAR,
     adresseMail VARCHAR,
     idLabo INT NOT NULL,
-    FOREIGN KEY (idLabo) REFERENCES Labo_Externe(idLabo),
+    FOREIGN KEY (idLabo) REFERENCES Labo_Externe(idLabo) ON DELETE CASCADE,
     PRIMARY KEY (idAuteur)
 );
 
@@ -127,7 +127,7 @@ CREATE TABLE Projet (
     budget_Laas INT NOT NULL,
     cout INT NOT NULL,
     idMeneurProjet INT NOT NULL,
-    FOREIGN KEY (idMeneurProjet) REFERENCES Scientifique(idScientifique),
+    FOREIGN KEY (idMeneurProjet) REFERENCES Scientifique(idScientifique) ON DELETE CASCADE,
     PRIMARY KEY(idProjet)
 );
 
@@ -135,8 +135,8 @@ CREATE TABLE Projet (
 CREATE TABLE Participe(
     idProjet INT NOT NULL,
     idScientifique INT NOT NULL,
-    FOREIGN KEY (idProjet) REFERENCES Projet(idProjet),
-    FOREIGN KEY (idScientifique) REFERENCES Scientifique(idScientifique),
+    FOREIGN KEY (idProjet) REFERENCES Projet(idProjet) ON DELETE CASCADE,
+    FOREIGN KEY (idScientifique) REFERENCES Scientifique(idScientifique) ON DELETE CASCADE,
     PRIMARY KEY (idProjet, idScientifique)
 );
 
@@ -144,8 +144,8 @@ CREATE TABLE Participe(
 CREATE TABLE Preside(
     idCongres INT NOT NULL,
     idScientifique INT NOT NULL,
-    FOREIGN KEY (idCongres) REFERENCES Congres(idCongres),
-    FOREIGN KEY (idScientifique) REFERENCES Scientifique(idScientifique),
+    FOREIGN KEY (idCongres) REFERENCES Congres(idCongres) ON DELETE CASCADE,
+    FOREIGN KEY (idScientifique) REFERENCES Scientifique(idScientifique) ON DELETE CASCADE,
     PRIMARY KEY (idCongres, idScientifique)
 );
 
@@ -153,8 +153,8 @@ CREATE TABLE Preside(
 CREATE TABLE Publie_Scientifique(
     idPublication INT NOT NULL,
     idScientifique INT NOT NULL,
-    FOREIGN KEY (idPublication) REFERENCES Publication(idPublication),
-    FOREIGN KEY (idScientifique) REFERENCES Scientifique(idScientifique),
+    FOREIGN KEY (idPublication) REFERENCES Publication(idPublication) ON DELETE CASCADE,
+    FOREIGN KEY (idScientifique) REFERENCES Scientifique(idScientifique) ON DELETE CASCADE,
     PRIMARY KEY (idPublication, idScientifique)
 );
 
@@ -162,8 +162,8 @@ CREATE TABLE Publie_Scientifique(
 CREATE TABLE Publie_Doctorant(
     idPublication INT NOT NULL,
     idDoctorant INT NOT NULL,
-    FOREIGN KEY (idPublication) REFERENCES Publication(idPublication),
-    FOREIGN KEY (idDoctorant) REFERENCES Doctorant(idDoctorant),
+    FOREIGN KEY (idPublication) REFERENCES Publication(idPublication) ON DELETE CASCADE,
+    FOREIGN KEY (idDoctorant) REFERENCES Doctorant(idDoctorant) ON DELETE CASCADE,
     PRIMARY KEY (idPublication, idDoctorant)
 );
 
@@ -171,8 +171,8 @@ CREATE TABLE Publie_Doctorant(
 CREATE TABLE Publie_Externe(
     idPublication INT NOT NULL,
     idAuteurExterne INT NOT NULL,
-    FOREIGN KEY (idPublication) REFERENCES Publication(idPublication),
-    FOREIGN KEY (idAuteurExterne) REFERENCES Auteur_Externe(idAuteur),
+    FOREIGN KEY (idPublication) REFERENCES Publication(idPublication) ON DELETE CASCADE,
+    FOREIGN KEY (idAuteurExterne) REFERENCES Auteur_Externe(idAuteur) ON DELETE CASCADE,
     PRIMARY KEY (idPublication, idAuteurExterne)
 );
 
@@ -188,8 +188,8 @@ CREATE TABLE Partenaire(
 CREATE TABLE Participe_Externe(
     idProjet INT NOT NULL,
     idPartenaire INT NOT NULL,
-    FOREIGN KEY (idProjet) REFERENCES Projet(idProjet),
-    FOREIGN KEY (idPartenaire) REFERENCES Partenaire(idPartenaire),
+    FOREIGN KEY (idProjet) REFERENCES Projet(idProjet) ON DELETE CASCADE,
+    FOREIGN KEY (idPartenaire) REFERENCES Partenaire(idPartenaire) ON DELETE CASCADE,
     PRIMARY KEY (idProjet, idPartenaire)
 );
 
@@ -197,8 +197,8 @@ CREATE TABLE Participe_Externe(
 CREATE TABLE Organise (
     idPortesOuverte INT NOT NULL,
     idPersonnel INT NOT NULL,
-    FOREIGN KEY (idPortesOuverte) REFERENCES Journee_Portes_Ouvertes(idPorteOuverte),
-    FOREIGN KEY (idPersonnel) REFERENCES Personnel(idPersonnel),
+    FOREIGN KEY (idPortesOuverte) REFERENCES Journee_Portes_Ouvertes(idPorteOuverte) ON DELETE CASCADE,
+    FOREIGN KEY (idPersonnel) REFERENCES Personnel(idPersonnel) ON DELETE CASCADE,
     PRIMARY KEY(idPortesOuverte, idPersonnel)
 );
 
@@ -206,8 +206,8 @@ CREATE TABLE Organise (
 CREATE TABLE Encadrement (
     idDoctorant INT NOT NULL,
     idScientifique INT NOT NULL,
-    FOREIGN KEY (idDoctorant) REFERENCES Doctorant(idDoctorant),
-    FOREIGN KEY (idScientifique) REFERENCES Scientifique(idScientifique),
+    FOREIGN KEY (idDoctorant) REFERENCES Doctorant(idDoctorant) ON DELETE CASCADE,
+    FOREIGN KEY (idScientifique) REFERENCES Scientifique(idScientifique) ON DELETE CASCADE,
     PRIMARY KEY(idScientifique,idDoctorant)
 );
 
