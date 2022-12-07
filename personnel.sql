@@ -212,4 +212,12 @@ CREATE TABLE Partenaire(
     pays char,
 );
 
+--Yasmine
+
+CREATE TABLE Evenement(
+    PRIMARY KEY(idEvenement),
+    date_debut DATE,
+    date_fin DATE,
+);
+
 
