@@ -1,13 +1,15 @@
+-- Axel
 CREATE TABLE Personnel
 (
     idPersonnel INT CONSTRAINT UnePersonne PRIMARY KEY,
-    nom CHAR,
-    prenom CHAR,
+    nom VARCHAR,
+    prenom VARCHAR,
     date_de_naissance DATE,
-    adress CHAR,
+    adress VARCHAR,
     date_de_recrutement DATE,
 );
 
+--Axel
 CREATE TABLE Doctorant(
     idDoctorant INT NOT NULL,
     date_debut_these DATE,
@@ -16,6 +18,7 @@ CREATE TABLE Doctorant(
     PRIMARY KEY(idPersonnel)
 );
 
+--Yasmine
 CREATE TABLE Scientifique(
     idScientique INT NOT NULL,
     idPersonnel INT NOT NULL,
@@ -24,12 +27,37 @@ CREATE TABLE Scientifique(
     PRIMARY KEY(idPersonnel)
 );
 
-CREATE Publication (
-    idPublication SERIAL NOT NULL,
-    titre TEXT,
+-- Nathan
+CREATE Auteur_Externe (
+    idAuteur INT NOT NULL,
+    nom VARCHAR,
+    prenom VARCHAR,
+    adresseMail VARCHAR,
+    idLabo INT NOT NULL,
+    FOREIGN KEY (idLabo) REFERENCES LaboExterne(idLabo),
+    PRIMARY KEY (idAuteur)
 
 );
 
+CREATE Labo_externe(
+    idLabo INT NOT NULL,
+    nom VARCHAR,
+    pays VARCHAR,
+    PRIMARY KEY(idLabo)
+);
+
+-- Nathan
+CREATE Publication (
+    idPublication INT NOT NULL,
+    titre VARCHAR,
+    annee DATE,
+    nomConf VARCHAR,
+    classeConf VARCHAR,
+    nbPages INT,
+    PRIMARY KEY (idPublication)
+);
+
+-- Ronan
 CREATE Participe(
     idProjet INT NOT NULL,
     idScientifique INT NOT NULL,
@@ -38,6 +66,7 @@ CREATE Participe(
     PRIMARY KEY (idProjet, idScientifique)
 );
 
+-- Ronan
 CREATE Preside(
     idCongres INT NOT NULL,
     idScientifique INT NOT NULL,
@@ -46,6 +75,7 @@ CREATE Preside(
     PRIMARY KEY (idCongres, idScientifique)
 );
 
+-- Ronan
 CREATE Publie_Scientifique(
     idPublication INT NOT NULL,
     idScientifique INT NOT NULL,
@@ -54,6 +84,7 @@ CREATE Publie_Scientifique(
     PRIMARY KEY (idPublication, idScientifique)
 );
 
+-- Ronan
 CREATE Publie_Doctorant(
     idPublication INT NOT NULL,
     idDoctorant INT NOT NULL,
@@ -62,15 +93,17 @@ CREATE Publie_Doctorant(
     PRIMARY KEY (idPublication, idDoctorant)
 );
 
+-- Ronan
 CREATE TABLE Publie_Externe(
     idPublication INT NOT NULL,
     idAuteurExterne INT NOT NULL,
-    FOREIGN KEY (idPublication) REFERENCES Publication(idPublication),
+    s dFOREIGN KEY (idPublication) REFERENCES Publication(idPublication),
     FOREIGN KEY (idAuteurExterne) REFERENCES Auteur_Externe(idAuteur),
     PRIMARY KEY (idPublication, idAuteurExterne)
 
 );
 
+-- Ronan
 CREATE TABLE Participe_Externe(
     idProjet INT NOT NULL,
     idPartenaire INT NOT NULL,
@@ -79,6 +112,7 @@ CREATE TABLE Participe_Externe(
     PRIMARY KEY (idProjet, idPartenaire)
 );
 
+-- Ronan
 CREATE TABLE Organise (
     idPortesOuverte INT NOT NULL,
     idPersonnel INT NOT NULL,
