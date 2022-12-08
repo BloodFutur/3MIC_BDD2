@@ -81,7 +81,7 @@ GROUP BY idEtablissement  ;
 
 SELECT idEtablissement, Count(Distinct idEnseignant)
 FROM Enseignant-chercheur
-GROUP idEtablissement
+GROUP BY idEtablissement
 HAVING count(Distinct idEnseignant) >= 50 ;
 
 
