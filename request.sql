@@ -44,3 +44,58 @@ JOIN Publie_Externe pe on pe.idAuteur = ae.idAuteur
 GROUP BY pays
 ORDER BY nb_publi DESC LIMIT 1;
 
+--Yasmine QUESTION 5 A tester enc
+
+Select idDoctorant, count(distinct idPublication) as NombrePublication
+From Doctorant D
+Left join Publie_Doctorant PD on PD,idDoctorant= D,idDoctorant
+Group By idDoctorant;
+
+
+--Yasmine QUESTION 8
+
+SELECT idEnseignant
+FROM Enseignant-chercheur
+NOT IN ( (SELECT idScientifique
+               FROM Publication)
+               UNION
+	      (SELECT idScientifique
+               FROM Encadrement)
+	) ;
+
+-- Yasmine QUESTION 14
+
+SELECT Count(Distinct idPublication)
+FROM Publication
+GROUP BY annee ;
+
+-- Yasmine QUESTION 15
+
+SELECT Count(Distinct E,idEnseignant)
+FROM Enseignant-chercheur E,Personnel P,Scientifique S
+WHERE P.idPersonnel=S.idScientifique
+AND S.idScientifique=E,idEnseignant
+GROUP BY idEtablissement  ;
+
+-- Yasmine QUESTION 19
+
+SELECT idEtablissement, Count(Distinct idEnseignant)
+From Enseignant-chercheur
+Group by idEtablissement
+HAVING count(Distinct idEnseignant) >= 50 ;
+
+
+--Yasmine QUESTION 21
+
+SELECT Distinct P.Pays
+FROM Partenaire P, Participe_externe PEX
+where P.idpartenaire=PEX.idpartenaire
+and not exists (Select *
+
+		 From Projet PR
+		 Where not exists (Select *
+
+				      From Participe_externe PEX2
+				      Where PEX2.idPartenaire=P.idPartenaire and
+                                                      PEX2.idPr=PR.idProjet));
+
