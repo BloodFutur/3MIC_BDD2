@@ -46,10 +46,10 @@ ORDER BY nb_publi DESC LIMIT 1;
 
 --Yasmine QUESTION 5 A tester enc
 
-Select idDoctorant, count(distinct idPublication) as NombrePublication
-From Doctorant D
-Left join Publie_Doctorant PD on PD,idDoctorant= D,idDoctorant
-Group By idDoctorant;
+SELECT idDoctorant, count(distinct idPublication) as NombrePublication
+FROM Doctorant D
+LEFT JOIN Publie_Doctorant PD on PD.idDoctorant= D.idDoctorant
+GROUP BY idDoctorant;
 
 
 --Yasmine QUESTION 8
@@ -72,16 +72,16 @@ GROUP BY annee ;
 -- Yasmine QUESTION 15
 
 SELECT Count(Distinct E,idEnseignant)
-FROM Enseignant-chercheur E,Personnel P,Scientifique S
+FROM Enseignant-chercheur E,Personnel P ,Scientifique S
 WHERE P.idPersonnel=S.idScientifique
-AND S.idScientifique=E,idEnseignant
+AND S.idScientifique=E.idEnseignant
 GROUP BY idEtablissement  ;
 
 -- Yasmine QUESTION 19
 
 SELECT idEtablissement, Count(Distinct idEnseignant)
-From Enseignant-chercheur
-Group by idEtablissement
+FROM Enseignant-chercheur
+GROUP idEtablissement
 HAVING count(Distinct idEnseignant) >= 50 ;
 
 
