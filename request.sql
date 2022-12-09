@@ -79,10 +79,9 @@ GROUP BY e.idDoctorant, nom, prenom
 HAVING COUNT(DISTINCT s.idScientifique)=1;
 
 -- Ronan Q16
-SELECT pays, COUNT(*) nb_publi
-FROM Labo_Externe
+SELECT pays, COUNT(*) nb_publi FROM Labo_Externe
 JOIN Auteur_Externe ae on ae.idLabo = Labo_Externe.idLabo
-JOIN Publie_Externe pe on pe.idAuteur = ae.idAuteur
+JOIN Publie_Externe pe on pe.idAuteurExterne = ae.idAuteur
 GROUP BY pays
 ORDER BY nb_publi DESC LIMIT 1;
 
