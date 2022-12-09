@@ -66,7 +66,7 @@ GROUP BY idDoctorant;
 SELECT idEnseignant
 FROM Enseignant-chercheur
 NOT IN ( (SELECT idScientifique
-               FROM Publication)
+               FROM Publie_scientifique)
                UNION
 	      (SELECT idScientifique
                FROM Encadrement)
