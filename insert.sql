@@ -291,15 +291,14 @@ INSERT INTO Publie_Scientifique VALUES (
 );
 
 --Yasmine
-INSERT INTO Evenememnt (
+INSERT INTO Evenememnt VALUES (
     0001,
     DATE '2022-07-07',
     DATE '2023-07-07'	
 );
 
 --Yasmine
-
-INSERT INTO Evenememnt (
+INSERT INTO Evenememnt VALUES (
     0002,
     DATE '2022-01-07',
     DATE '2023-07-12'	
