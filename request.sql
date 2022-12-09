@@ -34,6 +34,10 @@ SELECT COUNT(*) FROM Doctorant
 WHERE date_soutenance IS NOT NULL;
 
 --Nathan Q7
+SELECT nom, prenom FROM Personnel
+WHERE idPersonnel NOT IN (
+    SELECT idScientifique FROM Encadrement
+);
 
 -- Ronan Q10
 SELECT idDoctorant, nom, prenom, COUNT(*) FROM Encadrement
