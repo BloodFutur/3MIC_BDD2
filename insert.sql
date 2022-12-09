@@ -229,7 +229,7 @@ INSERT INTO Projet (
 );
 
 --Yasmine
-INSERT INTO Publication (
+INSERT INTO Publication VALUES(
     001,
     'recherche scientifique sur la chimie organique',
     DATE '2022-07-07',
@@ -240,7 +240,7 @@ INSERT INTO Publication (
 
 --Yasmine
 
-INSERT INTO Publication (
+INSERT INTO Publication VALUES(
     002,
     'Page rank',
     DATE '2022-07-07',
