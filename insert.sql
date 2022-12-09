@@ -69,8 +69,13 @@ INSERT INTO Personnel (
     '2020-9-15'
 );
 
+<<<<<<< HEAD
 INSERT INTO Personnel (
     4,
+=======
+INSERT INTO Personnel VALUES (
+    5,
+>>>>>>> d1713cf14fbfbef0546be1f9abd0731d8aa312af
     'Le Bricoleur',
     'Bob',
     DATE '1878-12-25',
@@ -81,6 +86,23 @@ INSERT INTO Partenaire(
     01,
     'GFGH',
     'Allemagne'
+);
+
+INSERT INTO Doctorant VALUES (
+    4,
+    DATE '2020-23-06',
+    DATE '2023-08-03'
+);
+
+iNSERT INTO Doctorant VALUES (
+    2,
+    DATE '2021-07-30',
+    DATE '2022-09-29'
+);
+
+INSERT INTO Scientifique VALUES (
+    3,
+    'cr1'
 );
 
 
@@ -221,16 +243,53 @@ INSERT INTO Publication (
   	220
 );
 
+<<<<<<< HEAD
+=======
+INSERT INTO Publication VALUES (
+    003,
+    'chaine de markov',
+    DATE '2022-12-03',
+    'Mathematiques appliqués',
+    113,
+  	500
+);
+
+INSERT INTO Publie_Doctorant VALUES (
+    1,
+    2
+);
+
+INSERT INTO Publie_Doctorant VALUES (
+    2,
+    2
+);
+
+INSERT INTO Publie_Doctorant VALUES (
+    2,
+    4
+);
+
+
+>>>>>>> d1713cf14fbfbef0546be1f9abd0731d8aa312af
 
 INSERT INTO Evenememnt (
     0001,
     DATE '2022-07-07',
-    DATE '2023-07-07',	
+    DATE '2023-07-07'	
 );
 
 INSERT INTO Evenememnt (
     0002,
     DATE '2022-01-07',
-    DATE '2023-07-12',	
+    DATE '2023-07-12'	
 );
 
+<<<<<<< HEAD
+=======
+INSERT INTO Evenememnt VALUES (
+    0003,
+    DATE '2022-02-10',
+    DATE '2023-03-12'
+);
+
+>>>>>>> d1713cf14fbfbef0546be1f9abd0731d8aa312af
