@@ -23,7 +23,7 @@ JOIN Labo_Externe le on ae.idLabo = le.idLabo
 WHERE perso.nom = 'Azi'
     AND perso.prenom = 'Jean'
     AND annee >= '2016-01-01'
-    AND annee <= '2020-01-01';
+    AND annee <= '2023-01-01';
 
 --Axel Q3
 SELECT COUNT(DISTINCT idAuteurExterne) AS nbCollab FROM Publie_Externe pe

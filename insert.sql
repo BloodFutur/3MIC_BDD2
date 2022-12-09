@@ -182,9 +182,9 @@ INSERT INTO Auteur_Externe VALUES (
 
 INSERT INTO Auteur_Externe VALUES (
     3,
-    'Paul',
-    'Hugo',
-    'paulo@mail.com',
+    'Pascal',
+    'Gerard',
+    'gege@mail.com',
     1
 );
 
@@ -299,6 +299,24 @@ INSERT INTO Publication VALUES (
   	500
 );
 
+INSERT INTO Publication VALUES (
+    004,
+    'Physique quantique',
+    DATE '2017-12-03',
+    'Physique',
+    113,
+  	1520
+);
+
+INSERT INTO Publication VALUES (
+    005,
+    'La nourriture en France',
+    DATE '2022-12-03',
+    'IEE',
+    112,
+  	20
+);
+
 INSERT INTO Publie_Doctorant VALUES (
     1,
     2
@@ -329,6 +347,17 @@ INSERT INTO Publie_Scientifique VALUES (
     2
 );
 
+INSERT INTO Publie_Scientifique VALUES (
+    4,
+    2
+);
+
+INSERT INTO Publie_Scientifique VALUES (
+    4,
+    3
+);
+
+
 INSERT INTO Publie_Externe VALUES (
     1,
     0
@@ -350,7 +379,12 @@ INSERT INTO Publie_Externe VALUES (
 );
 
 INSERT INTO Publie_Externe VALUES (
-    2,
+    4,
+    1
+);
+
+INSERT INTO Publie_Externe VALUES (
+    4,
     3
 );
 
