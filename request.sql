@@ -92,7 +92,7 @@ FROM publie_doctorant
 GROUP BY idDoctorant
 
 
---Yasmine QUESTION 8 TESTE PAS D'ERREUR DE SYNTAXE
+--Yasmine QUESTION 8 Testé
 
 SELECT idEnseignant
 FROM Enseignant_chercheur
@@ -117,14 +117,14 @@ WHERE pub.classeConf = 'A';
 --    AND pub.classeConf IN  'A*' 'B';
 
 
--- Yasmine QUESTION 14
+
 -- Yasmine QUESTION 14 Testé
 
 SELECT Count(Distinct idPublication)
 FROM Publication
 GROUP BY publication.annee;
 
--- Yasmine QUESTION 15 Testé PAS D'ERREUR DE SYNTAXE
+-- Yasmine QUESTION 15 Testé
 
 SELECT Count(Distinct E.idEnseignant)
 FROM Enseignant_chercheur E,Personnel P ,Scientifique S
@@ -132,7 +132,7 @@ WHERE P.idPersonnel=S.idScientifique
 AND S.idScientifique=E.idEnseignant
 GROUP BY idEtablissement;
 
--- Yasmine QUESTION 19 Testé PAS D'ERREUR DE SYNTAXE
+-- Yasmine QUESTION 19 Testé
 
 SELECT idEtablissement, Count(Distinct idEnseignant)
 FROM Enseignant_chercheur
@@ -140,7 +140,7 @@ GROUP BY idEtablissement
 HAVING count(Distinct idEnseignant) >= 50;
 
 
---Yasmine QUESTION 21 Testé PAS D'ERREUR DE SYNTAXE
+--Yasmine QUESTION 21 Testé
 
 SELECT Distinct P.Pays
 FROM Partenaire P, Participe_externe PEX
