@@ -1,5 +1,5 @@
 -- Nathan
-CREATE TYPE echelon AS ENUM (
+CREATE TYPE T_CLASSECONF AS ENUM (
     'A*',
     'A',
     'B',
@@ -7,11 +7,21 @@ CREATE TYPE echelon AS ENUM (
 );
 
 -- Nathan
-CREATE TYPE grade AS ENUM (
+CREATE TYPE T_GRADE AS ENUM (
     'cr1',
     'cr2',
     'mcf',
     'mcf hors classe'
+);
+
+CREATE TYPE T_ECHELON AS ENUM (
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7
 );
 
 -- Axel
@@ -37,7 +47,7 @@ CREATE TABLE Doctorant(
 --Yasmine
 CREATE TABLE Scientifique(
     idScientifique INT NOT NULL,
-    grade VARCHAR,
+    grade T_GRADE,
     FOREIGN KEY (idScientifique) REFERENCES Personnel(idPersonnel) ON DELETE CASCADE,
     PRIMARY KEY (idScientifique)
 );
@@ -55,7 +65,7 @@ CREATE TABLE Etablissement(
 CREATE TABLE Enseignant_Chercheur(
     idEnseignant INT NOT NULL,
     idEtablissement INT NOT NULL,
-    echelon ECHELON,
+    echelon T_ECHELON,
     FOREIGN KEY (idEtablissement) REFERENCES Etablissement(idEtablissement) ON DELETE CASCADE,
     FOREIGN KEY (idEnseignant) REFERENCES Personnel(idPersonnel) ON DELETE CASCADE,
     PRIMARY KEY (idEnseignant)
@@ -118,7 +128,7 @@ CREATE TABLE Publication(
     titre VARCHAR,
     annee DATE,
     nomConf VARCHAR,
-    classeConf VARCHAR,
+    classeConf T_CLASSECONF,
     nbPages INT,
     PRIMARY KEY (idPublication)
 );
