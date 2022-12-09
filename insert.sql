@@ -263,6 +263,20 @@ INSERT INTO Publie_Doctorant VALUES (
     4
 );
 
+INSERT INTO Publie_Scientifique VALUES (
+    1,
+    3
+);
+
+INSERT INTO Publie_Scientifique VALUES (
+    2,
+    3
+);
+
+INSERT INTO Publie_Scientifique VALUES (
+    1,
+    2
+);
 
 INSERT INTO Evenememnt (
     0001,
