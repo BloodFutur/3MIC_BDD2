@@ -103,7 +103,6 @@ NOT IN ( (SELECT idScientifique
                FROM Encadrement)
 	) ;
 
-<<<<<<< HEAD
 
 -- Axel Q12
 SELECT idEnseignant FROM Enseignant_Chercheur ec
@@ -118,9 +117,7 @@ WHERE pub.classeConf = 'A';
 
 
 -- Yasmine QUESTION 14
-=======
 -- Yasmine QUESTION 14 Testé
->>>>>>> af456634e468d2a6e5d3dbc4e169d73853af5baf
 
 SELECT Count(Distinct idPublication)
 FROM Publication
