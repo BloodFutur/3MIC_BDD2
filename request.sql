@@ -93,18 +93,18 @@ LEFT JOIN Publie_Doctorant PD on PD.idDoctorant= D.idDoctorant
 GROUP BY idDoctorant;
 
 
---Yasmine QUESTION 8
+--Yasmine QUESTION 8 TESTE PAS D'ERREUR DE SYNTAXE
 
 SELECT idEnseignant
 FROM Enseignant_chercheur
+WHERE idEnseignant
 NOT IN ( (SELECT idScientifique
-               FROM Publie_scientifique)
-               UNION
-	      (SELECT idScientifique
-               FROM Encadrement)
-	) ;
+          FROM Publie_scientifique)
+          UNION
+	  (SELECT idScientifique
+          FROM Encadrement)
+	);
 
-<<<<<<< HEAD
 
 -- Axel Q12
 SELECT idEnseignant FROM Enseignant_Chercheur ec
@@ -119,9 +119,7 @@ WHERE pub.classeConf = 'A';
 
 
 -- Yasmine QUESTION 14
-=======
 -- Yasmine QUESTION 14 Testé
->>>>>>> af456634e468d2a6e5d3dbc4e169d73853af5baf
 
 SELECT Count(Distinct idPublication)
 FROM Publication
