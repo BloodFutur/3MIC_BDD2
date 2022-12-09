@@ -94,16 +94,17 @@ LEFT JOIN Publie_Doctorant PD on PD.idDoctorant= D.idDoctorant
 GROUP BY idDoctorant;
 
 
---Yasmine QUESTION 8
+--Yasmine QUESTION 8 TESTE PAS D'ERREUR DE SYNTAXE
 
 SELECT idEnseignant
 FROM Enseignant_chercheur
+WHERE idEnseignant
 NOT IN ( (SELECT idScientifique
-               FROM Publie_scientifique)
-               UNION
-	      (SELECT idScientifique
-               FROM Encadrement)
-	) ;
+          FROM Publie_scientifique)
+          UNION
+	  (SELECT idScientifique
+          FROM Encadrement)
+	);
 
 <<<<<<< HEAD
 
