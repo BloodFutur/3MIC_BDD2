@@ -126,7 +126,6 @@ INSERT INTO Encadrement VALUES (
     2,
     3
 );
-
 INSERT INTO Labo_externe VALUES (
     1,
     'CNES',
@@ -157,7 +156,37 @@ INSERT INTO Labo_externe VALUES (
     'Luxembourg'
 );
 
+INSERT INTO Auteur_Externe VALUES (
+    0,
+    'John',
+    'Doe',
+    'johndoe@mail.com',
+    0
+);
 
+INSERT INTO Auteur_Externe VALUES (
+    1,
+    'Dmitri',
+    'Alexandrovich',
+    'alex@yandex.ru',
+    3
+);
+
+INSERT INTO Auteur_Externe VALUES (
+    2,
+    'Paul',
+    'Hugo',
+    'paulo@mail.com',
+    1
+);
+
+INSERT INTO Auteur_Externe VALUES (
+    3,
+    'Paul',
+    'Hugo',
+    'paulo@mail.com',
+    1
+);
 
 -- Ronan
 INSERT INTO Labo_externe VALUES (
@@ -167,7 +196,7 @@ INSERT INTO Labo_externe VALUES (
 );
 
 --Yasmine
-INSERT INTO Projet (
+INSERT INTO Projet VALUES(
     01,
     'BaseDeDonnee',
     'BDD',
@@ -250,6 +279,7 @@ INSERT INTO Publication VALUES(
 );
 
 --Yasmine
+INSERT INTO Publication VALUES(
     002,
     'Page rank',
     DATE '2022-07-07',
@@ -284,16 +314,30 @@ INSERT INTO Publie_Doctorant VALUES (
     4
 );
 
---Yasmine
+INSERT INTO Publie_Scientifique VALUES (
+    1,
+    3
+);
 
+INSERT INTO Publie_Scientifique VALUES (
+    2,
+    3
+);
+
+INSERT INTO Publie_Scientifique VALUES (
+    1,
+    2
+);
+
+--Yasmine
 INSERT INTO Evenememnt VALUES (
-    0001,
+    0001,INSERT INTO
+
     DATE '2022-07-07',
     DATE '2023-07-07'	
 );
 
 --Yasmine
-
 INSERT INTO Evenememnt VALUES (
     0002,
     DATE '2022-01-07',
