@@ -34,8 +34,11 @@ WHERE idScientifique = '01';
 
 
 -- Axel Q4
-SELECT COUNT(DISTINCT ) as nbPaysCollab FROM Publication
-WHERE classeConf = 'A';
+SELECT COUNT(DISTINCT pays) AS nbPaysCollab FROM Labo_Externe le
+RIGHT JOIN Auteur_Externe ae ON ae.idLabo = le.idLabo
+RIGHT JOIN Publie_Externe pe ON pe.idAuteurExterne = ae.idAuteurExterne
+JOIN Publication pub ON pub.idPublication = pe.idPublication
+WHERE pub.classeConf = 'A';
 
 -- Nathan Q5
 SELECT idDoctorant, COUNT(idPublication) FROM Publie_Doctorant
@@ -50,7 +53,7 @@ SELECT nom, prenom FROM Personnel
 WHERE idPersonnel IN (
     SELECT idScientifique FROM Scientifique
     WHERE idScientifique NOT IN (
-        SELECT idScientifique FROM Encadrement
+    SELECT idScientifique FROM Encadrement
     )
 );
 
@@ -99,6 +102,19 @@ NOT IN ( (SELECT idScientifique
 	      (SELECT idScientifique
                FROM Encadrement)
 	) ;
+
+
+-- Axel Q12
+SELECT idEnseignant FROM Enseignant_Chercheur ec
+RIGHT JOIN Publie_Scientifique ps ON ps.idScientifique = ec.idScientifique
+RIGHT JOIN Publication pub ON pub.idPublication = ps.idScientifique
+WHERE pub.classeConf = 'A';
+--EXCEPT SELECT idEnseignant FROM Enseignant_Chercheur ec
+--RIGHT JOIN Publie_Scientifique ps ON ps.idScientifique = ec.idScientifique
+--RIGHT JOIN Publication pub ON pub.idPublication = ps.idScientifique
+--WHERE pub.classeConf = 'A'
+--    AND pub.classeConf IN  'A*' 'B';
+
 
 -- Yasmine QUESTION 14
 
