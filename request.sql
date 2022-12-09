@@ -95,7 +95,7 @@ GROUP BY idDoctorant;
 --Yasmine QUESTION 8
 
 SELECT idEnseignant
-FROM Enseignant-chercheur
+FROM Enseignant_chercheur
 NOT IN ( (SELECT idScientifique
                FROM Publie_scientifique)
                UNION
@@ -103,6 +103,7 @@ NOT IN ( (SELECT idScientifique
                FROM Encadrement)
 	) ;
 
+<<<<<<< HEAD
 
 -- Axel Q12
 SELECT idEnseignant FROM Enseignant_Chercheur ec
@@ -117,28 +118,31 @@ WHERE pub.classeConf = 'A';
 
 
 -- Yasmine QUESTION 14
+=======
+-- Yasmine QUESTION 14 Testé
+>>>>>>> af456634e468d2a6e5d3dbc4e169d73853af5baf
 
 SELECT Count(Distinct idPublication)
 FROM Publication
-GROUP BY annee ;
+GROUP BY publication.annee;
 
--- Yasmine QUESTION 15
+-- Yasmine QUESTION 15 Testé PAS D'ERREUR DE SYNTAXE
 
-SELECT Count(Distinct E,idEnseignant)
-FROM Enseignant-chercheur E,Personnel P ,Scientifique S
+SELECT Count(Distinct E.idEnseignant)
+FROM Enseignant_chercheur E,Personnel P ,Scientifique S
 WHERE P.idPersonnel=S.idScientifique
 AND S.idScientifique=E.idEnseignant
-GROUP BY idEtablissement  ;
+GROUP BY idEtablissement;
 
--- Yasmine QUESTION 19
+-- Yasmine QUESTION 19 Testé PAS D'ERREUR DE SYNTAXE
 
 SELECT idEtablissement, Count(Distinct idEnseignant)
-FROM Enseignant-chercheur
+FROM Enseignant_chercheur
 GROUP BY idEtablissement
-HAVING count(Distinct idEnseignant) >= 50 ;
+HAVING count(Distinct idEnseignant) >= 50;
 
 
---Yasmine QUESTION 21
+--Yasmine QUESTION 21 Testé PAS D'ERREUR DE SYNTAXE
 
 SELECT Distinct P.Pays
 FROM Partenaire P, Participe_externe PEX
@@ -150,5 +154,5 @@ and not exists (Select *
 
 				      From Participe_externe PEX2
 				      Where PEX2.idPartenaire=P.idPartenaire and
-                                                      PEX2.idPr=PR.idProjet));
+                                                      PEX2.idProjet=PR.idProjet));
 
