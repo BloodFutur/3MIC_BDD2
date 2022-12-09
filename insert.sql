@@ -319,6 +319,32 @@ INSERT INTO Publie_Scientifique VALUES (
     2
 );
 
+INSERT INTO Publie_Externe VALUES (
+    1,
+    0
+);
+
+INSERT INTO Publie_Externe VALUES (
+    1,
+    3
+);
+
+INSERT INTO Publie_Externe VALUES (
+    2,
+    2
+);
+
+INSERT INTO Publie_Externe VALUES (
+    3,
+    1
+);
+
+INSERT INTO Publie_Externe VALUES (
+    2,
+    3
+);
+
+
 --Yasmine
 INSERT INTO Evenememnt VALUES (
     0001,INSERT INTO
