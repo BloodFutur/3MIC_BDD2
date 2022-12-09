@@ -3,8 +3,8 @@
 --SELECT COUNT(id) 
 --FROM SELECT idScientifique FROM Enseignant_Chercheur
 --    WHERE idScientifique = 01;
-SELECT COUNT(idPublication) as nbCollab FROM Publication
-WHERE classeConf = 'A';
+--SELECT COUNT(idPublication) as nbCollab FROM Publication
+--WHERE classeConf = 'A';
 
 -- Nathan Q1
 SELECT Personnel.nom, Scientifique.grade FROM Personnel, Scientifique
@@ -24,6 +24,18 @@ WHERE perso.nom = 'Azi'
     AND perso.prenom = 'Jean'
     AND annee >= '2016-01-01'
     AND annee <= '2020-01-01';
+
+--Axel Q3
+SELECT COUNT(DISTINCT idAuteurExterne) AS nbCollab FROM Publie_Externe pe
+JOIN Publie_Scientifique ps ON pe.idPublication = ps.idPublication
+RIGHT JOIN Publie_Doctorant pdoc ON pe.idPublication = pdoc.idPublication
+JOIN Enseignant_Chercheur ec ON ec.idEnseignant = ps.idScientifique
+WHERE idScientifique = '01';
+
+
+-- Axel Q4
+SELECT COUNT(DISTINCT ) as nbPaysCollab FROM Publication
+WHERE classeConf = 'A';
 
 -- Nathan Q5
 SELECT idDoctorant, COUNT(idPublication) FROM Publie_Doctorant

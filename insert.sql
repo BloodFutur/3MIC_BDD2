@@ -85,8 +85,14 @@ INSERT INTO Partenaire VALUES (
 
 INSERT INTO Doctorant VALUES (
     4,
-    DATE '2020-23-06',
+    DATE '2020-06-23',
     DATE '2023-08-03'
+);
+
+INSERT INTO Doctorant VALUES (
+    1,
+    DATE '2019-07-13',
+    DATE '2020-11-08'
 );
 
 iNSERT INTO Doctorant VALUES (
@@ -116,6 +122,10 @@ INSERT INTO Encadrement VALUES (
     2
 );
 
+INSERT INTO Encadrement VALUES (
+    2,
+    3
+);
 INSERT INTO Labo_externe VALUES (
     1,
     'CNES',
