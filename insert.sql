@@ -146,7 +146,37 @@ INSERT INTO Labo_externe VALUES (
     'Luxembourg'
 );
 
+INSERT INTO Auteur_Externe VALUES (
+    0,
+    'John',
+    'Doe',
+    'johndoe@mail.com',
+    0
+);
 
+INSERT INTO Auteur_Externe VALUES (
+    1,
+    'Dmitri',
+    'Alexandrovich',
+    'alex@yandex.ru',
+    3
+);
+
+INSERT INTO Auteur_Externe VALUES (
+    2,
+    'Paul',
+    'Hugo',
+    'paulo@mail.com',
+    1
+);
+
+INSERT INTO Auteur_Externe VALUES (
+    3,
+    'Paul',
+    'Hugo',
+    'paulo@mail.com',
+    1
+);
 
 -- Ronan
 INSERT INTO Labo_externe VALUES (
@@ -291,7 +321,8 @@ INSERT INTO Publie_Scientifique VALUES (
 
 --Yasmine
 INSERT INTO Evenememnt VALUES (
-    0001,
+    0001,INSERT INTO
+
     DATE '2022-07-07',
     DATE '2023-07-07'	
 );
