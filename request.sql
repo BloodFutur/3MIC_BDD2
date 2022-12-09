@@ -85,12 +85,11 @@ JOIN Publie_Externe pe on pe.idAuteurExterne = ae.idAuteur
 GROUP BY pays
 ORDER BY nb_publi DESC LIMIT 1;
 
---Yasmine QUESTION 5 A tester enc
+--Yasmine QUESTION 5 Testé
 
-SELECT idDoctorant, count(distinct idPublication) as NombrePublication
-FROM Doctorant D
-LEFT JOIN Publie_Doctorant PD on PD.idDoctorant= D.idDoctorant
-GROUP BY idDoctorant;
+SELECT iddoctorant, count(distinct idPublication) as NombrePublication
+FROM publie_doctorant
+GROUP BY idDoctorant
 
 
 --Yasmine QUESTION 8 TESTE PAS D'ERREUR DE SYNTAXE
