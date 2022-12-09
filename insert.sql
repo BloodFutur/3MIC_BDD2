@@ -116,8 +116,6 @@ INSERT INTO Encadrement VALUES (
     2
 );
 
-INSERT INTO
-
 INSERT INTO Labo_externe VALUES (
     1,
     'CNES',
