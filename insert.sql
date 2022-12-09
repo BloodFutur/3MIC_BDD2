@@ -45,12 +45,29 @@ INSERT INTO Personnel VALUES (
 );
 
 INSERT INTO Personnel VALUES (
-    4,
+    5,
     'Le Bricoleur',
     'Bob',
     DATE '1878-12-25',
     'au chantier',
     '2020-9-15'
+);
+
+INSERT INTO Doctorant VALUES (
+    4,
+    DATE '2020-23-06',
+    DATE '2023-08-03'
+);
+
+iNSERT INTO Doctorant VALUES (
+    2,
+    DATE '2021-07-30',
+    DATE '2022-09-29'
+);
+
+INSERT INTO Scientifique VALUES (
+    3,
+    'cr1'
 );
 
 
@@ -158,6 +175,21 @@ INSERT INTO Publication VALUES (
     'Mathematiques appliqués',
     113,
   	500
+);
+
+INSERT INTO Publie_Doctorant VALUES (
+    1,
+    2
+);
+
+INSERT INTO Publie_Doctorant VALUES (
+    2,
+    2
+);
+
+INSERT INTO Publie_Doctorant VALUES (
+    2,
+    4
 );
 
 

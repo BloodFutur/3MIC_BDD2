@@ -1,13 +1,12 @@
--- Nathan
-
 
 --Axel, question 3 et 4
 --SELECT COUNT(id) 
 --FROM SELECT idScientifique FROM Enseignant_Chercheur
 --    WHERE idScientifique = 01;
-
 SELECT COUNT(idPublication) as nbCollab FROM Publication
 WHERE classeConf = 'A';
+
+-- Nathan Q1
 SELECT Personnel.nom, Scientifique.grade FROM Personnel, Scientifique
 WHERE idPersonnel = idScientifique AND idPersonnel IN (
     SELECT idScientifique FROM Encadrement
@@ -26,9 +25,15 @@ WHERE perso.nom = 'Azi'
     AND annee >= '2016-01-01'
     AND annee <= '2020-01-01';
 
+-- Nathan Q5
+SELECT idDoctorant, COUNT(idPublication) FROM Publie_Doctorant
+GROUP BY idDoctorant;
+
 -- Ronan Q6
 SELECT COUNT(*) FROM Doctorant
 WHERE date_soutenance IS NOT NULL;
+
+--Nathan Q7
 
 -- Ronan Q10
 SELECT idDoctorant, nom, prenom, COUNT(*) FROM Encadrement
