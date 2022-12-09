@@ -69,13 +69,8 @@ INSERT INTO Personnel (
     '2020-9-15'
 );
 
-<<<<<<< HEAD
-INSERT INTO Personnel (
-    4,
-=======
 INSERT INTO Personnel VALUES (
     5,
->>>>>>> d1713cf14fbfbef0546be1f9abd0731d8aa312af
     'Le Bricoleur',
     'Bob',
     DATE '1878-12-25',
@@ -105,6 +100,10 @@ INSERT INTO Scientifique VALUES (
     'cr1'
 );
 
+INSERT INTO Scientifique VALUES (
+    2,
+    'cr1'
+);
 
 INSERT INTO Labo_externe (
     0,
@@ -143,11 +142,8 @@ INSERT INTO Labo_externe (
 );
 
 
-<<<<<<< HEAD
 
 -- Ronan
-=======
->>>>>>> ebb8e0ebb042c8e6526d6db68553636d759f3b9a
 INSERT INTO Labo_externe (
     6,
     'BRBN',
@@ -243,8 +239,6 @@ INSERT INTO Publication (
   	220
 );
 
-<<<<<<< HEAD
-=======
 INSERT INTO Publication VALUES (
     003,
     'chaine de markov',
@@ -270,8 +264,6 @@ INSERT INTO Publie_Doctorant VALUES (
 );
 
 
->>>>>>> d1713cf14fbfbef0546be1f9abd0731d8aa312af
-
 INSERT INTO Evenememnt (
     0001,
     DATE '2022-07-07',
@@ -284,12 +276,8 @@ INSERT INTO Evenememnt (
     DATE '2023-07-12'	
 );
 
-<<<<<<< HEAD
-=======
 INSERT INTO Evenememnt VALUES (
     0003,
     DATE '2022-02-10',
     DATE '2023-03-12'
 );
-
->>>>>>> d1713cf14fbfbef0546be1f9abd0731d8aa312af
