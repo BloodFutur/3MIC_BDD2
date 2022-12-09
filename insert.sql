@@ -150,6 +150,8 @@ INSERT INTO Labo_externe (
     'Bresil'
 );
 
+--Yasmine
+
 INSERT INTO Projet (
     01,
     'BaseDeDonnee',
@@ -161,6 +163,8 @@ INSERT INTO Projet (
     500,
   	001
 );
+
+--Yasmine
 
 INSERT INTO Projet (
     02,
@@ -209,6 +213,9 @@ INSERT INTO Partenaire(
     'MAKL',
     'France'
 );
+
+--Yasmine
+
 INSERT INTO Projet (
     03,
     'Programation web',
@@ -221,6 +228,7 @@ INSERT INTO Projet (
   	003
 );
 
+--Yasmine
 INSERT INTO Publication (
     001,
     'recherche scientifique sur la chimie organique',
@@ -230,6 +238,8 @@ INSERT INTO Publication (
   	220
 );
 
+--Yasmine
+
 INSERT INTO Publication (
     002,
     'Page rank',
@@ -238,6 +248,8 @@ INSERT INTO Publication (
     112,
   	220
 );
+
+--Yasmine
 
 INSERT INTO Publication VALUES (
     003,
@@ -263,6 +275,7 @@ INSERT INTO Publie_Doctorant VALUES (
     4
 );
 
+--Yasmine
 
 INSERT INTO Evenememnt (
     0001,
@@ -270,11 +283,15 @@ INSERT INTO Evenememnt (
     DATE '2023-07-07'	
 );
 
+--Yasmine
+
 INSERT INTO Evenememnt (
     0002,
     DATE '2022-01-07',
     DATE '2023-07-12'	
 );
+
+--Yasmine
 
 INSERT INTO Evenememnt VALUES (
     0003,
