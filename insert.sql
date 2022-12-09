@@ -158,7 +158,7 @@ INSERT INTO Labo_externe VALUES (
 );
 
 --Yasmine
-INSERT INTO Projet (
+INSERT INTO Projet VALUES(
     01,
     'BaseDeDonnee',
     'BDD',
@@ -241,6 +241,7 @@ INSERT INTO Publication VALUES(
 );
 
 --Yasmine
+INSERT INTO Publication VALUES(
     002,
     'Page rank',
     DATE '2022-07-07',
