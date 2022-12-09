@@ -1,10 +1,93 @@
-INSERT INTO Personnel VALUES (
-    0,
+----------------------------------------------------------------------
+--                                                                  --
+--                    Personnel                                     --
+--                                                                  --
+----------------------------------------------------------------------
+
+-- Nathan
+INSERT nom, prenom, date_de_naissance, adress, date_de_recrutement INTO Personnel VALUES (
     'Billard',
     'Nathan',
     DATE '2000-12-25',
-    'chez Nathan',
+    '15 avenue du Colonel Roche',
+    DATE '2020-9-15'
+);
+
+INSERT nom, prenom, date_de_naissance, adress, date_de_recrutement INTO Personnel VALUES (
+    'Bonnet',
+    'Ronan',
+    DATE '2002-12-25',
+    'chez Ronan',
     '2020-9-15'
+);
+
+INSERT nom, prenom, date_de_naissance, adress, date_de_recrutement INTO Personnel VALUES (
+    'Olougouna',
+    'Axel',
+    DATE '2001-12-25',
+    'chez Axel',
+    '2020-9-15'
+);
+
+INSERT nom, prenom, date_de_naissance, adress, date_de_recrutement INTO Personnel VALUES (
+    'Grane',
+    'Yasmine',
+    DATE '2001-12-25',
+    'chez Yasmine',
+    '2020-9-15'
+);
+
+INSERT nom, prenom, date_de_naissance, adress, date_de_recrutement INTO Personnel VALUES (
+    'Wonderland',
+    'Alice',
+    DATE '1978-12-25',
+    'chez les lapins',
+    '2020-9-15'
+);
+
+INSERT nom, prenom, date_de_naissance, adress, date_de_recrutement INTO Personnel VALUES (
+    'Le Bricoleur',
+    'Bob',
+    DATE '1878-12-25',
+    'au chantier',
+    '2020-9-15'
+);
+
+INSERT nom, prenom, date_de_naissance, adress, date_de_recrutement INTO Personnel VALUES (
+    'Romilly',
+    'Étienne',
+    DATE '1995-03-17',
+    '32 avenue des Maronnais',
+    DATE '2013-09-01'
+);
+
+INSERT nom, prenom, date_de_naissance, adress, date_de_recrutement INTO Personnel VALUES (
+    'Jacques',
+    'Léonne',
+    DATE '2002-01-07',
+    '158 rue de la passion',
+    DATE '2021-08-25'
+);
+
+----------------------------------------------------------------------
+--                                                                  --
+--                    Doctorant                                     --
+--                                                                  --
+----------------------------------------------------------------------
+
+INSERT date_debut_these, date_soutenance INTO Doctorant VALUES (
+    DATE '2020-06-23',
+    DATE '2023-08-03'
+);
+
+INSERT date_debut_these, date_soutenance INTO Doctorant VALUES (
+    DATE '2019-07-13',
+    DATE '2020-11-08'
+);
+
+INSERT date_debut_these, date_soutenance INTO Doctorant VALUES (
+    DATE '2021-07-30',
+    DATE '2022-09-29'
 );
 
 
@@ -33,72 +116,11 @@ INSERT INTO Etablissement VALUES (
     'Paris'    
 );
 
-INSERT INTO Personnel VALUES (
-    1,
-    'Bonnet',
-    'Ronan',
-    DATE '2002-12-25',
-    'chez Ronan',
-    '2020-9-15'
-);
-
-INSERT INTO Personnel VALUES (
-    2,
-    'Olougouna',
-    'Axel',
-    DATE '2001-12-25',
-    'chez Axel',
-    '2020-9-15'
-);
-
-INSERT INTO Personnel VALUES (
-    3,
-    'Grane',
-    'Yasmine',
-    DATE '2001-12-25',
-    'chez Yasmine',
-    '2020-9-15'
-);
-
-INSERT INTO Personnel VALUES (
-    4,
-    'Wonderland',
-    'Alice',
-    DATE '1978-12-25',
-    'chez les lapins',
-    '2020-9-15'
-);
-
-INSERT INTO Personnel VALUES (
-    5,
-    'Le Bricoleur',
-    'Bob',
-    DATE '1878-12-25',
-    'au chantier',
-    '2020-9-15'
-);--Axel
+--Axel
 INSERT INTO Partenaire VALUES (
     01,
     'GFGH',
     'Allemagne'
-);
-
-INSERT INTO Doctorant VALUES (
-    4,
-    DATE '2020-06-23',
-    DATE '2023-08-03'
-);
-
-INSERT INTO Doctorant VALUES (
-    1,
-    DATE '2019-07-13',
-    DATE '2020-11-08'
-);
-
-iNSERT INTO Doctorant VALUES (
-    2,
-    DATE '2021-07-30',
-    DATE '2022-09-29'
 );
 
 INSERT INTO Scientifique VALUES (
@@ -126,6 +148,7 @@ INSERT INTO Encadrement VALUES (
     2,
     3
 );
+
 INSERT INTO Labo_externe VALUES (
     1,
     'CNES',

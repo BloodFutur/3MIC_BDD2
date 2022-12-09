@@ -17,7 +17,7 @@ CREATE TYPE grade AS ENUM (
 -- Axel
 CREATE TABLE Personnel
 (
-    idPersonnel INT CONSTRAINT UnePersonne PRIMARY KEY,
+    idPersonnel SERIAL CONSTRAINT UnePersonne PRIMARY KEY,
     nom VARCHAR,
     prenom VARCHAR,
     date_de_naissance DATE,
@@ -27,7 +27,7 @@ CREATE TABLE Personnel
 
 --Axel
 CREATE TABLE Doctorant(
-    idDoctorant INT NOT NULL,
+    idDoctorant SERIAL NOT NULL,
     date_debut_these DATE,
     date_soutenance DATE,
     FOREIGN KEY (idDoctorant) REFERENCES Personnel(idPersonnel) ON DELETE CASCADE,
