@@ -277,7 +277,7 @@ INSERT INTO Publie_Doctorant VALUES (
 
 --Yasmine
 
-INSERT INTO Evenememnt (
+INSERT INTO Evenememnt VALUES (
     0001,
     DATE '2022-07-07',
     DATE '2023-07-07'	
@@ -285,7 +285,7 @@ INSERT INTO Evenememnt (
 
 --Yasmine
 
-INSERT INTO Evenememnt (
+INSERT INTO Evenememnt VALUES (
     0002,
     DATE '2022-01-07',
     DATE '2023-07-12'	
