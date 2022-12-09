@@ -1,4 +1,4 @@
-INSERT INTO Personnel VALUES (
+INSERT INTO Personnel (
     0,
     'Billard',
     'Nathan',
@@ -8,7 +8,32 @@ INSERT INTO Personnel VALUES (
 );
 
 
-INSERT INTO Personnel VALUES (
+--Axel
+INSERT INTO Etablissement(
+    01,
+    'Institut National des Sciences Appliquées',
+    'INSA',
+    'Toulouse'
+);
+
+--Axel
+INSERT INTO Etablissement(
+    02,
+    'Ecole Nationale de l Aviation Civile',
+    'ENAC',
+    'Toulouse'
+);
+
+
+--Axel
+INSERT INTO Etablissement(
+    03,
+    'Ecole Polytechnique',
+    'X',
+    'Paris'    
+);
+
+INSERT INTO Personnel (
     1,
     'Bonnet',
     'Ronan',
@@ -17,7 +42,7 @@ INSERT INTO Personnel VALUES (
     '2020-9-15'
 );
 
-INSERT INTO Personnel VALUES (
+INSERT INTO Personnel (
     2,
     'Olougouna',
     'Axel',
@@ -26,7 +51,7 @@ INSERT INTO Personnel VALUES (
     '2020-9-15'
 );
 
-INSERT INTO Personnel VALUES (
+INSERT INTO Personnel (
     3,
     'Grane',
     'Yasmine',
@@ -35,7 +60,7 @@ INSERT INTO Personnel VALUES (
     '2020-9-15'
 );
 
-INSERT INTO Personnel VALUES (
+INSERT INTO Personnel (
     4,
     'Wonderland',
     'Alice',
@@ -44,60 +69,70 @@ INSERT INTO Personnel VALUES (
     '2020-9-15'
 );
 
-INSERT INTO Personnel VALUES (
+INSERT INTO Personnel (
     4,
     'Le Bricoleur',
     'Bob',
     DATE '1878-12-25',
     'au chantier',
     '2020-9-15'
+);--Axel
+INSERT INTO Partenaire(
+    01,
+    'GFGH',
+    'Allemagne'
 );
 
 
-INSERT INTO Labo_externe VALUES (
+INSERT INTO Labo_externe (
     0,
     'LAAS',
     'France'
 );
 
-INSERT INTO Labo_externe VALUES (
+INSERT INTO Labo_externe (
     1,
     'CNES',
     'France'
 );
 
-INSERT INTO Labo_externe VALUES (
+INSERT INTO Labo_externe (
     2,
     'GEAS',
     'Allemagne'
 );
 
-INSERT INTO Labo_externe VALUES (
+INSERT INTO Labo_externe (
     3,
     'RUAF',
     'Russie'
 );
 
-INSERT INTO Labo_externe VALUES (
+INSERT INTO Labo_externe (
     4,
     'ENFD',
     'Angleterre'
 );
 
-INSERT INTO Labo_externe VALUES (
+INSERT INTO Labo_externe (
     5,
     'LUBN',
     'Luxembourg'
 );
 
 
-INSERT INTO Labo_externe VALUES (
+<<<<<<< HEAD
+
+-- Ronan
+=======
+>>>>>>> ebb8e0ebb042c8e6526d6db68553636d759f3b9a
+INSERT INTO Labo_externe (
     6,
     'BRBN',
     'Bresil'
 );
 
-INSERT INTO Projet VALUES (
+INSERT INTO Projet (
     01,
     'BaseDeDonnee',
     'BDD',
@@ -109,7 +144,7 @@ INSERT INTO Projet VALUES (
   	001
 );
 
-INSERT INTO Projet VALUES (
+INSERT INTO Projet (
     02,
     'langC',
     'C',
@@ -121,7 +156,42 @@ INSERT INTO Projet VALUES (
   	002
 );
 
-INSERT INTO Projet VALUES (
+
+--Axel
+INSERT INTO Partenaire(
+    01,
+    'GFGH',
+    'Allemagne'
+);
+
+--Axel
+INSERT INTO Partenaire(
+    02,
+    'LMC',
+    'Australie'
+);
+
+--Axel
+INSERT INTO Partenaire(
+    03,
+    'ESHT',
+    'USA'
+);
+
+--Axel
+INSERT INTO Partenaire(
+    01,
+    'HLMY',
+    'Japon'
+);
+
+--Axel
+INSERT INTO Partenaire(
+    01,
+    'MAKL',
+    'France'
+);
+INSERT INTO Projet (
     03,
     'Programation web',
     'ProgWeb',
@@ -133,7 +203,7 @@ INSERT INTO Projet VALUES (
   	003
 );
 
-INSERT INTO Publication VALUES (
+INSERT INTO Publication (
     001,
     'recherche scientifique sur la chimie organique',
     DATE '2022-07-07',
@@ -142,7 +212,7 @@ INSERT INTO Publication VALUES (
   	220
 );
 
-INSERT INTO Publication VALUES (
+INSERT INTO Publication (
     002,
     'Page rank',
     DATE '2022-07-07',
@@ -151,32 +221,16 @@ INSERT INTO Publication VALUES (
   	220
 );
 
-INSERT INTO Publication VALUES (
-    003,
-    'chaine de markov',
-    DATE '2022-12-03',
-    'Mathematiques appliqués',
-    113,
-  	500
-);
 
-
-
-INSERT INTO Evenememnt VALUES (
+INSERT INTO Evenememnt (
     0001,
     DATE '2022-07-07',
     DATE '2023-07-07',	
 );
 
-INSERT INTO Evenememnt VALUES (
+INSERT INTO Evenememnt (
     0002,
     DATE '2022-01-07',
     DATE '2023-07-12',	
-);
-
-INSERT INTO Evenememnt VALUES (
-    0003,
-    DATE '2022-02-10',
-    DATE '2023-03-12',	
 );
 
