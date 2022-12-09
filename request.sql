@@ -68,10 +68,12 @@ WHERE idPersonnel IN (
 );
 
 -- Ronan Q10
-SELECT idDoctorant, nom, prenom, COUNT(*) FROM Encadrement
-JOIN Scientifique on idPersonnel=idScientifique
-GROUP BY idDoctorant, nom, prenom
-HAVING COUNT(DISTINCT idScientifique)=1;
+SELECT e.idDoctorant, nom, prenom, COUNT(*) FROM Encadrement e
+JOIN Scientifique s ON e.idScientifique=s.idScientifique
+JOIN Doctorant d ON e.idDoctorant=d.idDoctorant
+RIGHT JOIN Personnel p ON d.idDoctorant=p.idPersonnel
+GROUP BY e.idDoctorant, nom, prenom
+HAVING COUNT(DISTINCT s.idScientifique)=1;
 
 -- Ronan Q16
 SELECT pays, COUNT(*) nb_publi
