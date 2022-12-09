@@ -1,4 +1,4 @@
-INSERT INTO Personnel (
+INSERT INTO Personnel VALUES (
     0,
     'Billard',
     'Nathan',
@@ -9,7 +9,7 @@ INSERT INTO Personnel (
 
 
 --Axel
-INSERT INTO Etablissement(
+INSERT INTO Etablissement VALUES (
     01,
     'Institut National des Sciences Appliquées',
     'INSA',
@@ -17,7 +17,7 @@ INSERT INTO Etablissement(
 );
 
 --Axel
-INSERT INTO Etablissement(
+INSERT INTO Etablissement VALUES (
     02,
     'Ecole Nationale de l Aviation Civile',
     'ENAC',
@@ -26,14 +26,14 @@ INSERT INTO Etablissement(
 
 
 --Axel
-INSERT INTO Etablissement(
+INSERT INTO Etablissement VALUES (
     03,
     'Ecole Polytechnique',
     'X',
     'Paris'    
 );
 
-INSERT INTO Personnel (
+INSERT INTO Personnel VALUES (
     1,
     'Bonnet',
     'Ronan',
@@ -42,7 +42,7 @@ INSERT INTO Personnel (
     '2020-9-15'
 );
 
-INSERT INTO Personnel (
+INSERT INTO Personnel VALUES (
     2,
     'Olougouna',
     'Axel',
@@ -51,7 +51,7 @@ INSERT INTO Personnel (
     '2020-9-15'
 );
 
-INSERT INTO Personnel (
+INSERT INTO Personnel VALUES (
     3,
     'Grane',
     'Yasmine',
@@ -60,7 +60,7 @@ INSERT INTO Personnel (
     '2020-9-15'
 );
 
-INSERT INTO Personnel (
+INSERT INTO Personnel VALUES (
     4,
     'Wonderland',
     'Alice',
@@ -77,7 +77,7 @@ INSERT INTO Personnel VALUES (
     'au chantier',
     '2020-9-15'
 );--Axel
-INSERT INTO Partenaire(
+INSERT INTO Partenaire VALUES (
     01,
     'GFGH',
     'Allemagne'
@@ -102,40 +102,45 @@ INSERT INTO Scientifique VALUES (
 
 INSERT INTO Scientifique VALUES (
     2,
-    'cr1'
+    'mcf'
 );
 
-INSERT INTO Labo_externe (
+INSERT INTO Labo_externe VALUES (
     0,
     'LAAS',
     'France'
 );
 
-INSERT INTO Labo_externe (
+INSERT INTO Encadrement VALUES (
+    4,
+    2
+);
+
+INSERT INTO Labo_externe VALUES (
     1,
     'CNES',
     'France'
 );
 
-INSERT INTO Labo_externe (
+INSERT INTO Labo_externe VALUES (
     2,
     'GEAS',
     'Allemagne'
 );
 
-INSERT INTO Labo_externe (
+INSERT INTO Labo_externe VALUES (
     3,
     'RUAF',
     'Russie'
 );
 
-INSERT INTO Labo_externe (
+INSERT INTO Labo_externe VALUES (
     4,
     'ENFD',
     'Angleterre'
 );
 
-INSERT INTO Labo_externe (
+INSERT INTO Labo_externe VALUES (
     5,
     'LUBN',
     'Luxembourg'
@@ -144,13 +149,14 @@ INSERT INTO Labo_externe (
 
 
 -- Ronan
-INSERT INTO Labo_externe (
+INSERT INTO Labo_externe VALUES (
     6,
     'BRBN',
     'Bresil'
 );
 
-INSERT INTO Projet (
+--Yasmine
+INSERT INTO Projet VALUES(
     01,
     'BaseDeDonnee',
     'BDD',
@@ -162,7 +168,8 @@ INSERT INTO Projet (
   	001
 );
 
-INSERT INTO Projet (
+--Yasmine
+INSERT INTO Projet VALUES (
     02,
     'langC',
     'C',
@@ -176,40 +183,41 @@ INSERT INTO Projet (
 
 
 --Axel
-INSERT INTO Partenaire(
+INSERT INTO Partenaire VALUES (
     01,
     'GFGH',
     'Allemagne'
 );
 
 --Axel
-INSERT INTO Partenaire(
+INSERT INTO Partenaire VALUES (
     02,
     'LMC',
     'Australie'
 );
 
 --Axel
-INSERT INTO Partenaire(
+INSERT INTO Partenaire VALUES (
     03,
     'ESHT',
     'USA'
 );
 
 --Axel
-INSERT INTO Partenaire(
+INSERT INTO Partenaire VALUES (
     01,
     'HLMY',
     'Japon'
 );
 
 --Axel
-INSERT INTO Partenaire(
+INSERT INTO Partenaire VALUES (
     01,
     'MAKL',
     'France'
 );
-INSERT INTO Projet (
+--Yasmine
+INSERT INTO Projet VALUES (
     03,
     'Programation web',
     'ProgWeb',
@@ -221,7 +229,7 @@ INSERT INTO Projet (
   	003
 );
 
-INSERT INTO Publication (
+INSERT INTO Publication VALUES(
     001,
     'recherche scientifique sur la chimie organique',
     DATE '2022-07-07',
@@ -230,7 +238,8 @@ INSERT INTO Publication (
   	220
 );
 
-INSERT INTO Publication (
+--Yasmine
+INSERT INTO Publication VALUES(
     002,
     'Page rank',
     DATE '2022-07-07',
@@ -238,6 +247,8 @@ INSERT INTO Publication (
     112,
   	220
 );
+
+--Yasmine
 
 INSERT INTO Publication VALUES (
     003,
@@ -263,18 +274,36 @@ INSERT INTO Publie_Doctorant VALUES (
     4
 );
 
+INSERT INTO Publie_Scientifique VALUES (
+    1,
+    3
+);
 
-INSERT INTO Evenememnt (
+INSERT INTO Publie_Scientifique VALUES (
+    2,
+    3
+);
+
+INSERT INTO Publie_Scientifique VALUES (
+    1,
+    2
+);
+
+--Yasmine
+INSERT INTO Evenememnt VALUES (
     0001,
     DATE '2022-07-07',
     DATE '2023-07-07'	
 );
 
-INSERT INTO Evenememnt (
+--Yasmine
+INSERT INTO Evenememnt VALUES (
     0002,
     DATE '2022-01-07',
     DATE '2023-07-12'	
 );
+
+--Yasmine
 
 INSERT INTO Evenememnt VALUES (
     0003,

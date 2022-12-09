@@ -47,8 +47,24 @@ WHERE date_soutenance IS NOT NULL;
 
 --Nathan Q7
 SELECT nom, prenom FROM Personnel
-WHERE idPersonnel NOT IN (
-    SELECT idScientifique FROM Encadrement
+WHERE idPersonnel IN (
+    SELECT idScientifique FROM Scientifique
+    WHERE idScientifique NOT IN (
+        SELECT idScientifique FROM Encadrement
+    )
+);
+
+-- Nathan Q9
+SELECT nom, prenom FROM Personnel
+WHERE idPersonnel IN (
+    SELECT idScientifique FROM Scientifique
+    WHERE idScientifique IN (
+        SELECT idScientifique FROM Encadrement
+        WHERE idDoctorant IN (
+            SELECT idDoctorant FROM Doctorant
+            WHERE date_soutenance < NOW()
+        )
+    )
 );
 
 -- Ronan Q10
@@ -78,7 +94,7 @@ GROUP BY idDoctorant;
 SELECT idEnseignant
 FROM Enseignant-chercheur
 NOT IN ( (SELECT idScientifique
-               FROM Publication)
+               FROM Publie_scientifique)
                UNION
 	      (SELECT idScientifique
                FROM Encadrement)
