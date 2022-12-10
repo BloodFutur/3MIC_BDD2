@@ -18,7 +18,7 @@ INSERT INTO Personnel(nom, prenom, date_de_naissance, adress, date_de_recrutemen
     'Ronan',
     DATE '2002-12-25',
     'chez Ronan',
-    '2020-9-15'
+    DATE '2020-9-15'
 );
 
 INSERT INTO Personnel(nom, prenom, date_de_naissance, adress, date_de_recrutement) VALUES (
@@ -26,7 +26,7 @@ INSERT INTO Personnel(nom, prenom, date_de_naissance, adress, date_de_recrutemen
     'Axel',
     DATE '2001-12-25',
     'chez Axel',
-    '2020-9-15'
+    DATE '2020-9-15'
 );
 
 INSERT INTO Personnel(nom, prenom, date_de_naissance, adress, date_de_recrutement) VALUES (
@@ -34,7 +34,7 @@ INSERT INTO Personnel(nom, prenom, date_de_naissance, adress, date_de_recrutemen
     'Yasmine',
     DATE '2001-12-25',
     'chez Yasmine',
-    '2020-9-15'
+    DATE '2020-9-15'
 );
 
 INSERT INTO Personnel(nom, prenom, date_de_naissance, adress, date_de_recrutement) VALUES (
@@ -42,7 +42,7 @@ INSERT INTO Personnel(nom, prenom, date_de_naissance, adress, date_de_recrutemen
     'Alice',
     DATE '1978-12-25',
     'chez les lapins',
-    '2020-9-15'
+    DATE '2020-9-15'
 );
 
 INSERT INTO Personnel(nom, prenom, date_de_naissance, adress, date_de_recrutement) VALUES (
@@ -50,7 +50,7 @@ INSERT INTO Personnel(nom, prenom, date_de_naissance, adress, date_de_recrutemen
     'Bob',
     DATE '1878-12-25',
     'au chantier',
-    '2020-9-15'
+    DATE '2020-9-15'
 );
 
 INSERT INTO Personnel(nom, prenom, date_de_naissance, adress, date_de_recrutement) VALUES (
@@ -67,6 +67,14 @@ INSERT INTO Personnel(nom, prenom, date_de_naissance, adress, date_de_recrutemen
     DATE '2002-01-07',
     '158 rue de la passion',
     DATE '2021-08-25'
+);
+
+INSERT INTO Personnel(nom, prenom, date_de_naissance, adress, date_de_recrutement) VALUES (
+    'Azi',
+    'Jean',
+    DATE '2000-03-17',
+    '132 boulevard de la moutarde',
+    DATE '2020-06-23'
 );
 
 ----------------------------------------------------------------------
@@ -107,14 +115,19 @@ INSERT INTO Doctorant(idDoctorant, date_debut_these, date_soutenance) VALUES (
 ----------------------------------------------------------------------
 
 
-INSERT INTO Scientifique(idScientifique, grade) VALUES (
+INSERT INTO Scientifique VALUES (
     5,
     'cr1'
 );
 
-INSERT INTO Scientifique(idScientifique, grade) VALUES (
+INSERT INTO Scientifique VALUES (
     2,
     'mcf'
+);
+
+INSERT INTO Scientifique VALUES (
+    9,
+    'mcf hors classe'
 );
 
 ----------------------------------------------------------------------
@@ -266,9 +279,9 @@ INSERT INTO Auteur_Externe(nom, prenom, adresseMail, idLabo) VALUES (
 );
 
 INSERT INTO Auteur_Externe(nom, prenom, adresseMail, idLabo) VALUES (
-    'Azi',
-    'Jean',
-    'Jazzi@msn.com',
+    'David',
+    'Bianca',
+    'Binca@msn.com',
     4
 );
 
@@ -409,6 +422,11 @@ INSERT INTO Publie_Scientifique VALUES (
 INSERT INTO Publie_Scientifique VALUES (
     4,
     5
+);
+
+INSERT INTO Publie_Scientifique VALUES (
+    4,
+    9
 );
 
 ----------------------------------------------------------------------

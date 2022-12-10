@@ -25,6 +25,7 @@ WHERE perso.nom = 'Azi'
     AND annee >= '2016-01-01'
     AND annee <= '2020-01-01';
 
+
 --Axel Q3
 SELECT COUNT(DISTINCT idAuteurExterne) AS nbCollab FROM Publie_Externe pe
 JOIN Publie_Scientifique ps ON pe.idPublication = ps.idPublication
