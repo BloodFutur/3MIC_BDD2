@@ -274,7 +274,7 @@ CREATE TABLE Publie_Externe(
             ON DELETE CASCADE
             ON UPDATE CASCADE,
     CONSTRAINT pk_publieExterne
-        PRIMARY KEY (idPublication, idAuteurExterne),
+        PRIMARY KEY (idPublication, idAuteurExterne)
 );
 
 --Yasmine
