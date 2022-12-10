@@ -14,12 +14,12 @@ WHERE idPersonnel = idScientifique AND idPersonnel IN (
 );
 
 -- Ronan Q2
-SELECT ae.nom, ae.prenom le.pays FROM Personnel AS perso 
-JOIN Publie_Scientifique ps on perso.idPersonnel = ps.idPersonnel
-RIGHT JOIN Publication publi on publi.idPublication = ps.idPublication
-RIGHT JOIN Publie_Externe pe on publi.idPublication = pe.idPublication
-JOIN Auteur_Externe ae on ae.idAuteur = pe.idAuteur
-JOIN Labo_Externe le on ae.idLabo = le.idLabo
+SELECT ae.nom, ae.prenom, le.pays FROM Personnel AS perso
+JOIN Publie_Scientifique ps ON perso.idPersonnel = ps.idPersonnel
+RIGHT JOIN Publication publi ON publi.idPublication = ps.idPublication
+RIGHT JOIN Publie_Externe pe ON publi.idPublication = pe.idPublication
+JOIN Auteur_Externe ae ON ae.idAuteur = pe.idAuteur
+JOIN Labo_Externe le ON ae.idLabo = le.idLabo
 WHERE perso.nom = 'Azi'
     AND perso.prenom = 'Jean'
     AND annee >= '2016-01-01'

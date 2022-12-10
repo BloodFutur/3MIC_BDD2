@@ -265,6 +265,12 @@ INSERT INTO Auteur_Externe(nom, prenom, adresseMail, idLabo) VALUES (
     1
 );
 
+INSERT INTO Auteur_Externe(nom, prenom, adresseMail, idLabo) VALUES (
+    'Azi',
+    'Jean',
+    'Jazzi@msn.com',
+    4
+);
 
 ----------------------------------------------------------------------
 --                                                                  --
@@ -462,6 +468,11 @@ INSERT INTO Publie_Externe VALUES (
 INSERT INTO Publie_Externe VALUES (
     4,
     3
+);
+
+INSERT INTO Publie_Externe VALUES (
+    4,
+    5
 );
 
 ----------------------------------------------------------------------
