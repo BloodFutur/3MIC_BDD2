@@ -5,7 +5,7 @@
 ----------------------------------------------------------------------
 
 -- Nathan
-INSERT nom, prenom, date_de_naissance, adress, date_de_recrutement INTO Personnel VALUES (
+INSERT INTO Personnel(nom, prenom, date_de_naissance, adress, date_de_recrutement) VALUES (
     'Billard',
     'Nathan',
     DATE '2000-12-25',
@@ -13,7 +13,7 @@ INSERT nom, prenom, date_de_naissance, adress, date_de_recrutement INTO Personne
     DATE '2020-9-15'
 );
 
-INSERT nom, prenom, date_de_naissance, adress, date_de_recrutement INTO Personnel VALUES (
+INSERT INTO Personnel(nom, prenom, date_de_naissance, adress, date_de_recrutement) VALUES (
     'Bonnet',
     'Ronan',
     DATE '2002-12-25',
@@ -21,7 +21,7 @@ INSERT nom, prenom, date_de_naissance, adress, date_de_recrutement INTO Personne
     '2020-9-15'
 );
 
-INSERT nom, prenom, date_de_naissance, adress, date_de_recrutement INTO Personnel VALUES (
+INSERT INTO Personnel(nom, prenom, date_de_naissance, adress, date_de_recrutement) VALUES (
     'Olougouna',
     'Axel',
     DATE '2001-12-25',
@@ -29,7 +29,7 @@ INSERT nom, prenom, date_de_naissance, adress, date_de_recrutement INTO Personne
     '2020-9-15'
 );
 
-INSERT nom, prenom, date_de_naissance, adress, date_de_recrutement INTO Personnel VALUES (
+INSERT INTO Personnel(nom, prenom, date_de_naissance, adress, date_de_recrutement) VALUES (
     'Grane',
     'Yasmine',
     DATE '2001-12-25',
@@ -37,7 +37,7 @@ INSERT nom, prenom, date_de_naissance, adress, date_de_recrutement INTO Personne
     '2020-9-15'
 );
 
-INSERT nom, prenom, date_de_naissance, adress, date_de_recrutement INTO Personnel VALUES (
+INSERT INTO Personnel(nom, prenom, date_de_naissance, adress, date_de_recrutement) VALUES (
     'Wonderland',
     'Alice',
     DATE '1978-12-25',
@@ -45,7 +45,7 @@ INSERT nom, prenom, date_de_naissance, adress, date_de_recrutement INTO Personne
     '2020-9-15'
 );
 
-INSERT nom, prenom, date_de_naissance, adress, date_de_recrutement INTO Personnel VALUES (
+INSERT INTO Personnel(nom, prenom, date_de_naissance, adress, date_de_recrutement) VALUES (
     'Le Bricoleur',
     'Bob',
     DATE '1878-12-25',
@@ -53,7 +53,7 @@ INSERT nom, prenom, date_de_naissance, adress, date_de_recrutement INTO Personne
     '2020-9-15'
 );
 
-INSERT nom, prenom, date_de_naissance, adress, date_de_recrutement INTO Personnel VALUES (
+INSERT INTO Personnel(nom, prenom, date_de_naissance, adress, date_de_recrutement) VALUES (
     'Romilly',
     'Étienne',
     DATE '1995-03-17',
@@ -61,7 +61,7 @@ INSERT nom, prenom, date_de_naissance, adress, date_de_recrutement INTO Personne
     DATE '2013-09-01'
 );
 
-INSERT nom, prenom, date_de_naissance, adress, date_de_recrutement INTO Personnel VALUES (
+INSERT INTO Personnel(nom, prenom, date_de_naissance, adress, date_de_recrutement) VALUES (
     'Jacques',
     'Léonne',
     DATE '2002-01-07',
@@ -75,19 +75,19 @@ INSERT nom, prenom, date_de_naissance, adress, date_de_recrutement INTO Personne
 --                                                                  --
 ----------------------------------------------------------------------
 
-INSERT idDoctorant, date_debut_these, date_soutenance INTO Doctorant VALUES (
+INSERT INTO Doctorant(idDoctorant, date_debut_these, date_soutenance) VALUES (
     1,
     DATE '2020-06-23',
     DATE '2023-08-03'
 );
 
-INSERT idDoctorant, date_debut_these, date_soutenance INTO Doctorant VALUES (
+INSERT INTO Doctorant(idDoctorant, date_debut_these, date_soutenance) VALUES (
     3,
     DATE '2019-07-13',
     DATE '2020-11-08'
 );
 
-INSERT idDoctorant, date_debut_these, date_soutenance INTO Doctorant VALUES (
+INSERT INTO Doctorant(idDoctorant, date_debut_these, date_soutenance) VALUES (
     4,
     DATE '2021-07-30',
     DATE '2022-09-29'
@@ -100,12 +100,12 @@ INSERT idDoctorant, date_debut_these, date_soutenance INTO Doctorant VALUES (
 ----------------------------------------------------------------------
 
 
-INSERT idScientifique, grade INTO Scientifique VALUES (
+INSERT INTO Scientifique(idScientifique, grade) VALUES (
     5,
     'cr1'
 );
 
-INSERT idScientifique, grade INTO Scientifique VALUES (
+INSERT INTO Scientifique(idScientifique, grade) VALUES (
     2,
     'mcf'
 );
