@@ -234,7 +234,7 @@ INSERT INTO Auteur_Externe(nom, prenom, adresseMail, idLabo) VALUES (
     'John',
     'Doe',
     'johndoe@mail.com',
-    0
+    2
 );
 
 INSERT INTO Auteur_Externe(nom, prenom, adresseMail, idLabo) VALUES (
@@ -315,7 +315,7 @@ INSERT INTO Publication(titre, annee, nomConf, classeConf, nbPages) VALUES(
 ----------------------------------------------------------------------
 
 --Yasmine
-INSERT INTO Projet(titre, acronyme, annee_debut, annee_fin, duree, budget_Laas, cout, idMeneur) VALUES(
+INSERT INTO Projet(titre, acronyme, annee_debut, annee_fin, duree, budget_Laas, cout, idMeneurProjet) VALUES(
     'BaseDeDonnee',
     'BDD',
     DATE '2022-12-07',
@@ -327,7 +327,7 @@ INSERT INTO Projet(titre, acronyme, annee_debut, annee_fin, duree, budget_Laas, 
 );
 
 --Yasmine
-INSERT INTO Projet(titre, acronyme, annee_debut, annee_fin, duree, budget_Laas, cout, idMeneur) VALUES(
+INSERT INTO Projet(titre, acronyme, annee_debut, annee_fin, duree, budget_Laas, cout, idMeneurProjet) VALUES(
     'langC',
     'C',
     DATE '2022-11-07',
@@ -339,7 +339,7 @@ INSERT INTO Projet(titre, acronyme, annee_debut, annee_fin, duree, budget_Laas, 
 );
 
 --Yasmine
-INSERT INTO Projet(titre, acronyme, annee_debut, annee_fin, duree, budget_Laas, cout, idMeneur) VALUES(
+INSERT INTO Projet(titre, acronyme, annee_debut, annee_fin, duree, budget_Laas, cout, idMeneurProjet) VALUES(
     'Programation web',
     'ProgWeb',
     DATE '2022-04-07',
@@ -424,7 +424,7 @@ INSERT INTO Publie_Doctorant VALUES (
 
 INSERT INTO Publie_Externe VALUES (
     1,
-    0
+    4
 );
 
 INSERT INTO Publie_Externe VALUES (
@@ -439,12 +439,12 @@ INSERT INTO Publie_Externe VALUES (
 
 INSERT INTO Publie_Externe VALUES (
     3,
-    1
+    5
 );
 
 INSERT INTO Publie_Externe VALUES (
     4,
-    1
+    5
 );
 
 INSERT INTO Publie_Externe VALUES (
