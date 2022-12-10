@@ -400,7 +400,7 @@ INSERT INTO Publie_Scientifique VALUES (
 
 INSERT INTO Publie_Scientifique VALUES (
     2,
-    3
+    2
 );
 
 INSERT INTO Publie_Scientifique VALUES (
@@ -538,6 +538,6 @@ INSERT INTO Encadrement VALUES (
 
 INSERT INTO Encadrement VALUES (
     2,
-    3
+    5
 );
 
