@@ -117,16 +117,14 @@ INSERT INTO Scientifique(idScientifique, grade) VALUES (
 ----------------------------------------------------------------------
 
 --Axel
-INSERT INTO Etablissement VALUES (
-    01,
+INSERT INTO Etablissement(nom, acronyme, adresse) VALUES (
     'Institut National des Sciences Appliquées',
     'INSA',
     'Toulouse'
 );
 
 --Axel
-INSERT INTO Etablissement VALUES (
-    02,
+INSERT INTO Etablissement(nom, acronyme, adresse) VALUES (
     'Ecole Nationale de l Aviation Civile',
     'ENAC',
     'Toulouse'
@@ -134,8 +132,7 @@ INSERT INTO Etablissement VALUES (
 
 
 --Axel
-INSERT INTO Etablissement VALUES (
-    03,
+INSERT INTO Etablissement(nom, acronyme, adresse) VALUES (
     'Ecole Polytechnique',
     'X',
     'Paris'    
@@ -154,23 +151,20 @@ INSERT INTO Etablissement VALUES (
 ----------------------------------------------------------------------
 
 --Yasmine
-INSERT INTO Evenement VALUES (
-    0001,
+INSERT INTO Evenement(dateDebut, dateFin) VALUES (
     DATE '2022-07-07',
     DATE '2023-07-07'
 );
 
 --Yasmine
-INSERT INTO Evenement VALUES (
-    0002,
+INSERT INTO Evenement(dateDebut, dateFin) VALUES (
     DATE '2022-01-07',
     DATE '2023-07-12'
 );
 
 --Yasmine
 
-INSERT INTO Evenement VALUES (
-    0003,
+INSERT INTO Evenement(dateDebut, dateFin) VALUES (
     DATE '2022-02-10',
     DATE '2023-03-12'
 );
@@ -188,45 +182,38 @@ INSERT INTO Evenement VALUES (
 --                                                                  --
 ----------------------------------------------------------------------
 -- Ronan
-INSERT INTO Labo_externe VALUES (
-    6,
+INSERT INTO Labo_externe(nom, pays) VALUES (
     'BRBN',
     'Bresil'
 );
 
 
-INSERT INTO Labo_externe VALUES (
-    0,
+INSERT INTO Labo_externe(nom, pays) VALUES (
     'LAAS',
     'France'
 );
 
-INSERT INTO Labo_externe VALUES (
-    1,
+INSERT INTO Labo_externe(nom, pays) VALUES (
     'CNES',
     'France'
 );
 
-INSERT INTO Labo_externe VALUES (
-    2,
+INSERT INTO Labo_externe(nom, pays) VALUES (
     'GEAS',
     'Allemagne'
 );
 
-INSERT INTO Labo_externe VALUES (
-    3,
+INSERT INTO Labo_externe(nom, pays) VALUES (
     'RUAF',
     'Russie'
 );
 
-INSERT INTO Labo_externe VALUES (
-    4,
+INSERT INTO Labo_externe(nom, pays) VALUES (
     'ENFD',
     'Angleterre'
 );
 
-INSERT INTO Labo_externe VALUES (
-    5,
+INSERT INTO Labo_externe(nom, pays) VALUES (
     'LUBN',
     'Luxembourg'
 );
@@ -243,32 +230,28 @@ INSERT INTO Labo_externe VALUES (
 --                                                                  --
 ----------------------------------------------------------------------
 
-INSERT INTO Auteur_Externe VALUES (
-    0,
+INSERT INTO Auteur_Externe(nom, prenom, adresseMail, idLabo) VALUES (
     'John',
     'Doe',
     'johndoe@mail.com',
     0
 );
 
-INSERT INTO Auteur_Externe VALUES (
-    1,
+INSERT INTO Auteur_Externe(nom, prenom, adresseMail, idLabo) VALUES (
     'Dmitri',
     'Alexandrovich',
     'alex@yandex.ru',
     3
 );
 
-INSERT INTO Auteur_Externe VALUES (
-    2,
+INSERT INTO Auteur_Externe(nom, prenom, adresseMail, idLabo) VALUES (
     'Paul',
     'Hugo',
     'paulo@mail.com',
     1
 );
 
-INSERT INTO Auteur_Externe VALUES (
-    3,
+INSERT INTO Auteur_Externe(nom, prenom, adresseMail, idLabo) VALUES (
     'Pascal',
     'Gerard',
     'gege@mail.com',
@@ -282,52 +265,47 @@ INSERT INTO Auteur_Externe VALUES (
 --                                                                  --
 ----------------------------------------------------------------------
 
-INSERT INTO Publication VALUES(
-    001,
+INSERT INTO Publication(titre, annee, nomConf, classeConf, nbPages) VALUES(
     'recherche scientifique sur la chimie organique',
     DATE '2022-07-07',
     'conference des sciences',
     'A*',
-  	220
+    220
 );
 
 --Yasmine
-INSERT INTO Publication VALUES(
-    002,
+INSERT INTO Publication(titre, annee, nomConf, classeConf, nbPages) VALUES(
     'Page rank',
     DATE '2022-07-07',
     'conference des sciences et technologies',
     'A',
-  	220
+    220
 );
 
 --Yasmine
 
-INSERT INTO Publication VALUES (
-    003,
+INSERT INTO Publication(titre, annee, nomConf, classeConf, nbPages) VALUES(
     'chaine de markov',
     DATE '2022-12-03',
     'Mathematiques appliqués',
     'B',
-  	500
+    500
 );
 
-INSERT INTO Publication VALUES (
-    004,
+INSERT INTO Publication(titre, annee, nomConf, classeConf, nbPages) VALUES(
     'Physique quantique',
     DATE '2017-12-03',
     'Physique',
     'A',
-  	1520
+    1520
 );
 
-INSERT INTO Publication VALUES (
-    005,
+INSERT INTO Publication(titre, annee, nomConf, classeConf, nbPages) VALUES(
     'La nourriture en France',
     DATE '2022-12-03',
     'IEE',
     'A*',
-  	20
+    20
 );
 
 ----------------------------------------------------------------------
@@ -337,8 +315,7 @@ INSERT INTO Publication VALUES (
 ----------------------------------------------------------------------
 
 --Yasmine
-INSERT INTO Projet VALUES(
-    01,
+INSERT INTO Projet(titre, acronyme, annee_debut, annee_fin, duree, budget_Laas, cout, idMeneur) VALUES(
     'BaseDeDonnee',
     'BDD',
     DATE '2022-12-07',
@@ -350,8 +327,7 @@ INSERT INTO Projet VALUES(
 );
 
 --Yasmine
-INSERT INTO Projet VALUES (
-    02,
+INSERT INTO Projet(titre, acronyme, annee_debut, annee_fin, duree, budget_Laas, cout, idMeneur) VALUES(
     'langC',
     'C',
     DATE '2022-11-07',
@@ -363,8 +339,7 @@ INSERT INTO Projet VALUES (
 );
 
 --Yasmine
-INSERT INTO Projet VALUES (
-    03,
+INSERT INTO Projet(titre, acronyme, annee_debut, annee_fin, duree, budget_Laas, cout, idMeneur) VALUES(
     'Programation web',
     'ProgWeb',
     DATE '2022-04-07',
@@ -405,7 +380,7 @@ INSERT INTO Publie_Scientifique VALUES (
 
 INSERT INTO Publie_Scientifique VALUES (
     1,
-    5
+    2
 );
 
 INSERT INTO Publie_Scientifique VALUES (
@@ -537,7 +512,7 @@ INSERT INTO Encadrement VALUES (
 );
 
 INSERT INTO Encadrement VALUES (
-    2,
+    3,
     5
 );
 
