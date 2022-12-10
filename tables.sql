@@ -37,7 +37,7 @@ CREATE TABLE Personnel
 
 --Axel
 CREATE TABLE Doctorant(
-    idDoctorant SERIAL NOT NULL,
+    idDoctorant INT NOT NULL,
     date_debut_these DATE,
     date_soutenance DATE,
     FOREIGN KEY (idDoctorant) REFERENCES Personnel(idPersonnel) ON DELETE CASCADE,

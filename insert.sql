@@ -75,21 +75,46 @@ INSERT nom, prenom, date_de_naissance, adress, date_de_recrutement INTO Personne
 --                                                                  --
 ----------------------------------------------------------------------
 
-INSERT date_debut_these, date_soutenance INTO Doctorant VALUES (
+INSERT idDoctorant, date_debut_these, date_soutenance INTO Doctorant VALUES (
+    1,
     DATE '2020-06-23',
     DATE '2023-08-03'
 );
 
-INSERT date_debut_these, date_soutenance INTO Doctorant VALUES (
+INSERT idDoctorant, date_debut_these, date_soutenance INTO Doctorant VALUES (
+    3,
     DATE '2019-07-13',
     DATE '2020-11-08'
 );
 
-INSERT date_debut_these, date_soutenance INTO Doctorant VALUES (
+INSERT idDoctorant, date_debut_these, date_soutenance INTO Doctorant VALUES (
+    4,
     DATE '2021-07-30',
     DATE '2022-09-29'
 );
 
+----------------------------------------------------------------------
+--                                                                  --
+--                    Scientifique                                  --
+--                                                                  --
+----------------------------------------------------------------------
+
+
+INSERT idScientifique, grade INTO Scientifique VALUES (
+    3,
+    'cr1'
+);
+
+INSERT idScientifique, grade INTO Scientifique VALUES (
+    2,
+    'mcf'
+);
+
+----------------------------------------------------------------------
+--                                                                  --
+--                    Etablissement                                 --
+--                                                                  --
+----------------------------------------------------------------------
 
 --Axel
 INSERT INTO Etablissement VALUES (
@@ -116,37 +141,65 @@ INSERT INTO Etablissement VALUES (
     'Paris'    
 );
 
---Axel
-INSERT INTO Partenaire VALUES (
-    01,
-    'GFGH',
-    'Allemagne'
+----------------------------------------------------------------------
+--                                                                  --
+--                    Enseignant Chercheur                          --
+--                                                                  --
+----------------------------------------------------------------------
+
+----------------------------------------------------------------------
+--                                                                  --
+--                    Evenement                                     --
+--                                                                  --
+----------------------------------------------------------------------
+
+--Yasmine
+INSERT INTO Evenement VALUES (
+    0001,INSERT INTO
+
+    DATE '2022-07-07',
+    DATE '2023-07-07'
 );
 
-INSERT INTO Scientifique VALUES (
-    3,
-    'cr1'
+--Yasmine
+INSERT INTO Evenement VALUES (
+    0002,
+    DATE '2022-01-07',
+    DATE '2023-07-12'
 );
 
-INSERT INTO Scientifique VALUES (
-    2,
-    'mcf'
+--Yasmine
+
+INSERT INTO Evenement VALUES (
+    0003,
+    DATE '2022-02-10',
+    DATE '2023-03-12'
 );
+
+----------------------------------------------------------------------
+--                                                                  --
+--                    Congres                                       --
+--                                                                  --
+----------------------------------------------------------------------
+
+
+----------------------------------------------------------------------
+--                                                                  --
+--                    Labo externe                                  --
+--                                                                  --
+----------------------------------------------------------------------
+-- Ronan
+INSERT INTO Labo_externe VALUES (
+    6,
+    'BRBN',
+    'Bresil'
+);
+
 
 INSERT INTO Labo_externe VALUES (
     0,
     'LAAS',
     'France'
-);
-
-INSERT INTO Encadrement VALUES (
-    4,
-    2
-);
-
-INSERT INTO Encadrement VALUES (
-    2,
-    3
 );
 
 INSERT INTO Labo_externe VALUES (
@@ -178,6 +231,18 @@ INSERT INTO Labo_externe VALUES (
     'LUBN',
     'Luxembourg'
 );
+
+----------------------------------------------------------------------
+--                                                                  --
+--                    Journees porte ouvertes                       --
+--                                                                  --
+----------------------------------------------------------------------
+
+----------------------------------------------------------------------
+--                                                                  --
+--                    Auteurs externes                              --
+--                                                                  --
+----------------------------------------------------------------------
 
 INSERT INTO Auteur_Externe VALUES (
     0,
@@ -211,86 +276,12 @@ INSERT INTO Auteur_Externe VALUES (
     1
 );
 
--- Ronan
-INSERT INTO Labo_externe VALUES (
-    6,
-    'BRBN',
-    'Bresil'
-);
 
---Yasmine
-INSERT INTO Projet VALUES(
-    01,
-    'BaseDeDonnee',
-    'BDD',
-    DATE '2022-12-07',
-    DATE '2022-01-07',
-    30,
-    1000,
-    500,
-  	001
-);
-
---Yasmine
-INSERT INTO Projet VALUES (
-    02,
-    'langC',
-    'C',
-    DATE '2022-11-07',
-    DATE '2022-04-07',
-    40,
-    100,
-    60,
-  	002
-);
-
-
---Axel
-INSERT INTO Partenaire VALUES (
-    01,
-    'GFGH',
-    'Allemagne'
-);
-
---Axel
-INSERT INTO Partenaire VALUES (
-    02,
-    'LMC',
-    'Australie'
-);
-
---Axel
-INSERT INTO Partenaire VALUES (
-    03,
-    'ESHT',
-    'USA'
-);
-
---Axel
-INSERT INTO Partenaire VALUES (
-    01,
-    'HLMY',
-    'Japon'
-);
-
---Axel
-INSERT INTO Partenaire VALUES (
-    01,
-    'MAKL',
-    'France'
-);
---Yasmine
-INSERT INTO Projet VALUES (
-    03,
-    'Programation web',
-    'ProgWeb',
-    DATE '2022-04-07',
-    DATE '2022-06-07',
-    80,
-    10000,
-    6000,
-  	003
-);
+----------------------------------------------------------------------
+--                                                                  --
+--                    Publication                                   --
+--                                                                  --
+----------------------------------------------------------------------
 
 INSERT INTO Publication VALUES(
     001,
@@ -340,6 +331,101 @@ INSERT INTO Publication VALUES (
   	20
 );
 
+----------------------------------------------------------------------
+--                                                                  --
+--                    Projet                                        --
+--                                                                  --
+----------------------------------------------------------------------
+
+--Yasmine
+INSERT INTO Projet VALUES(
+    01,
+    'BaseDeDonnee',
+    'BDD',
+    DATE '2022-12-07',
+    DATE '2022-01-07',
+    30,
+    1000,
+    500,
+  	001
+);
+
+--Yasmine
+INSERT INTO Projet VALUES (
+    02,
+    'langC',
+    'C',
+    DATE '2022-11-07',
+    DATE '2022-04-07',
+    40,
+    100,
+    60,
+  	002
+);
+
+--Yasmine
+INSERT INTO Projet VALUES (
+    03,
+    'Programation web',
+    'ProgWeb',
+    DATE '2022-04-07',
+    DATE '2022-06-07',
+    80,
+    10000,
+    6000,
+  	003
+);
+
+----------------------------------------------------------------------
+--                                                                  --
+--                    Participe                                     --
+--                                                                  --
+----------------------------------------------------------------------
+
+----------------------------------------------------------------------
+--                                                                  --
+--                    Preside                                       --
+--                                                                  --
+----------------------------------------------------------------------
+
+----------------------------------------------------------------------
+--                                                                  --
+--                    Publie Scientifique                           --
+--                                                                  --
+----------------------------------------------------------------------
+
+INSERT INTO Publie_Scientifique VALUES (
+    1,
+    3
+);
+
+INSERT INTO Publie_Scientifique VALUES (
+    2,
+    3
+);
+
+INSERT INTO Publie_Scientifique VALUES (
+    1,
+    2
+);
+
+INSERT INTO Publie_Scientifique VALUES (
+    4,
+    2
+);
+
+INSERT INTO Publie_Scientifique VALUES (
+    4,
+    3
+);
+
+----------------------------------------------------------------------
+--                                                                  --
+--                    Publie Doctorant                              --
+--                                                                  --
+----------------------------------------------------------------------
+
+
 INSERT INTO Publie_Doctorant VALUES (
     1,
     2
@@ -355,31 +441,12 @@ INSERT INTO Publie_Doctorant VALUES (
     4
 );
 
-INSERT INTO Publie_Scientifique VALUES (
-    1,
-    3
-);
 
-INSERT INTO Publie_Scientifique VALUES (
-    2,
-    3
-);
-
-INSERT INTO Publie_Scientifique VALUES (
-    1,
-    2
-);
-
-INSERT INTO Publie_Scientifique VALUES (
-    4,
-    2
-);
-
-INSERT INTO Publie_Scientifique VALUES (
-    4,
-    3
-);
-
+----------------------------------------------------------------------
+--                                                                  --
+--                    Publie Externe                                --
+--                                                                  --
+----------------------------------------------------------------------
 
 INSERT INTO Publie_Externe VALUES (
     1,
@@ -411,26 +478,79 @@ INSERT INTO Publie_Externe VALUES (
     3
 );
 
+----------------------------------------------------------------------
+--                                                                  --
+--                    Partenaire                                    --
+--                                                                  --
+----------------------------------------------------------------------
 
---Yasmine
-INSERT INTO Evenememnt VALUES (
-    0001,INSERT INTO
-
-    DATE '2022-07-07',
-    DATE '2023-07-07'	
+--Axel
+INSERT INTO Partenaire VALUES (
+01,
+'GFGH',
+    'Allemagne'
 );
 
---Yasmine
-INSERT INTO Evenememnt VALUES (
-    0002,
-    DATE '2022-01-07',
-    DATE '2023-07-12'	
+--Axel
+INSERT INTO Partenaire VALUES (
+    01,
+    'GFGH',
+    'Allemagne'
 );
 
---Yasmine
-
-INSERT INTO Evenememnt VALUES (
-    0003,
-    DATE '2022-02-10',
-    DATE '2023-03-12'
+--Axel
+INSERT INTO Partenaire VALUES (
+    02,
+    'LMC',
+    'Australie'
 );
+
+--Axel
+INSERT INTO Partenaire VALUES (
+    03,
+    'ESHT',
+    'USA'
+);
+
+--Axel
+INSERT INTO Partenaire VALUES (
+    01,
+    'HLMY',
+    'Japon'
+);
+
+--Axel
+INSERT INTO Partenaire VALUES (
+    01,
+    'MAKL',
+    'France'
+);
+
+----------------------------------------------------------------------
+--                                                                  --
+--                    Participe Externe                             --
+--                                                                  --
+----------------------------------------------------------------------
+
+----------------------------------------------------------------------
+--                                                                  --
+--                    Organise                                      --
+--                                                                  --
+----------------------------------------------------------------------
+
+----------------------------------------------------------------------
+--                                                                  --
+--                    Encadrement                                   --
+--                                                                  --
+----------------------------------------------------------------------
+
+INSERT INTO Encadrement VALUES (
+    4,
+    2
+);
+
+INSERT INTO Encadrement VALUES (
+    2,
+    3
+);
+
