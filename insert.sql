@@ -155,8 +155,7 @@ INSERT INTO Etablissement VALUES (
 
 --Yasmine
 INSERT INTO Evenement VALUES (
-    0001,INSERT INTO
-
+    0001,
     DATE '2022-07-07',
     DATE '2023-07-07'
 );
@@ -288,7 +287,7 @@ INSERT INTO Publication VALUES(
     'recherche scientifique sur la chimie organique',
     DATE '2022-07-07',
     'conference des sciences',
-    112,
+    'A*',
   	220
 );
 
@@ -298,7 +297,7 @@ INSERT INTO Publication VALUES(
     'Page rank',
     DATE '2022-07-07',
     'conference des sciences et technologies',
-    112,
+    'A',
   	220
 );
 
@@ -309,7 +308,7 @@ INSERT INTO Publication VALUES (
     'chaine de markov',
     DATE '2022-12-03',
     'Mathematiques appliqués',
-    113,
+    'B',
   	500
 );
 
@@ -318,7 +317,7 @@ INSERT INTO Publication VALUES (
     'Physique quantique',
     DATE '2017-12-03',
     'Physique',
-    113,
+    'A',
   	1520
 );
 
@@ -327,7 +326,7 @@ INSERT INTO Publication VALUES (
     'La nourriture en France',
     DATE '2022-12-03',
     'IEE',
-    112,
+    'A*',
   	20
 );
 
