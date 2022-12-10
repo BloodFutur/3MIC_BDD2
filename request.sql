@@ -6,7 +6,7 @@
 --SELECT COUNT(idPublication) as nbCollab FROM Publication
 --WHERE classeConf = 'A';
 
--- Nathan Q1
+-- Nathan Q1 tested
 SELECT Personnel.nom, Scientifique.grade FROM Personnel, Scientifique
 WHERE idPersonnel = idScientifique AND idPersonnel IN (
     SELECT idScientifique FROM Encadrement
@@ -40,7 +40,7 @@ RIGHT JOIN Publie_Externe pe ON pe.idAuteurExterne = ae.idAuteurExterne
 JOIN Publication pub ON pub.idPublication = pe.idPublication
 WHERE pub.classeConf = 'A';
 
--- Nathan Q5
+-- Nathan Q5 tested
 SELECT idDoctorant, COUNT(idPublication) FROM Publie_Doctorant
 GROUP BY idDoctorant;
 
@@ -54,7 +54,7 @@ GROUP BY idDoctorant
 SELECT COUNT(*) FROM Doctorant
 WHERE date_soutenance IS NOT NULL;
 
---Nathan Q7
+--Nathan Q7 tested
 SELECT nom, prenom FROM Personnel
 WHERE idPersonnel IN (
     SELECT idScientifique FROM Scientifique
@@ -75,7 +75,7 @@ NOT IN ( (SELECT idScientifique
           FROM Encadrement)
 	);
 
--- Nathan Q9
+-- Nathan Q9 tested
 SELECT nom, prenom FROM Personnel
 WHERE idPersonnel IN (
     SELECT idScientifique FROM Scientifique
@@ -95,6 +95,13 @@ JOIN Doctorant d ON e.idDoctorant=d.idDoctorant
 RIGHT JOIN Personnel p ON d.idDoctorant=p.idPersonnel
 GROUP BY e.idDoctorant, nom, prenom
 HAVING COUNT(DISTINCT s.idScientifique)=1;
+
+-- Nathan Q11 tested
+SELECT idPersonnel, nom, prenom, nbEtudiant FROM Personnel, (
+    SELECT idScientifique, COUNT(DISTINCT idDoctorant) AS nbEtudiant FROM Encadrement
+    GROUP BY idScientifique
+) AS Classe
+WHERE nbEtudiant >= 2 AND idPersonnel = idScientifique;
 
 -- Axel Q12
 SELECT idEnseignant FROM Enseignant_Chercheur ec

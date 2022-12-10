@@ -75,6 +75,7 @@ INSERT INTO Personnel(nom, prenom, date_de_naissance, adress, date_de_recrutemen
 --                                                                  --
 ----------------------------------------------------------------------
 
+-- Nathan
 INSERT INTO Doctorant(idDoctorant, date_debut_these, date_soutenance) VALUES (
     1,
     DATE '2020-06-23',
@@ -91,6 +92,12 @@ INSERT INTO Doctorant(idDoctorant, date_debut_these, date_soutenance) VALUES (
     4,
     DATE '2021-07-30',
     DATE '2022-09-29'
+);
+
+INSERT INTO Doctorant(idDoctorant, date_debut_these, date_soutenance) VALUES (
+    8,
+    DATE '2022-09-20',
+    DATE '2024-10-12'
 );
 
 ----------------------------------------------------------------------
@@ -516,3 +523,8 @@ INSERT INTO Encadrement VALUES (
     5
 );
 
+
+INSERT INTO Encadrement VALUES (
+    8,
+    2
+);
