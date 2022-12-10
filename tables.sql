@@ -15,13 +15,13 @@ CREATE TYPE T_GRADE AS ENUM (
 );
 
 CREATE TYPE T_ECHELON AS ENUM (
-    1,
-    2,
-    3,
-    4,
-    5,
-    6,
-    7
+    '1',
+    '2',
+    '3',
+    '4',
+    '5',
+    '6',
+    '7'
 );
 
 -- Axel

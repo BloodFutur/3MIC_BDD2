@@ -101,7 +101,7 @@ INSERT idDoctorant, date_debut_these, date_soutenance INTO Doctorant VALUES (
 
 
 INSERT idScientifique, grade INTO Scientifique VALUES (
-    3,
+    5,
     'cr1'
 );
 
