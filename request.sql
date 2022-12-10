@@ -71,39 +71,39 @@ WHERE idPersonnel IN (
 );
 
 -- Ronan Q10
-SELECT idDoctorant, nom, prenom, COUNT(*) FROM Encadrement
-JOIN Scientifique on idPersonnel=idScientifique
-GROUP BY idDoctorant, nom, prenom
-HAVING COUNT(DISTINCT idScientifique)=1;
+SELECT e.idDoctorant, nom, prenom, COUNT(*) FROM Encadrement e
+JOIN Scientifique s ON e.idScientifique=s.idScientifique
+JOIN Doctorant d ON e.idDoctorant=d.idDoctorant
+RIGHT JOIN Personnel p ON d.idDoctorant=p.idPersonnel
+GROUP BY e.idDoctorant, nom, prenom
+HAVING COUNT(DISTINCT s.idScientifique)=1;
 
 -- Ronan Q16
-SELECT pays, COUNT(*) nb_publi
-FROM Labo_Externe
+SELECT pays, COUNT(*) nb_publi FROM Labo_Externe
 JOIN Auteur_Externe ae on ae.idLabo = Labo_Externe.idLabo
-JOIN Publie_Externe pe on pe.idAuteur = ae.idAuteur
+JOIN Publie_Externe pe on pe.idAuteurExterne = ae.idAuteur
 GROUP BY pays
 ORDER BY nb_publi DESC LIMIT 1;
 
---Yasmine QUESTION 5 A tester enc
+--Yasmine QUESTION 5 Testé
 
-SELECT idDoctorant, count(distinct idPublication) as NombrePublication
-FROM Doctorant D
-LEFT JOIN Publie_Doctorant PD on PD.idDoctorant= D.idDoctorant
-GROUP BY idDoctorant;
+SELECT iddoctorant, count(distinct idPublication) as NombrePublication
+FROM publie_doctorant
+GROUP BY idDoctorant
 
 
---Yasmine QUESTION 8
+--Yasmine QUESTION 8 Testé
 
 SELECT idEnseignant
 FROM Enseignant_chercheur
+WHERE idEnseignant
 NOT IN ( (SELECT idScientifique
-               FROM Publie_scientifique)
-               UNION
-	      (SELECT idScientifique
-               FROM Encadrement)
-	) ;
+          FROM Publie_scientifique)
+          UNION
+	  (SELECT idScientifique
+          FROM Encadrement)
+	);
 
-<<<<<<< HEAD
 
 -- Axel Q12
 SELECT idEnseignant FROM Enseignant_Chercheur ec
@@ -117,16 +117,14 @@ WHERE pub.classeConf = 'A';
 --    AND pub.classeConf IN  'A*' 'B';
 
 
--- Yasmine QUESTION 14
-=======
+
 -- Yasmine QUESTION 14 Testé
->>>>>>> af456634e468d2a6e5d3dbc4e169d73853af5baf
 
 SELECT Count(Distinct idPublication)
 FROM Publication
 GROUP BY publication.annee;
 
--- Yasmine QUESTION 15 Testé PAS D'ERREUR DE SYNTAXE
+-- Yasmine QUESTION 15 Testé
 
 SELECT Count(Distinct E.idEnseignant)
 FROM Enseignant_chercheur E,Personnel P ,Scientifique S
@@ -134,7 +132,7 @@ WHERE P.idPersonnel=S.idScientifique
 AND S.idScientifique=E.idEnseignant
 GROUP BY idEtablissement;
 
--- Yasmine QUESTION 19 Testé PAS D'ERREUR DE SYNTAXE
+-- Yasmine QUESTION 19 Testé
 
 SELECT idEtablissement, Count(Distinct idEnseignant)
 FROM Enseignant_chercheur
@@ -142,7 +140,7 @@ GROUP BY idEtablissement
 HAVING count(Distinct idEnseignant) >= 50;
 
 
---Yasmine QUESTION 21 Testé PAS D'ERREUR DE SYNTAXE
+--Yasmine QUESTION 21 Testé
 
 SELECT Distinct P.Pays
 FROM Partenaire P, Participe_externe PEX
