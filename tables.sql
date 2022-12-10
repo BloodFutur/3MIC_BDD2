@@ -95,9 +95,10 @@ CREATE TABLE Congres(
 
 -- Ronan
 CREATE TABLE Labo_externe(
-    idLabo SERIAL PRIMARY KEY,
+    idLabo SERIAL NOT NULL,
     nom VARCHAR(255),
     pays VARCHAR(255),
+    PRIMARY KEY (idLabo)
 );
 
 -- Ronan
@@ -231,7 +232,7 @@ CREATE TABLE Publie_Externe(
         FOREIGN KEY (idAuteurExterne) 
             REFERENCES Auteur_Externe(idAuteur) 
             ON DELETE CASCADE
-            ON UPDATE
+            ON UPDATE CASCADE
 );
 
 --Yasmine
