@@ -346,7 +346,7 @@ INSERT INTO Projet VALUES(
     30,
     1000,
     500,
-  	001
+    5
 );
 
 --Yasmine
@@ -359,7 +359,7 @@ INSERT INTO Projet VALUES (
     40,
     100,
     60,
-  	002
+    2
 );
 
 --Yasmine
@@ -372,7 +372,7 @@ INSERT INTO Projet VALUES (
     80,
     10000,
     6000,
-  	003
+    5
 );
 
 ----------------------------------------------------------------------
@@ -395,7 +395,7 @@ INSERT INTO Projet VALUES (
 
 INSERT INTO Publie_Scientifique VALUES (
     1,
-    3
+    5
 );
 
 INSERT INTO Publie_Scientifique VALUES (
@@ -405,7 +405,7 @@ INSERT INTO Publie_Scientifique VALUES (
 
 INSERT INTO Publie_Scientifique VALUES (
     1,
-    2
+    5
 );
 
 INSERT INTO Publie_Scientifique VALUES (
@@ -415,7 +415,7 @@ INSERT INTO Publie_Scientifique VALUES (
 
 INSERT INTO Publie_Scientifique VALUES (
     4,
-    3
+    5
 );
 
 ----------------------------------------------------------------------
@@ -427,12 +427,12 @@ INSERT INTO Publie_Scientifique VALUES (
 
 INSERT INTO Publie_Doctorant VALUES (
     1,
-    2
+    1
 );
 
 INSERT INTO Publie_Doctorant VALUES (
     2,
-    2
+    3
 );
 
 INSERT INTO Publie_Doctorant VALUES (
@@ -484,43 +484,31 @@ INSERT INTO Publie_Externe VALUES (
 ----------------------------------------------------------------------
 
 --Axel
-INSERT INTO Partenaire VALUES (
-01,
-'GFGH',
-    'Allemagne'
-);
-
---Axel
-INSERT INTO Partenaire VALUES (
-    01,
+INSERT INTO Partenaire(nom, pays) VALUES (
     'GFGH',
     'Allemagne'
 );
 
 --Axel
-INSERT INTO Partenaire VALUES (
-    02,
+INSERT INTO Partenaire(nom, pays) VALUES (
     'LMC',
     'Australie'
 );
 
 --Axel
-INSERT INTO Partenaire VALUES (
-    03,
+INSERT INTO Partenaire(nom, pays) VALUES (
     'ESHT',
     'USA'
 );
 
 --Axel
-INSERT INTO Partenaire VALUES (
-    01,
+INSERT INTO Partenaire(nom, pays) VALUES (
     'HLMY',
     'Japon'
 );
 
 --Axel
-INSERT INTO Partenaire VALUES (
-    01,
+INSERT INTO Partenaire(nom, pays) VALUES (
     'MAKL',
     'France'
 );
