@@ -44,6 +44,12 @@ WHERE pub.classeConf = 'A';
 SELECT idDoctorant, COUNT(idPublication) FROM Publie_Doctorant
 GROUP BY idDoctorant;
 
+--Yasmine QUESTION 5 Testé
+
+SELECT iddoctorant, count(distinct idPublication) as NombrePublication
+FROM publie_doctorant
+GROUP BY idDoctorant
+
 -- Ronan Q6
 SELECT COUNT(*) FROM Doctorant
 WHERE date_soutenance IS NOT NULL;
@@ -56,6 +62,18 @@ WHERE idPersonnel IN (
     SELECT idScientifique FROM Encadrement
     )
 );
+
+--Yasmine QUESTION 8 Testé
+
+SELECT idEnseignant
+FROM Enseignant_chercheur
+WHERE idEnseignant
+NOT IN ( (SELECT idScientifique
+          FROM Publie_scientifique)
+          UNION
+	  (SELECT idScientifique
+          FROM Encadrement)
+	);
 
 -- Nathan Q9
 SELECT nom, prenom FROM Personnel
@@ -78,33 +96,6 @@ RIGHT JOIN Personnel p ON d.idDoctorant=p.idPersonnel
 GROUP BY e.idDoctorant, nom, prenom
 HAVING COUNT(DISTINCT s.idScientifique)=1;
 
--- Ronan Q16
-SELECT pays, COUNT(*) nb_publi FROM Labo_Externe
-JOIN Auteur_Externe ae on ae.idLabo = Labo_Externe.idLabo
-JOIN Publie_Externe pe on pe.idAuteurExterne = ae.idAuteur
-GROUP BY pays
-ORDER BY nb_publi DESC LIMIT 1;
-
---Yasmine QUESTION 5 Testé
-
-SELECT iddoctorant, count(distinct idPublication) as NombrePublication
-FROM publie_doctorant
-GROUP BY idDoctorant
-
-
---Yasmine QUESTION 8 Testé
-
-SELECT idEnseignant
-FROM Enseignant_chercheur
-WHERE idEnseignant
-NOT IN ( (SELECT idScientifique
-          FROM Publie_scientifique)
-          UNION
-	  (SELECT idScientifique
-          FROM Encadrement)
-	);
-
-
 -- Axel Q12
 SELECT idEnseignant FROM Enseignant_Chercheur ec
 RIGHT JOIN Publie_Scientifique ps ON ps.idScientifique = ec.idScientifique
@@ -115,8 +106,6 @@ WHERE pub.classeConf = 'A';
 --RIGHT JOIN Publication pub ON pub.idPublication = ps.idScientifique
 --WHERE pub.classeConf = 'A'
 --    AND pub.classeConf IN  'A*' 'B';
-
-
 
 -- Yasmine QUESTION 14 Testé
 
@@ -131,6 +120,17 @@ FROM Enseignant_chercheur E,Personnel P ,Scientifique S
 WHERE P.idPersonnel=S.idScientifique
 AND S.idScientifique=E.idEnseignant
 GROUP BY idEtablissement;
+
+-- Ronan Q16
+SELECT pays, COUNT(*) nb_publi FROM Labo_Externe
+JOIN Auteur_Externe ae on ae.idLabo = Labo_Externe.idLabo
+JOIN Publie_Externe pe on pe.idAuteurExterne = ae.idAuteur
+GROUP BY pays
+ORDER BY nb_publi DESC LIMIT 1;
+
+
+
+
 
 -- Yasmine QUESTION 19 Testé
 
