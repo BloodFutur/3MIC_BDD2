@@ -439,12 +439,12 @@ INSERT INTO Publie_Externe VALUES (
 
 INSERT INTO Publie_Externe VALUES (
     3,
-    5
+    1
 );
 
 INSERT INTO Publie_Externe VALUES (
     4,
-    5
+    1
 );
 
 INSERT INTO Publie_Externe VALUES (
