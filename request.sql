@@ -18,7 +18,7 @@ SELECT ae.nom, ae.prenom, le.pays FROM Personnel AS perso
 JOIN Publie_Scientifique ps ON perso.idPersonnel = ps.idScientifique
 RIGHT JOIN Publication publi ON publi.idPublication = ps.idPublication
 RIGHT JOIN Publie_Externe pe ON publi.idPublication = pe.idPublication
-JOIN Auteur_Externe ae ON ae.idAuteur = pe.idAuteur
+JOIN Auteur_Externe ae ON ae.idAuteur = pe.idAuteurExterne
 JOIN Labo_Externe le ON ae.idLabo = le.idLabo
 WHERE perso.nom = 'Azi'
     AND perso.prenom = 'Jean'
