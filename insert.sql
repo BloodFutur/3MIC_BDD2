@@ -363,6 +363,11 @@ INSERT INTO Projet(titre, acronyme, annee_debut, annee_fin, duree, budget_Laas, 
 --                                                                  --
 ----------------------------------------------------------------------
 
+INSERT INTO Participe VALUES (
+    1,
+    5
+);
+
 ----------------------------------------------------------------------
 --                                                                  --
 --                    Preside                                       --

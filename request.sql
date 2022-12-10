@@ -136,7 +136,15 @@ GROUP BY pays
 ORDER BY nb_publi DESC LIMIT 1;
 
 
-
+-- Nathan tested
+SELECT * FROM Scientifique
+WHERE idScientifique IN (
+    SELECT idScientifique FROM (
+        SELECT idScientifique, COUNT(DISTINCT idProjet) AS nbProjets FROM Participe
+        GROUP BY idScientifique
+    ) AS Taux_Participation
+    WHERE nbProjets = 1
+);
 
 
 -- Yasmine QUESTION 19 Testé
