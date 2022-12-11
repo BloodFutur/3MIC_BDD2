@@ -1,4 +1,25 @@
 
+--         | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12 | 13 | 14 | 15 | 16 | 17 | 18 | 19 | 20 | 21 |
+-- --------+---+---+---+---+---+---+---+---+---+----+----+----+----+----+----+----+----+----+----+----+----+
+-- Axel    |   |   | x | x |   |   |   |   |   |    |    | x  |    |    |    |    |    |    |    |    |    |
+-- --------+---+---+---+---+---+---+---+---+---+----+----+----+----+----+----+----+----+----+----+----+----+
+-- Ronan   |   | O |   |   |   | x |   |   |   | x  |    |    |    |    |    | x  |    |    |    |    |    |
+-- --------+---+---+---+---+---+---+---+---+---+----+----+----+----+----+----+----+----+----+----+----+----+
+-- Yasmine |   |   |   |   | O |   |   | O |   |    |    |    |    | O  | O  |    |    |    | O  |    | O  |
+-- --------+---+---+---+---+---+---+---+---+---+----+----+----+----+----+----+----+----+----+----+----+----+
+-- Nathan  | O |   |   |   |   |   | O |   | O |    | O  |    |    |    |    |    | O  |    |    |    |    |
+-- --------+---+---+---+---+---+---+---+---+---+----+----+----+----+----+----+----+----+----+----+----+----+
+--                                                              ^                        ^         ^
+--                                                              |                        |         |
+
+
+--          x = écrit
+--          O = écrit + testé
+
+
+
+
+
 --Axel, question 3 et 4
 --SELECT COUNT(id) 
 --FROM SELECT idScientifique FROM Enseignant_Chercheur
@@ -13,7 +34,7 @@ WHERE idPersonnel = idScientifique AND idPersonnel IN (
     WHERE idDoctorant = 4
 );
 
--- Ronan Q2
+-- Ronan Q2 tested
 SELECT ae.nom, ae.prenom, le.pays FROM Personnel AS perso
 JOIN Publie_Scientifique ps ON perso.idPersonnel = ps.idScientifique
 RIGHT JOIN Publication publi ON publi.idPublication = ps.idPublication
@@ -42,8 +63,8 @@ JOIN Publication pub ON pub.idPublication = pe.idPublication
 WHERE pub.classeConf = 'A';
 
 -- Nathan Q5 tested
-SELECT idDoctorant, COUNT(idPublication) FROM Publie_Doctorant
-GROUP BY idDoctorant;
+-- SELECT idDoctorant, COUNT(idPublication) FROM Publie_Doctorant
+-- GROUP BY idDoctorant;
 
 --Yasmine QUESTION 5 Testé
 
@@ -137,7 +158,7 @@ GROUP BY pays
 ORDER BY nb_publi DESC LIMIT 1;
 
 
--- Nathan tested
+-- Nathan Q17 tested
 SELECT * FROM Scientifique
 WHERE idScientifique IN (
     SELECT idScientifique FROM (
