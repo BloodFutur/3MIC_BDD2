@@ -1,7 +1,11 @@
 
 --         | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12 | 13 | 14 | 15 | 16 | 17 | 18 | 19 | 20 | 21 |
 -- --------+---+---+---+---+---+---+---+---+---+----+----+----+----+----+----+----+----+----+----+----+----+
+<<<<<<< HEAD
+-- Axel    |   |   | O | O |   |   |   |   |   |    |    | x  | O  |    |    |    |    |    |    |    |    |
+=======
 -- Axel    |   |   | O | O |   |   |   |   |   |    |    | x  | x  |    |    |    |    |    |    |    |    |
+>>>>>>> 1a38bf8865af3e2e64d57867ce98f7f521a5b0a3
 -- --------+---+---+---+---+---+---+---+---+---+----+----+----+----+----+----+----+----+----+----+----+----+
 -- Ronan   |   | O |   |   |   | O |   |   |   | O  |    |    |    |    |    | x  |    |    |    |    |    |
 -- --------+---+---+---+---+---+---+---+---+---+----+----+----+----+----+----+----+----+----+----+----+----+
@@ -137,14 +141,14 @@ WHERE pub.classeConf = 'A' AND pub.classeConf NOT IN ('A*', 'B', 'C');
 --RIGHT JOIN Publication pub ON pub.idPublication = ps.idScientifique
 --WHERE pub.classeConf IN  'A*', 'A', 'B', 'C';
 
--- Axel Q13
-SELECT p.idScientifique, p.nom, p.prenom FROM Personnel p
+-- Axel Q13 tested
+SELECT DISTINCT p.idPersonnel, p.nom, p.prenom FROM Personnel p
 JOIN Enseignant_Chercheur ec ON ec.idEnseignant = p.idPersonnel
-RIGHT JOIN Encadrement encad1 on encad1.idEnseignant = ec.idEnseignant
+RIGHT JOIN Encadrement encad1 ON ec.idEnseignant = encad1.idScientifique
 WHERE ec.idEnseignant = encad1.idScientifique
 AND NOT EXISTS (SELECT * FROM Doctorant doc
                 WHERE NOT EXISTS(SELECT * FROM Encadrement encad2
-                                WHERE encad2.idScientifique = ec.idScientifique
+                                WHERE encad2.idScientifique = ec.idEnseignant
                                         AND encad2.idDoctorant = doc.idDoctorant));
 
 -- Yasmine QUESTION 14 Testé
@@ -187,7 +191,7 @@ WHERE idScientifique IN (
 SELECT idEtablissement, Count(Distinct idEnseignant)
 FROM Enseignant_chercheur
 GROUP BY idEtablissement
-HAVING count(Distinct idEnseignant) >= 50;
+HAVING count(Distinct idEnseignant) >= 2;
 
 
 --Yasmine QUESTION 21 Testé
