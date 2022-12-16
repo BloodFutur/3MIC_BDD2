@@ -149,8 +149,8 @@ AND NOT EXISTS (SELECT * FROM Doctorant doc
 
 -- Yasmine QUESTION 14 Testé
 
-SELECT Count(Distinct idPublication)
-FROM Publication
+SELECT annee,Count(Distinct idPublication)
+FROM publication
 GROUP BY publication.annee;
 
 -- Yasmine QUESTION 15 Testé
