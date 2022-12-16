@@ -1,11 +1,15 @@
 
 --         | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12 | 13 | 14 | 15 | 16 | 17 | 18 | 19 | 20 | 21 |
 -- --------+---+---+---+---+---+---+---+---+---+----+----+----+----+----+----+----+----+----+----+----+----+
+<<<<<<< HEAD
 -- Axel    |   |   | O | O |   |   |   |   |   |    |    | x  | O  |    |    |    |    |    |    |    |    |
+=======
+-- Axel    |   |   | O | O |   |   |   |   |   |    |    | x  | x  |    |    |    |    |    |    |    |    |
+>>>>>>> 1a38bf8865af3e2e64d57867ce98f7f521a5b0a3
 -- --------+---+---+---+---+---+---+---+---+---+----+----+----+----+----+----+----+----+----+----+----+----+
--- Ronan   |   | O |   |   |   | O |   |   |   | x  |    |    |    |    |    | x  |    |    |    |    |    |
+-- Ronan   |   | O |   |   |   | O |   |   |   | O  |    |    |    |    |    | x  |    |    |    |    |    |
 -- --------+---+---+---+---+---+---+---+---+---+----+----+----+----+----+----+----+----+----+----+----+----+
--- Yasmine |   |   |   |   | O |   |   | x |   |    |    |    |    | O  | O  |    |    |    | O  |    | O  |
+-- Yasmine |   |   |   |   | O |   |   | O |   |    |    |    |    | O  | O  |    |    |    | O  |    | O  |
 -- --------+---+---+---+---+---+---+---+---+---+----+----+----+----+----+----+----+----+----+----+----+----+
 -- Nathan  | O |   |   |   |   |   | O |   | O |    | O  |    |    |    |    |    | O  |    |    |    |    |
 -- --------+---+---+---+---+---+---+---+---+---+----+----+----+----+----+----+----+----+----+----+----+----+
@@ -85,7 +89,7 @@ WHERE idPersonnel IN (
     )
 );
 
---Yasmine QUESTION 8
+--Yasmine QUESTION 8 tested
 SELECT EC.idEnseignant,P.nom,P.prenom
 FROM enseignant_chercheur EC, Personnel P
 WHERE P.idPersonnel=EC.idEnseignant and idEnseignant 
@@ -110,7 +114,7 @@ WHERE idPersonnel IN (
     )
 );
 
--- Ronan Q10
+-- Ronan Q10 tested
 SELECT idDoctorant, nom, prenom FROM (
   SELECT e.idDoctorant, nom, prenom, COUNT(*) FROM Encadrement e
   JOIN Scientifique s ON e.idScientifique=s.idScientifique
@@ -128,8 +132,8 @@ SELECT idPersonnel, nom, prenom, nbEtudiant FROM Personnel, (
 WHERE nbEtudiant >= 2 AND idPersonnel = idScientifique;
 
 -- Axel Q12
-SELECT idEnseignant FROM Enseignant_Chercheur ec
-RIGHT JOIN Publie_Scientifique ps ON ps.idScientifique = ec.idScientifique
+SELECT DISTINCT idEnseignant FROM Enseignant_Chercheur ec
+RIGHT JOIN Publie_Scientifique ps ON ps.idScientifique = ec.idEnseignant
 RIGHT JOIN Publication pub ON pub.idPublication = ps.idScientifique
 WHERE pub.classeConf = 'A' AND pub.classeConf NOT IN ('A*', 'B', 'C');
 --EXCEPT SELECT idEnseignant FROM Enseignant_Chercheur ec
@@ -149,13 +153,15 @@ AND NOT EXISTS (SELECT * FROM Doctorant doc
 
 -- Yasmine QUESTION 14 Testé
 
-SELECT Count(Distinct idPublication)
-FROM Publication
-GROUP BY publication.annee;
+SELECT
+  EXTRACT(YEAR FROM publication.annee) AS nbannee
+  ,Count(Distinct idPublication)
+FROM publication
+GROUP BY nbannee;
 
 -- Yasmine QUESTION 15 Testé
 
-SELECT Count(Distinct E.idEnseignant)
+SELECT idetablissement,Count(Distinct E.idEnseignant)
 FROM Enseignant_chercheur E,Personnel P ,Scientifique S
 WHERE P.idPersonnel=S.idScientifique
 AND S.idScientifique=E.idEnseignant
