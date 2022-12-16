@@ -150,10 +150,10 @@ AND NOT EXISTS (SELECT * FROM Doctorant doc
 -- Yasmine QUESTION 14 Testé
 
 SELECT
-  EXTRACT(YEAR FROM publication.annee) AS annee
+  EXTRACT(YEAR FROM publication.annee) AS nbannee
   ,Count(Distinct idPublication)
 FROM publication
-GROUP BY annee;
+GROUP BY nbannee;
 
 -- Yasmine QUESTION 15 Testé
 
