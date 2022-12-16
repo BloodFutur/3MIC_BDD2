@@ -164,6 +164,12 @@ INSERT INTO Etablissement(nom, acronyme, adresse) VALUES (
 --                                                                  --
 ----------------------------------------------------------------------
 
+INSERT INTO Enseignant_Chercheur VALUES (
+    2,
+    2,
+    '2'
+);
+
 ----------------------------------------------------------------------
 --                                                                  --
 --                    Evenement                                     --

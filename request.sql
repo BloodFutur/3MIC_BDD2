@@ -1,7 +1,7 @@
 
 --         | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12 | 13 | 14 | 15 | 16 | 17 | 18 | 19 | 20 | 21 |
 -- --------+---+---+---+---+---+---+---+---+---+----+----+----+----+----+----+----+----+----+----+----+----+
--- Axel    |   |   | x | x |   |   |   |   |   |    |    | x  |    |    |    |    |    |    |    |    |    |
+-- Axel    |   |   | O | O |   |   |   |   |   |    |    | x  |    |    |    |    |    |    |    |    |    |
 -- --------+---+---+---+---+---+---+---+---+---+----+----+----+----+----+----+----+----+----+----+----+----+
 -- Ronan   |   | O |   |   |   | x |   |   |   | x  |    |    |    |    |    | x  |    |    |    |    |    |
 -- --------+---+---+---+---+---+---+---+---+---+----+----+----+----+----+----+----+----+----+----+----+----+
@@ -47,18 +47,18 @@ WHERE perso.nom = 'Azi'
     AND annee <= '2020-01-01';
 
 
---Axel Q3
+--Axel Q3 tested
 SELECT COUNT(DISTINCT idAuteurExterne) AS nbCollab FROM Publie_Externe pe
 JOIN Publie_Scientifique ps ON pe.idPublication = ps.idPublication
 --RIGHT JOIN Publie_Doctorant pdoc ON pe.idPublication = pdoc.idPublication
 RIGHT JOIN Enseignant_Chercheur ec ON ec.idEnseignant = ps.idScientifique
-WHERE idScientifique = '01';
+WHERE idScientifique = 2;
 
 
--- Axel Q4
+-- Axel Q4 tested
 SELECT COUNT(DISTINCT pays) AS nbPaysCollab FROM Labo_Externe le
 RIGHT JOIN Auteur_Externe ae ON ae.idLabo = le.idLabo
-RIGHT JOIN Publie_Externe pe ON pe.idAuteurExterne = ae.idAuteurExterne
+RIGHT JOIN Publie_Externe pe ON pe.idAuteurExterne = ae.idAuteur
 JOIN Publication pub ON pub.idPublication = pe.idPublication
 WHERE pub.classeConf = 'A';
 
@@ -70,7 +70,7 @@ WHERE pub.classeConf = 'A';
 
 SELECT iddoctorant, count(distinct idPublication) as NombrePublication
 FROM publie_doctorant
-GROUP BY idDoctorant
+GROUP BY idDoctorant;
 
 -- Ronan Q6
 SELECT COUNT(*) FROM Doctorant
