@@ -77,6 +77,222 @@ INSERT INTO Personnel(nom, prenom, date_de_naissance, adress, date_de_recrutemen
     DATE '2020-06-23'
 );
 
+INSERT INTO Personnel(nom, prenom, date_de_naissance, adress, date_de_recrutement) VALUES (
+    'Azi',
+    'Jean',
+    DATE '2000-03-17',
+    '132 boulevard de la moutarde',
+    DATE '2020-06-23'
+);
+
+INSERT INTO Personnel(nom, prenom, date_de_naissance, adress, date_de_recrutement) VALUES (
+    'a',
+    'A',
+    DATE '2000-03-17',
+    'Chez tout le monde',
+    DATE '2020-06-23'
+);
+
+INSERT INTO Personnel(nom, prenom, date_de_naissance, adress, date_de_recrutement) VALUES (
+    'b',
+    'B',
+    DATE '2000-03-17',
+    'Chez tout le monde',
+    DATE '2020-06-23'
+);
+
+INSERT INTO Personnel(nom, prenom, date_de_naissance, adress, date_de_recrutement) VALUES (
+    'c',
+    'C',
+    DATE '2000-03-17',
+    'Chez tout le monde',
+    DATE '2020-06-23'
+);
+
+INSERT INTO Personnel(nom, prenom, date_de_naissance, adress, date_de_recrutement) VALUES (
+    'd',
+    'D',
+    DATE '2000-03-17',
+    'Chez tout le monde',
+    DATE '2020-06-23'
+);
+
+INSERT INTO Personnel(nom, prenom, date_de_naissance, adress, date_de_recrutement) VALUES (
+    'e',
+    'E',
+    DATE '2000-03-17',
+    'Chez tout le monde',
+    DATE '2020-06-23'
+);
+
+INSERT INTO Personnel(nom, prenom, date_de_naissance, adress, date_de_recrutement) VALUES (
+    'f',
+    'F',
+    DATE '2000-03-17',
+    'Chez tout le monde',
+    DATE '2020-06-23'
+);
+
+INSERT INTO Personnel(nom, prenom, date_de_naissance, adress, date_de_recrutement) VALUES (
+    'g',
+    'G',
+    DATE '2000-03-17',
+    'Chez tout le monde',
+    DATE '2020-06-23'
+);
+
+INSERT INTO Personnel(nom, prenom, date_de_naissance, adress, date_de_recrutement) VALUES (
+    'h',
+    'H',
+    DATE '2000-03-17',
+    'Chez tout le monde',
+    DATE '2020-06-23'
+);
+
+INSERT INTO Personnel(nom, prenom, date_de_naissance, adress, date_de_recrutement) VALUES (
+    'i',
+    'I',
+    DATE '2000-03-17',
+    'Chez tout le monde',
+    DATE '2020-06-23'
+);
+
+INSERT INTO Personnel(nom, prenom, date_de_naissance, adress, date_de_recrutement) VALUES (
+    'j',
+    'J',
+    DATE '2000-03-17',
+    'Chez tout le monde',
+    DATE '2020-06-23'
+);
+
+INSERT INTO Personnel(nom, prenom, date_de_naissance, adress, date_de_recrutement) VALUES (
+    'k',
+    'K',
+    DATE '2000-03-17',
+    'Chez tout le monde',
+    DATE '2020-06-23'
+);
+
+INSERT INTO Personnel(nom, prenom, date_de_naissance, adress, date_de_recrutement) VALUES (
+    'l',
+    'L',
+    DATE '2000-03-17',
+    'Chez tout le monde',
+    DATE '2020-06-23'
+);
+
+INSERT INTO Personnel(nom, prenom, date_de_naissance, adress, date_de_recrutement) VALUES (
+    'm',
+    'M',
+    DATE '2000-03-17',
+    'Chez tout le monde',
+    DATE '2020-06-23'
+);
+
+INSERT INTO Personnel(nom, prenom, date_de_naissance, adress, date_de_recrutement) VALUES (
+    'n',
+    'N',
+    DATE '2000-03-17',
+    'Chez tout le monde',
+    DATE '2020-06-23'
+);
+
+INSERT INTO Personnel(nom, prenom, date_de_naissance, adress, date_de_recrutement) VALUES (
+    'o',
+    'O',
+    DATE '2000-03-17',
+    'Chez tout le monde',
+    DATE '2020-06-23'
+);
+
+INSERT INTO Personnel(nom, prenom, date_de_naissance, adress, date_de_recrutement) VALUES (
+    'p',
+    'P',
+    DATE '2000-03-17',
+    'Chez tout le monde',
+    DATE '2020-06-23'
+);
+
+INSERT INTO Personnel(nom, prenom, date_de_naissance, adress, date_de_recrutement) VALUES (
+    'q',
+    'Q',
+    DATE '2000-03-17',
+    'Chez tout le monde',
+    DATE '2020-06-23'
+);
+
+INSERT INTO Personnel(nom, prenom, date_de_naissance, adress, date_de_recrutement) VALUES (
+    'r',
+    'R',
+    DATE '2000-03-17',
+    'Chez tout le monde',
+    DATE '2020-06-23'
+);
+
+INSERT INTO Personnel(nom, prenom, date_de_naissance, adress, date_de_recrutement) VALUES (
+    's',
+    'S',
+    DATE '2000-03-17',
+    'Chez tout le monde',
+    DATE '2020-06-23'
+);
+
+INSERT INTO Personnel(nom, prenom, date_de_naissance, adress, date_de_recrutement) VALUES (
+    't',
+    'T',
+    DATE '2000-03-17',
+    'Chez tout le monde',
+    DATE '2020-06-23'
+);
+
+INSERT INTO Personnel(nom, prenom, date_de_naissance, adress, date_de_recrutement) VALUES (
+    'u',
+    'U',
+    DATE '2000-03-17',
+    'Chez tout le monde',
+    DATE '2020-06-23'
+);
+
+INSERT INTO Personnel(nom, prenom, date_de_naissance, adress, date_de_recrutement) VALUES (
+    'v',
+    'V',
+    DATE '2000-03-17',
+    'Chez tout le monde',
+    DATE '2020-06-23'
+);
+
+INSERT INTO Personnel(nom, prenom, date_de_naissance, adress, date_de_recrutement) VALUES (
+    'w',
+    'W',
+    DATE '2000-03-17',
+    'Chez tout le monde',
+    DATE '2020-06-23'
+);
+
+INSERT INTO Personnel(nom, prenom, date_de_naissance, adress, date_de_recrutement) VALUES (
+    'x',
+    'X',
+    DATE '2000-03-17',
+    'Chez tout le monde',
+    DATE '2020-06-23'
+);
+
+INSERT INTO Personnel(nom, prenom, date_de_naissance, adress, date_de_recrutement) VALUES (
+    'y',
+    'Y',
+    DATE '2000-03-17',
+    'Chez tout le monde',
+    DATE '2020-06-23'
+);
+
+INSERT INTO Personnel(nom, prenom, date_de_naissance, adress, date_de_recrutement) VALUES (
+    'z',
+    'Z',
+    DATE '2000-03-17',
+    'Chez tout le monde',
+    DATE '2020-06-23'
+);
+
 ----------------------------------------------------------------------
 --                                                                  --
 --                    Doctorant                                     --
@@ -180,6 +396,165 @@ INSERT INTO Enseignant_Chercheur VALUES (
     1,
     '5'
 );
+
+INSERT INTO Enseignant_Chercheur VALUES (
+    1,
+    3,
+    '7'
+);
+
+INSERT INTO Enseignant_Chercheur VALUES (
+    2,
+    3,
+    '7'
+);
+
+INSERT INTO Enseignant_Chercheur VALUES (
+    3,
+    3,
+    '7'
+);
+
+INSERT INTO Enseignant_Chercheur VALUES (
+    4,
+    3,
+    '7'
+);
+
+INSERT INTO Enseignant_Chercheur VALUES (
+    5,
+    3,
+    '7'
+);
+
+INSERT INTO Enseignant_Chercheur VALUES (
+    6,
+    3,
+    '7'
+);
+
+INSERT INTO Enseignant_Chercheur VALUES (
+    7,
+    3,
+    '7'
+);
+
+INSERT INTO Enseignant_Chercheur VALUES (
+    8,
+    3,
+    '7'
+);
+
+INSERT INTO Enseignant_Chercheur VALUES (
+    9,
+    3,
+    '7'
+);
+
+INSERT INTO Enseignant_Chercheur VALUES (
+    10,
+    3,
+    '7'
+);
+
+INSERT INTO Enseignant_Chercheur VALUES (
+    11,
+    3,
+    '7'
+);
+
+INSERT INTO Enseignant_Chercheur VALUES (
+    12,
+    3,
+    '7'
+);
+
+INSERT INTO Enseignant_Chercheur VALUES (
+    13,
+    3,
+    '7'
+);
+
+INSERT INTO Enseignant_Chercheur VALUES (
+    14,
+    3,
+    '7'
+);
+
+INSERT INTO Enseignant_Chercheur VALUES (
+    15,
+    3,
+    '7'
+);
+
+INSERT INTO Enseignant_Chercheur VALUES (
+    16,
+    3,
+    '7'
+);
+
+INSERT INTO Enseignant_Chercheur VALUES (
+    17,
+    3,
+    '7'
+);
+
+INSERT INTO Enseignant_Chercheur VALUES (
+    18,
+    3,
+    '7'
+);
+
+INSERT INTO Enseignant_Chercheur VALUES (
+    19,
+    3,
+    '7'
+);
+
+INSERT INTO Enseignant_Chercheur VALUES (
+    20,
+    3,
+    '7'
+);
+
+INSERT INTO Enseignant_Chercheur VALUES (
+    21,
+    3,
+    '7'
+);
+
+INSERT INTO Enseignant_Chercheur VALUES (
+    22,
+    3,
+    '7'
+);
+
+INSERT INTO Enseignant_Chercheur VALUES (
+    23,
+    3,
+    '7'
+);
+
+INSERT INTO Enseignant_Chercheur VALUES (
+    24,
+    3,
+    '7'
+);
+
+INSERT INTO Enseignant_Chercheur VALUES (
+    25,
+    3,
+    '7'
+);
+
+INSERT INTO Enseignant_Chercheur VALUES (
+    26,
+    3,
+    '7'
+);
+
+
+>>>>>>> b119cf9702250b937e1c924da94fb625026da004
 
 ----------------------------------------------------------------------
 --                                                                  --
@@ -510,6 +885,7 @@ INSERT INTO Publie_Externe VALUES (
     5
 );
 
+
 ----------------------------------------------------------------------
 --                                                                  --
 --                    Partenaire                                    --
@@ -552,6 +928,10 @@ INSERT INTO Partenaire(nom, pays) VALUES (
 --                                                                  --
 ----------------------------------------------------------------------
 
+
+
+
+
 ----------------------------------------------------------------------
 --                                                                  --
 --                    Organise                                      --
@@ -579,3 +959,16 @@ INSERT INTO Encadrement VALUES (
     8,
     2
 );
+
+----------------------------------------------------------------------
+--                                                                  --
+--                    Publie doctorant                             --
+--                                                                  --
+----------------------------------------------------------------------
+
+INSERT INTO  publie_doctorant VALUES (
+    8,
+    2
+);
+
+
