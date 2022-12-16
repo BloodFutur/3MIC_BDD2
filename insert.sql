@@ -398,66 +398,6 @@ INSERT INTO Enseignant_Chercheur VALUES (
 );
 
 INSERT INTO Enseignant_Chercheur VALUES (
-    1,
-    3,
-    '7'
-);
-
-INSERT INTO Enseignant_Chercheur VALUES (
-    2,
-    3,
-    '7'
-);
-
-INSERT INTO Enseignant_Chercheur VALUES (
-    3,
-    3,
-    '7'
-);
-
-INSERT INTO Enseignant_Chercheur VALUES (
-    4,
-    3,
-    '7'
-);
-
-INSERT INTO Enseignant_Chercheur VALUES (
-    5,
-    3,
-    '7'
-);
-
-INSERT INTO Enseignant_Chercheur VALUES (
-    6,
-    3,
-    '7'
-);
-
-INSERT INTO Enseignant_Chercheur VALUES (
-    7,
-    3,
-    '7'
-);
-
-INSERT INTO Enseignant_Chercheur VALUES (
-    8,
-    3,
-    '7'
-);
-
-INSERT INTO Enseignant_Chercheur VALUES (
-    9,
-    3,
-    '7'
-);
-
-INSERT INTO Enseignant_Chercheur VALUES (
-    10,
-    3,
-    '7'
-);
-
-INSERT INTO Enseignant_Chercheur VALUES (
     11,
     3,
     '7'
@@ -549,6 +489,66 @@ INSERT INTO Enseignant_Chercheur VALUES (
 
 INSERT INTO Enseignant_Chercheur VALUES (
     26,
+    3,
+    '7'
+);
+
+INSERT INTO Enseignant_Chercheur VALUES (
+    27,
+    3,
+    '7'
+);
+
+INSERT INTO Enseignant_Chercheur VALUES (
+    28,
+    3,
+    '7'
+);
+
+INSERT INTO Enseignant_Chercheur VALUES (
+    29,
+    3,
+    '7'
+);
+
+INSERT INTO Enseignant_Chercheur VALUES (
+    30,
+    3,
+    '7'
+);
+
+INSERT INTO Enseignant_Chercheur VALUES (
+    31,
+    3,
+    '7'
+);
+
+INSERT INTO Enseignant_Chercheur VALUES (
+    32,
+    3,
+    '7'
+);
+
+INSERT INTO Enseignant_Chercheur VALUES (
+    33,
+    3,
+    '7'
+);
+
+INSERT INTO Enseignant_Chercheur VALUES (
+    34,
+    3,
+    '7'
+);
+
+INSERT INTO Enseignant_Chercheur VALUES (
+    35,
+    3,
+    '7'
+);
+
+INSERT INTO Enseignant_Chercheur VALUES (
+    36,
     3,
     '7'
 );
