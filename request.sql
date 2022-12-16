@@ -135,7 +135,7 @@ RIGHT JOIN Publication pub ON pub.idPublication = ps.idScientifique
 WHERE pub.classeConf = 'A' AND pub.classeConf IN  'A*', 'B', 'C';
 
 -- Axel Q13
-SELECT p.idScientifique, p.nom, p.prenom FROM Personnel
+SELECT p.idScientifique, p.nom, p.prenom FROM Personnel p
 JOIN Enseignant_Chercheur ec ON ec.idEnseignant = p.idPersonnel
 RIGHT JOIN Encadrement encad1 on encad1.idEnseignant = ec.idEnseignant
 WHERE ec.idEnseignant = encad1.idScientifique
