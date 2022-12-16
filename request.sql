@@ -88,13 +88,14 @@ WHERE idPersonnel IN (
 --Yasmine QUESTION 8 Testé
 SELECT EC.idEnseignant,P.nom,P.prenom
 FROM Enseignant_chercheur EC, Personnel P
-WHERE P.idPersonnel=EC.ididEnseignant 
-NOT IN ( (SELECT idScientifique
-          FROM Publie_scientifique)
-          UNION
-	  (SELECT idScientifique
-          FROM Encadrement)
-	);
+WHERE P.idPersonnel=EC.idEnseignant
+    AND EC.idEnseignant
+  NOT IN ( (SELECT idScientifique
+            FROM Publie_scientifique)
+            UNION
+        (SELECT idScientifique
+            FROM Encadrement)
+);
 
 -- Nathan Q9 tested
 SELECT nom, prenom FROM Personnel
@@ -110,12 +111,14 @@ WHERE idPersonnel IN (
 );
 
 -- Ronan Q10
-SELECT e.idDoctorant, nom, prenom, COUNT(*) FROM Encadrement e
-JOIN Scientifique s ON e.idScientifique=s.idScientifique
-JOIN Doctorant d ON e.idDoctorant=d.idDoctorant
-RIGHT JOIN Personnel p ON d.idDoctorant=p.idPersonnel
-GROUP BY e.idDoctorant, nom, prenom
-HAVING COUNT(DISTINCT s.idScientifique)=1;
+SELECT idDoctorant, nom, prenom FROM (
+  SELECT e.idDoctorant, nom, prenom, COUNT(*) FROM Encadrement e
+  JOIN Scientifique s ON e.idScientifique=s.idScientifique
+  JOIN Doctorant d ON e.idDoctorant=d.idDoctorant
+  RIGHT JOIN Personnel p ON d.idDoctorant=p.idPersonnel
+  GROUP BY e.idDoctorant, nom, prenom
+  HAVING COUNT(DISTINCT s.idScientifique)=1
+);
 
 -- Nathan Q11 tested
 SELECT idPersonnel, nom, prenom, nbEtudiant FROM Personnel, (
