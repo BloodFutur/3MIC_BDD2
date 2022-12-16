@@ -131,7 +131,7 @@ WHERE nbEtudiant >= 2 AND idPersonnel = idScientifique;
 SELECT idEnseignant FROM Enseignant_Chercheur ec
 RIGHT JOIN Publie_Scientifique ps ON ps.idScientifique = ec.idScientifique
 RIGHT JOIN Publication pub ON pub.idPublication = ps.idScientifique
-WHERE pub.classeConf = 'A' AND pub.classeConf NOT IN 'A*', 'B', 'C';
+WHERE pub.classeConf = 'A' AND pub.classeConf NOT IN ('A*', 'B', 'C');
 --EXCEPT SELECT idEnseignant FROM Enseignant_Chercheur ec
 --RIGHT JOIN Publie_Scientifique ps ON ps.idScientifique = ec.idScientifique
 --RIGHT JOIN Publication pub ON pub.idPublication = ps.idScientifique
