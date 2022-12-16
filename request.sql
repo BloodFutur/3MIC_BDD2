@@ -3,9 +3,9 @@
 -- --------+---+---+---+---+---+---+---+---+---+----+----+----+----+----+----+----+----+----+----+----+----+
 -- Axel    |   |   | O | O |   |   |   |   |   |    |    | x  |    |    |    |    |    |    |    |    |    |
 -- --------+---+---+---+---+---+---+---+---+---+----+----+----+----+----+----+----+----+----+----+----+----+
--- Ronan   |   | O |   |   |   | O |   |   |   | x  |    |    |    |    |    | x  |    |    |    |    |    |
+-- Ronan   |   | O |   |   |   | O |   |   |   | O  |    |    |    |    |    | x  |    |    |    |    |    |
 -- --------+---+---+---+---+---+---+---+---+---+----+----+----+----+----+----+----+----+----+----+----+----+
--- Yasmine |   |   |   |   | O |   |   | x |   |    |    |    |    | O  | O  |    |    |    | O  |    | O  |
+-- Yasmine |   |   |   |   | O |   |   | O |   |    |    |    |    | O  | O  |    |    |    | O  |    | O  |
 -- --------+---+---+---+---+---+---+---+---+---+----+----+----+----+----+----+----+----+----+----+----+----+
 -- Nathan  | O |   |   |   |   |   | O |   | O |    | O  |    |    |    |    |    | O  |    |    |    |    |
 -- --------+---+---+---+---+---+---+---+---+---+----+----+----+----+----+----+----+----+----+----+----+----+
@@ -85,7 +85,7 @@ WHERE idPersonnel IN (
     )
 );
 
---Yasmine QUESTION 8
+--Yasmine QUESTION 8 tested
 SELECT EC.idEnseignant,P.nom,P.prenom
 FROM Enseignant_chercheur EC, Personnel P
 WHERE P.idPersonnel=EC.idEnseignant
@@ -110,7 +110,7 @@ WHERE idPersonnel IN (
     )
 );
 
--- Ronan Q10
+-- Ronan Q10 tested
 SELECT idDoctorant, nom, prenom FROM (
   SELECT e.idDoctorant, nom, prenom, COUNT(*) FROM Encadrement e
   JOIN Scientifique s ON e.idScientifique=s.idScientifique
