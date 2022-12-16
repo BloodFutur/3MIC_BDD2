@@ -732,6 +732,7 @@ INSERT INTO Publication(titre, annee, nomConf, classeConf, nbPages) VALUES(
 
 --Yasmine
 INSERT INTO Projet(titre, acronyme, annee_debut, annee_fin, duree, budget_Laas, cout, idMeneurProjet) VALUES(
+  4
     'BaseDeDonnee',
     'BDD',
     DATE '2022-12-07',
@@ -744,6 +745,7 @@ INSERT INTO Projet(titre, acronyme, annee_debut, annee_fin, duree, budget_Laas, 
 
 --Yasmine
 INSERT INTO Projet(titre, acronyme, annee_debut, annee_fin, duree, budget_Laas, cout, idMeneurProjet) VALUES(
+  5
     'langC',
     'C',
     DATE '2022-11-07',
@@ -756,6 +758,7 @@ INSERT INTO Projet(titre, acronyme, annee_debut, annee_fin, duree, budget_Laas, 
 
 --Yasmine
 INSERT INTO Projet(titre, acronyme, annee_debut, annee_fin, duree, budget_Laas, cout, idMeneurProjet) VALUES(
+  6
     'Programation web',
     'ProgWeb',
     DATE '2022-04-07',
@@ -883,6 +886,27 @@ INSERT INTO Publie_Externe VALUES (
     5
 );
 
+----------------------------------------------------------------------
+--                                                                  --
+--                    Participe Externe                                --
+--                                                                  --
+----------------------------------------------------------------------
+INSERT INTO  participe_externe VALUES (
+    4,
+    5
+);
+
+INSERT INTO  participe_externe VALUES (
+    5,
+    5
+);
+
+INSERT INTO participe_externe VALUES (
+    6,
+    5
+);
+
+
 
 ----------------------------------------------------------------------
 --                                                                  --
@@ -892,30 +916,35 @@ INSERT INTO Publie_Externe VALUES (
 
 --Axel
 INSERT INTO Partenaire(nom, pays) VALUES (
+  	5
     'GFGH',
     'Allemagne'
 );
 
 --Axel
 INSERT INTO Partenaire(nom, pays) VALUES (
+  6
     'LMC',
     'Australie'
 );
 
 --Axel
 INSERT INTO Partenaire(nom, pays) VALUES (
+  7
     'ESHT',
     'USA'
 );
 
 --Axel
 INSERT INTO Partenaire(nom, pays) VALUES (
+  8
     'HLMY',
     'Japon'
 );
 
 --Axel
 INSERT INTO Partenaire(nom, pays) VALUES (
+  9
     'MAKL',
     'France'
 );
