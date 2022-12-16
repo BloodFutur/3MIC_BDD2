@@ -191,7 +191,7 @@ WHERE idScientifique IN (
 SELECT idEtablissement, Count(Distinct idEnseignant)
 FROM Enseignant_chercheur
 GROUP BY idEtablissement
-HAVING count(Distinct idEnseignant) >= 50;
+HAVING count(Distinct idEnseignant) >= 2;
 
 
 --Yasmine QUESTION 21 Testé
