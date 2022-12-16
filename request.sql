@@ -58,7 +58,7 @@ WHERE idScientifique = 2;
 -- Axel Q4
 SELECT COUNT(DISTINCT pays) AS nbPaysCollab FROM Labo_Externe le
 RIGHT JOIN Auteur_Externe ae ON ae.idLabo = le.idLabo
-RIGHT JOIN Publie_Externe pe ON pe.idAuteurExterne = ae.idAuteurExterne
+RIGHT JOIN Publie_Externe pe ON pe.idAuteurExterne = ae.idAuteur
 JOIN Publication pub ON pub.idPublication = pe.idPublication
 WHERE pub.classeConf = 'A';
 
