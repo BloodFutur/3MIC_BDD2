@@ -1,7 +1,7 @@
 
 --         | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12 | 13 | 14 | 15 | 16 | 17 | 18 | 19 | 20 | 21 |
 -- --------+---+---+---+---+---+---+---+---+---+----+----+----+----+----+----+----+----+----+----+----+----+
--- Axel    |   |   | O | O |   |   |   |   |   |    |    | x  |    |    |    |    |    |    |    |    |    |
+-- Axel    |   |   | O | O |   |   |   |   |   |    |    | x  | x  |    |    |    |    |    |    |    |    |
 -- --------+---+---+---+---+---+---+---+---+---+----+----+----+----+----+----+----+----+----+----+----+----+
 -- Ronan   |   | O |   |   |   | O |   |   |   | O  |    |    |    |    |    | x  |    |    |    |    |    |
 -- --------+---+---+---+---+---+---+---+---+---+----+----+----+----+----+----+----+----+----+----+----+----+
@@ -128,7 +128,7 @@ SELECT idPersonnel, nom, prenom, nbEtudiant FROM Personnel, (
 WHERE nbEtudiant >= 2 AND idPersonnel = idScientifique;
 
 -- Axel Q12
-SELECT idEnseignant FROM Enseignant_Chercheur ec
+SELECT DISTINCT idEnseignant FROM Enseignant_Chercheur ec
 RIGHT JOIN Publie_Scientifique ps ON ps.idScientifique = ec.idEnseignant
 RIGHT JOIN Publication pub ON pub.idPublication = ps.idScientifique
 WHERE pub.classeConf = 'A' AND pub.classeConf NOT IN ('A*', 'B', 'C');
