@@ -88,7 +88,7 @@ WHERE idPersonnel IN (
 --Yasmine QUESTION 8 Testé
 SELECT EC.idEnseignant,P.nom,P.prenom
 FROM Enseignant_chercheur EC, Personnel P
-WHERE P.idPersonnel=EC.ididEnseignant and idEnseignant 
+WHERE P.idPersonnel=EC.idEnseignant and idEnseignant 
 NOT IN ( (SELECT idScientifique
           FROM Publie_scientifique)
           UNION
