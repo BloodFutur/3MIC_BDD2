@@ -181,6 +181,20 @@ INSERT INTO Enseignant_Chercheur VALUES (
     '5'
 );
 
+INSERT INTO Enseignant_Chercheur VALUES (
+    7,
+    1,
+    '5'
+);
+
+INSERT INTO Enseignant_Chercheur VALUES (
+    7,
+    1,
+    '5'
+);
+
+
+
 ----------------------------------------------------------------------
 --                                                                  --
 --                    Evenement                                     --
@@ -510,6 +524,7 @@ INSERT INTO Publie_Externe VALUES (
     5
 );
 
+
 ----------------------------------------------------------------------
 --                                                                  --
 --                    Partenaire                                    --
@@ -552,6 +567,10 @@ INSERT INTO Partenaire(nom, pays) VALUES (
 --                                                                  --
 ----------------------------------------------------------------------
 
+
+
+
+
 ----------------------------------------------------------------------
 --                                                                  --
 --                    Organise                                      --
@@ -579,3 +598,16 @@ INSERT INTO Encadrement VALUES (
     8,
     2
 );
+
+----------------------------------------------------------------------
+--                                                                  --
+--                    Publie doctorant                             --
+--                                                                  --
+----------------------------------------------------------------------
+
+INSERT INTO  publie_doctorant VALUES (
+    8,
+    2
+);
+
+
