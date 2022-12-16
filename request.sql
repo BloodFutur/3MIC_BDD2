@@ -87,15 +87,15 @@ WHERE idPersonnel IN (
 
 --Yasmine QUESTION 8
 SELECT EC.idEnseignant,P.nom,P.prenom
-FROM Enseignant_chercheur EC, Personnel P
-WHERE P.idPersonnel=EC.idEnseignant
-    AND EC.idEnseignant
-  NOT IN ( (SELECT idScientifique
-            FROM Publie_scientifique)
-            UNION
-        (SELECT idScientifique
-            FROM Encadrement)
-);
+FROM enseignant_chercheur EC, Personnel P
+WHERE P.idPersonnel=EC.idEnseignant and idEnseignant 
+NOT IN ( (SELECT idScientifique
+          FROM Publie_scientifique)
+          UNION
+	  (SELECT idScientifique
+          FROM Encadrement)
+	);
+
 
 -- Nathan Q9 tested
 SELECT nom, prenom FROM Personnel
