@@ -136,8 +136,9 @@ RIGHT JOIN Publication pub ON pub.idPublication = ps.idScientifique
 WHERE pub.classeConf = 'A' AND pub.classeConf IN  'A*', 'B', 'C';
 
 -- Axel Q13
-SELECT ec.idEnseignant, ec.nom, ec.prenom 
-FROM Enseignant_Chercheur ec, Encadrement encad1
+SELECT p.idScientifique, p.nom, p.prenom FROM Personnel
+JOIN Enseignant_Chercheur ec ON ec.idEnseignant = p.idPersonnel
+RIGHT JOIN Encadrement encad1 on encad1.idEnseignant = ec.idEnseignant
 WHERE ec.idEnseignant = encad1.idScientifique
 AND NOT EXISTS (SELECT * FROM Doctorant doc
                 WHERE NOT EXISTS(SELECT * FROM Encadrement encad2
