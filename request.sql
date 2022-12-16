@@ -50,8 +50,8 @@ WHERE perso.nom = 'Azi'
 --Axel Q3
 SELECT COUNT(DISTINCT idAuteurExterne) AS nbCollab FROM Publie_Externe pe
 JOIN Publie_Scientifique ps ON pe.idPublication = ps.idPublication
-RIGHT JOIN Publie_Doctorant pdoc ON pe.idPublication = pdoc.idPublication
-JOIN Enseignant_Chercheur ec ON ec.idEnseignant = ps.idScientifique
+--RIGHT JOIN Publie_Doctorant pdoc ON pe.idPublication = pdoc.idPublication
+RIGHT JOIN Enseignant_Chercheur ec ON ec.idEnseignant = ps.idScientifique
 WHERE idScientifique = '01';
 
 
@@ -129,12 +129,16 @@ WHERE nbEtudiant >= 2 AND idPersonnel = idScientifique;
 SELECT idEnseignant FROM Enseignant_Chercheur ec
 RIGHT JOIN Publie_Scientifique ps ON ps.idScientifique = ec.idScientifique
 RIGHT JOIN Publication pub ON pub.idPublication = ps.idScientifique
-WHERE pub.classeConf = 'A';
---EXCEPT SELECT idEnseignant FROM Enseignant_Chercheur ec
---RIGHT JOIN Publie_Scientifique ps ON ps.idScientifique = ec.idScientifique
---RIGHT JOIN Publication pub ON pub.idPublication = ps.idScientifique
---WHERE pub.classeConf = 'A'
---    AND pub.classeConf IN  'A*' 'B';
+WHERE pub.classeConf = 'A'
+EXCEPT SELECT idEnseignant FROM Enseignant_Chercheur ec
+RIGHT JOIN Publie_Scientifique ps ON ps.idScientifique = ec.idScientifique
+RIGHT JOIN Publication pub ON pub.idPublication = ps.idScientifique
+WHERE pub.classeConf = 'A' AND pub.classeConf IN  'A*', 'B', 'C';
+
+-- Axel Q13
+SELECT ec.idEnseignant, ec.nom, ec.prenom 
+FROM Enseignant_Chercheur ec, Encadrement encad
+WHERE Encadrement 
 
 -- Yasmine QUESTION 14 Testé
 
