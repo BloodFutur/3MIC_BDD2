@@ -74,7 +74,7 @@ GROUP BY idDoctorant;
 
 -- Ronan Q6
 SELECT COUNT(*) FROM Doctorant
-WHERE date_soutenance IS NOT NULL;
+WHERE date_soutenance < NOW();
 
 --Nathan Q7 tested
 SELECT nom, prenom FROM Personnel
@@ -86,7 +86,6 @@ WHERE idPersonnel IN (
 );
 
 --Yasmine QUESTION 8 Testé
-
 SELECT idEnseignant
 FROM Enseignant_chercheur
 WHERE idEnseignant
