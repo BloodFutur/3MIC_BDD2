@@ -86,7 +86,7 @@ WHERE idPersonnel IN (
 );
 
 --Yasmine QUESTION 8 Testé
-SELECT idEnseignant
+SELECT idEnseignant,nom,prenom
 FROM Enseignant_chercheur
 WHERE idEnseignant
 NOT IN ( (SELECT idScientifique
@@ -136,8 +136,12 @@ WHERE pub.classeConf = 'A' AND pub.classeConf IN  'A*', 'B', 'C';
 
 -- Axel Q13
 SELECT ec.idEnseignant, ec.nom, ec.prenom 
-FROM Enseignant_Chercheur ec, Encadrement encad
-WHERE Encadrement 
+FROM Enseignant_Chercheur ec, Encadrement encad1
+WHERE ec.idEnseignant = encad1.idScientifique
+AND NOT EXISTS (SELECT * FROM Doctorant doc
+                WHERE NOT EXISTS(SELECT * FROM Encadrement encad2
+                                WHERE encad2.idScientifique = ec.idScientifique
+                                        AND encad2.idDoctorant = doc.idDoctorant));
 
 -- Yasmine QUESTION 14 Testé
 
