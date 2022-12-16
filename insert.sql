@@ -130,6 +130,11 @@ INSERT INTO Scientifique VALUES (
     'mcf hors classe'
 );
 
+INSERT INTO Scientifique VALUES (
+    7,
+    'mcf'
+);
+
 ----------------------------------------------------------------------
 --                                                                  --
 --                    Etablissement                                 --
@@ -168,6 +173,12 @@ INSERT INTO Enseignant_Chercheur VALUES (
     2,
     2,
     '2'
+);
+
+INSERT INTO Enseignant_Chercheur VALUES (
+    7,
+    1,
+    '5'
 );
 
 ----------------------------------------------------------------------

@@ -3,9 +3,9 @@
 -- --------+---+---+---+---+---+---+---+---+---+----+----+----+----+----+----+----+----+----+----+----+----+
 -- Axel    |   |   | O | O |   |   |   |   |   |    |    | x  |    |    |    |    |    |    |    |    |    |
 -- --------+---+---+---+---+---+---+---+---+---+----+----+----+----+----+----+----+----+----+----+----+----+
--- Ronan   |   | O |   |   |   | x |   |   |   | x  |    |    |    |    |    | x  |    |    |    |    |    |
+-- Ronan   |   | O |   |   |   | O |   |   |   | x  |    |    |    |    |    | x  |    |    |    |    |    |
 -- --------+---+---+---+---+---+---+---+---+---+----+----+----+----+----+----+----+----+----+----+----+----+
--- Yasmine |   |   |   |   | O |   |   | O |   |    |    |    |    | O  | O  |    |    |    | O  |    | O  |
+-- Yasmine |   |   |   |   | O |   |   | x |   |    |    |    |    | O  | O  |    |    |    | O  |    | O  |
 -- --------+---+---+---+---+---+---+---+---+---+----+----+----+----+----+----+----+----+----+----+----+----+
 -- Nathan  | O |   |   |   |   |   | O |   | O |    | O  |    |    |    |    |    | O  |    |    |    |    |
 -- --------+---+---+---+---+---+---+---+---+---+----+----+----+----+----+----+----+----+----+----+----+----+
@@ -72,7 +72,7 @@ SELECT iddoctorant, count(distinct idPublication) as NombrePublication
 FROM publie_doctorant
 GROUP BY idDoctorant;
 
--- Ronan Q6
+-- Ronan Q6 tested
 SELECT COUNT(*) FROM Doctorant
 WHERE date_soutenance < NOW();
 
@@ -85,7 +85,7 @@ WHERE idPersonnel IN (
     )
 );
 
---Yasmine QUESTION 8 Testé
+--Yasmine QUESTION 8
 SELECT EC.idEnseignant,P.nom,P.prenom
 FROM Enseignant_chercheur EC, Personnel P
 WHERE P.idPersonnel=EC.idEnseignant
@@ -118,7 +118,7 @@ SELECT idDoctorant, nom, prenom FROM (
   RIGHT JOIN Personnel p ON d.idDoctorant=p.idPersonnel
   GROUP BY e.idDoctorant, nom, prenom
   HAVING COUNT(DISTINCT s.idScientifique)=1
-);
+) DoctorantInfo;
 
 -- Nathan Q11 tested
 SELECT idPersonnel, nom, prenom, nbEtudiant FROM Personnel, (
