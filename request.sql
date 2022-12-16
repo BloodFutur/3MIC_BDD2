@@ -157,7 +157,7 @@ GROUP BY nbannee;
 
 -- Yasmine QUESTION 15 Testé
 
-SELECT Count(Distinct E.idEnseignant)
+SELECT idetablissement,Count(Distinct E.idEnseignant)
 FROM Enseignant_chercheur E,Personnel P ,Scientifique S
 WHERE P.idPersonnel=S.idScientifique
 AND S.idScientifique=E.idEnseignant
