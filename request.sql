@@ -52,7 +52,7 @@ SELECT COUNT(DISTINCT idAuteurExterne) AS nbCollab FROM Publie_Externe pe
 JOIN Publie_Scientifique ps ON pe.idPublication = ps.idPublication
 --RIGHT JOIN Publie_Doctorant pdoc ON pe.idPublication = pdoc.idPublication
 RIGHT JOIN Enseignant_Chercheur ec ON ec.idEnseignant = ps.idScientifique
-WHERE idScientifique = '01';
+WHERE idScientifique = 2;
 
 
 -- Axel Q4
