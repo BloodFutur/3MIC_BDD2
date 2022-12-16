@@ -87,7 +87,7 @@ WHERE idPersonnel IN (
 
 --Yasmine QUESTION 8 Testé
 
-SELECT idEnseignant
+SELECT idEnseignant,nom,prenom
 FROM Enseignant_chercheur
 WHERE idEnseignant
 NOT IN ( (SELECT idScientifique
