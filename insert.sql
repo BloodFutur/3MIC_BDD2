@@ -398,66 +398,6 @@ INSERT INTO Enseignant_Chercheur VALUES (
 );
 
 INSERT INTO Enseignant_Chercheur VALUES (
-    1,
-    3,
-    '7'
-);
-
-INSERT INTO Enseignant_Chercheur VALUES (
-    2,
-    3,
-    '7'
-);
-
-INSERT INTO Enseignant_Chercheur VALUES (
-    3,
-    3,
-    '7'
-);
-
-INSERT INTO Enseignant_Chercheur VALUES (
-    4,
-    3,
-    '7'
-);
-
-INSERT INTO Enseignant_Chercheur VALUES (
-    5,
-    3,
-    '7'
-);
-
-INSERT INTO Enseignant_Chercheur VALUES (
-    6,
-    3,
-    '7'
-);
-
-INSERT INTO Enseignant_Chercheur VALUES (
-    7,
-    3,
-    '7'
-);
-
-INSERT INTO Enseignant_Chercheur VALUES (
-    8,
-    3,
-    '7'
-);
-
-INSERT INTO Enseignant_Chercheur VALUES (
-    9,
-    3,
-    '7'
-);
-
-INSERT INTO Enseignant_Chercheur VALUES (
-    10,
-    3,
-    '7'
-);
-
-INSERT INTO Enseignant_Chercheur VALUES (
     11,
     3,
     '7'
@@ -553,8 +493,66 @@ INSERT INTO Enseignant_Chercheur VALUES (
     '7'
 );
 
+INSERT INTO Enseignant_Chercheur VALUES (
+    27,
+    3,
+    '7'
+);
 
->>>>>>> b119cf9702250b937e1c924da94fb625026da004
+INSERT INTO Enseignant_Chercheur VALUES (
+    28,
+    3,
+    '7'
+);
+
+INSERT INTO Enseignant_Chercheur VALUES (
+    29,
+    3,
+    '7'
+);
+
+INSERT INTO Enseignant_Chercheur VALUES (
+    30,
+    3,
+    '7'
+);
+
+INSERT INTO Enseignant_Chercheur VALUES (
+    31,
+    3,
+    '7'
+);
+
+INSERT INTO Enseignant_Chercheur VALUES (
+    32,
+    3,
+    '7'
+);
+
+INSERT INTO Enseignant_Chercheur VALUES (
+    33,
+    3,
+    '7'
+);
+
+INSERT INTO Enseignant_Chercheur VALUES (
+    34,
+    3,
+    '7'
+);
+
+INSERT INTO Enseignant_Chercheur VALUES (
+    35,
+    3,
+    '7'
+);
+
+INSERT INTO Enseignant_Chercheur VALUES (
+    36,
+    3,
+    '7'
+);
+
 
 ----------------------------------------------------------------------
 --                                                                  --
@@ -768,6 +766,9 @@ INSERT INTO Projet(titre, acronyme, annee_debut, annee_fin, duree, budget_Laas, 
     5
 );
 
+
+
+
 ----------------------------------------------------------------------
 --                                                                  --
 --                    Participe                                     --
@@ -778,6 +779,37 @@ INSERT INTO Participe VALUES (
     1,
     5
 );
+
+INSERT INTO Participe VALUES (
+    1,
+    2
+);
+
+INSERT INTO Participe VALUES (
+    2,
+    2
+);
+
+INSERT INTO Participe VALUES (
+    3,
+    2
+);
+
+INSERT INTO Participe VALUES (
+    1,
+    7
+);
+
+INSERT INTO Participe VALUES (
+    2,
+    7
+);
+
+INSERT INTO Participe VALUES (
+    3,
+    7
+);
+
 
 ----------------------------------------------------------------------
 --                                                                  --
@@ -885,6 +917,27 @@ INSERT INTO Publie_Externe VALUES (
     5
 );
 
+----------------------------------------------------------------------
+--                                                                  --
+--                    Participe Externe                                --
+--                                                                  --
+----------------------------------------------------------------------
+INSERT INTO  participe_externe VALUES (
+    4,
+    5
+);
+
+INSERT INTO  participe_externe VALUES (
+    5,
+    5
+);
+
+INSERT INTO participe_externe VALUES (
+    6,
+    5
+);
+
+
 
 ----------------------------------------------------------------------
 --                                                                  --
@@ -894,30 +947,35 @@ INSERT INTO Publie_Externe VALUES (
 
 --Axel
 INSERT INTO Partenaire(nom, pays) VALUES (
+  	5
     'GFGH',
     'Allemagne'
 );
 
 --Axel
 INSERT INTO Partenaire(nom, pays) VALUES (
+  6
     'LMC',
     'Australie'
 );
 
 --Axel
 INSERT INTO Partenaire(nom, pays) VALUES (
+  7
     'ESHT',
     'USA'
 );
 
 --Axel
 INSERT INTO Partenaire(nom, pays) VALUES (
+  8
     'HLMY',
     'Japon'
 );
 
 --Axel
 INSERT INTO Partenaire(nom, pays) VALUES (
+  9
     'MAKL',
     'France'
 );

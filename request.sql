@@ -7,7 +7,7 @@
 -- --------+---+---+---+---+---+---+---+---+---+----+----+----+----+----+----+----+----+----+----+----+----+
 -- Yasmine |   |   |   |   | O |   |   | O |   |    |    |    |    | O  | O  |    |    |    | O  |    | O  |
 -- --------+---+---+---+---+---+---+---+---+---+----+----+----+----+----+----+----+----+----+----+----+----+
--- Nathan  | O |   |   |   |   |   | O |   | O |    | O  |    |    |    |    |    | O  |    |    |    |    |
+-- Nathan  | O |   |   |   |   |   | O |   | O |    | O  |    |    |    |    |    | O  | O  |    |    |    |
 -- --------+---+---+---+---+---+---+---+---+---+----+----+----+----+----+----+----+----+----+----+----+----+
 --                                                              ^                        ^         ^
 --                                                              |                        |         |
@@ -181,13 +181,25 @@ WHERE idScientifique IN (
     WHERE nbProjets = 1
 );
 
+-- Nathan QUESTION 18 (celle de Ronan) tested
+SELECT * from Scientifique
+WHERE idScientifique IN (
+    SELECT idScientifique FROM (
+        SELECT idScientifique, COUNT(DISTINCT idProjet) AS nbProjets FROM Participe
+        GROUP BY idScientifique
+    ) AS ParticipationCount
+    RIGHT JOIN (
+        SELECT COUNT(DISTINCT idProjet) AS nbTotalProjets FROM Projet
+    ) AS ProjectCount
+    ON ParticipationCount.nbProjets = ProjectCount.nbTotalProjets
+);
 
--- Yasmine QUESTION 19 Testé
+-- Yasmine QUESTION 19 Testé AVEC 25 AU LIEU DE 50
 
 SELECT idEtablissement, Count(Distinct idEnseignant)
 FROM Enseignant_chercheur
 GROUP BY idEtablissement
-HAVING count(Distinct idEnseignant) >= 2;
+HAVING count(Distinct idEnseignant) >= 50;
 
 -- Axel Question 20 ecrite et testée
 
@@ -203,17 +215,15 @@ ON Sc.nbmax = ScientPub.nb_proj;
 --WHERE ScientPub.nb_publie_S = SC.nbmax ;
 
 
+
 --Yasmine QUESTION 21 Testé
 
 SELECT Distinct P.Pays
 FROM Partenaire P, Participe_externe PEX
 where P.idpartenaire=PEX.idpartenaire
 and not exists (Select *
-
-		 From Projet PR
-		 Where not exists (Select *
-
-				      From Participe_externe PEX2
-				      Where PEX2.idPartenaire=P.idPartenaire and
-                                                      PEX2.idProjet=PR.idProjet));
-
+    From Projet PR
+    Where not exists (Select *
+        From Participe_externe PEX2
+        Where PEX2.idPartenaire=P.idPartenaire and
+            PEX2.idProjet=PR.idProjet));
