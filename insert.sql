@@ -353,158 +353,132 @@ INSERT INTO Scientifique VALUES (
 
 INSERT INTO Scientifique VALUES (
     11,
-    3,
-    '7'
+    'cr1'
 );
 
 INSERT INTO Scientifique VALUES (
     12,
-    3,
-    '7'
+    'cr1'
 );
 
 INSERT INTO Scientifique VALUES (
     13,
-    3,
-    '7'
+    'cr1'
 );
 
 INSERT INTO Scientifique VALUES (
     14,
-    3,
-    '7'
+    'cr1'
 );
 
 INSERT INTO Scientifique VALUES (
     15,
-    3,
-    '7'
+    'cr1'
 );
 
 INSERT INTO Scientifique VALUES (
     16,
-    3,
-    '7'
+    'cr1'
 );
 
 INSERT INTO Scientifique VALUES (
     17,
-    3,
-    '7'
+    'cr1'
 );
 
 INSERT INTO Scientifique VALUES (
     18,
-    3,
-    '7'
+    'cr1'
 );
 
 INSERT INTO Scientifique VALUES (
     19,
-    3,
-    '7'
+    'cr1'
 );
 
-INSERT INTO Enseignant_Chercheur VALUES (
+INSERT INTO Scientifique VALUES (
     20,
-    3,
-    '7'
+    'cr1'
 );
 
-INSERT INTO Enseignant_Chercheur VALUES (
+INSERT INTO Scientifique VALUES (
     21,
-    3,
-    '7'
+    'cr1'
 );
 
-INSERT INTO Enseignant_Chercheur VALUES (
+INSERT INTO Scientifique VALUES (
     22,
-    3,
-    '7'
+    'cr1'
 );
 
-INSERT INTO Enseignant_Chercheur VALUES (
+INSERT INTO Scientifique VALUES (
     23,
-    3,
-    '7'
+    'cr1'
 );
 
-INSERT INTO Enseignant_Chercheur VALUES (
+INSERT INTO Scientifique VALUES (
     24,
-    3,
-    '7'
+    'cr1'
 );
 
-INSERT INTO Enseignant_Chercheur VALUES (
+INSERT INTO Scientifique VALUES (
     25,
-    3,
-    '7'
+    'cr1'
 );
 
-INSERT INTO Enseignant_Chercheur VALUES (
+INSERT INTO Scientifique VALUES (
     26,
-    3,
-    '7'
+    'cr1'
 );
 
-INSERT INTO Enseignant_Chercheur VALUES (
+INSERT INTO Scientifique VALUES (
     27,
-    3,
-    '7'
+    'cr1'
 );
 
-INSERT INTO Enseignant_Chercheur VALUES (
+INSERT INTO Scientifique VALUES (
     28,
-    3,
-    '7'
+    'cr1'
 );
 
-INSERT INTO Enseignant_Chercheur VALUES (
+INSERT INTO Scientifique VALUES (
     29,
-    3,
-    '7'
+    'cr1'
 );
 
-INSERT INTO Enseignant_Chercheur VALUES (
+INSERT INTO Scientifique VALUES (
     30,
-    3,
-    '7'
+    'cr1'
 );
 
-INSERT INTO Enseignant_Chercheur VALUES (
+INSERT INTO Scientifique VALUES (
     31,
-    3,
-    '7'
+    'cr1'
 );
 
-INSERT INTO Enseignant_Chercheur VALUES (
+INSERT INTO Scientifique VALUES (
     32,
-    3,
-    '7'
+    'cr1'
 );
 
-INSERT INTO Enseignant_Chercheur VALUES (
+INSERT INTO Scientifique VALUES (
     33,
-    3,
-    '7'
+    'cr1'
 );
 
-INSERT INTO Enseignant_Chercheur VALUES (
+INSERT INTO Scientifique VALUES (
     34,
-    3,
-    '7'
+    'cr1'
 );
 
-INSERT INTO Enseignant_Chercheur VALUES (
+INSERT INTO Scientifique VALUES (
     35,
-    3,
-    '7'
+    'cr1'
 );
 
-INSERT INTO Enseignant_Chercheur VALUES (
+INSERT INTO Scientifique VALUES (
     36,
-    3,
-    '7'
+    'cr1'
 );
 
 ----------------------------------------------------------------------
