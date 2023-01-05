@@ -201,7 +201,6 @@ FROM Enseignant_chercheur
 GROUP BY idEtablissement
 HAVING count(Distinct idEnseignant) >= 50;
 
-
 --Yasmine QUESTION 21 Testé
 
 SELECT Distinct P.Pays

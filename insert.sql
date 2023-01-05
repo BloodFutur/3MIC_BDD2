@@ -795,6 +795,22 @@ INSERT INTO Participe VALUES (
     2
 );
 
+INSERT INTO Participe VALUES (
+    1,
+    7
+);
+
+INSERT INTO Participe VALUES (
+    2,
+    7
+);
+
+INSERT INTO Participe VALUES (
+    3,
+    7
+);
+
+
 ----------------------------------------------------------------------
 --                                                                  --
 --                    Preside                                       --
