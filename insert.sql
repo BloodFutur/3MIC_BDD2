@@ -769,6 +769,9 @@ INSERT INTO Projet(titre, acronyme, annee_debut, annee_fin, duree, budget_Laas, 
     5
 );
 
+
+
+
 ----------------------------------------------------------------------
 --                                                                  --
 --                    Participe                                     --
