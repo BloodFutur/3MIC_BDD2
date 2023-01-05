@@ -405,103 +405,103 @@ INSERT INTO Scientifique VALUES (
     '7'
 );
 
-INSERT INTO Enseignant_Chercheur VALUES (
+INSERT INTO Scientifique VALUES (
     20,
     3,
     '7'
 );
 
-INSERT INTO Enseignant_Chercheur VALUES (
+INSERT INTO Scientifique VALUES (
     21,
     3,
     '7'
 );
 
-INSERT INTO Enseignant_Chercheur VALUES (
+INSERT INTO Scientifique VALUES (
     22,
     3,
     '7'
 );
 
-INSERT INTO Enseignant_Chercheur VALUES (
+INSERT INTO Scientifique VALUES (
     23,
     3,
     '7'
 );
 
-INSERT INTO Enseignant_Chercheur VALUES (
+INSERT INTO Scientifique VALUES (
     24,
     3,
     '7'
 );
 
-INSERT INTO Enseignant_Chercheur VALUES (
+INSERT INTO Scientifique VALUES (
     25,
     3,
     '7'
 );
 
-INSERT INTO Enseignant_Chercheur VALUES (
+INSERT INTO Scientifique VALUES (
     26,
     3,
     '7'
 );
 
-INSERT INTO Enseignant_Chercheur VALUES (
+INSERT INTO Scientifique VALUES (
     27,
     3,
     '7'
 );
 
-INSERT INTO Enseignant_Chercheur VALUES (
+INSERT INTO Scientifique VALUES (
     28,
     3,
     '7'
 );
 
-INSERT INTO Enseignant_Chercheur VALUES (
+INSERT INTO Scientifique VALUES (
     29,
     3,
     '7'
 );
 
-INSERT INTO Enseignant_Chercheur VALUES (
+INSERT INTO Scientifique VALUES (
     30,
     3,
     '7'
 );
 
-INSERT INTO Enseignant_Chercheur VALUES (
+INSERT INTO Scientifique VALUES (
     31,
     3,
     '7'
 );
 
-INSERT INTO Enseignant_Chercheur VALUES (
+INSERT INTO Scientifique VALUES (
     32,
     3,
     '7'
 );
 
-INSERT INTO Enseignant_Chercheur VALUES (
+INSERT INTO Scientifique VALUES (
     33,
     3,
     '7'
 );
 
-INSERT INTO Enseignant_Chercheur VALUES (
+INSERT INTO Scientifique VALUES (
     34,
     3,
     '7'
 );
 
-INSERT INTO Enseignant_Chercheur VALUES (
+INSERT INTO Scientifique VALUES (
     35,
     3,
     '7'
 );
 
-INSERT INTO Enseignant_Chercheur VALUES (
+INSERT INTO Scientifique VALUES (
     36,
     3,
     '7'
@@ -1079,17 +1079,17 @@ INSERT INTO Publie_Externe VALUES (
 --                                                                  --
 ----------------------------------------------------------------------
 INSERT INTO  participe_externe VALUES (
-    2,
+    4,
     5
 );
 
 INSERT INTO  participe_externe VALUES (
-    3,
+    5,
     5
 );
 
 INSERT INTO participe_externe VALUES (
-    1,
+    6,
     5
 );
 
@@ -1103,30 +1103,35 @@ INSERT INTO participe_externe VALUES (
 
 --Axel
 INSERT INTO Partenaire(nom, pays) VALUES (
+  	5
     'GFGH',
     'Allemagne'
 );
 
 --Axel
 INSERT INTO Partenaire(nom, pays) VALUES (
+  6
     'LMC',
     'Australie'
 );
 
 --Axel
 INSERT INTO Partenaire(nom, pays) VALUES (
+  7
     'ESHT',
     'USA'
 );
 
 --Axel
 INSERT INTO Partenaire(nom, pays) VALUES (
+  8
     'HLMY',
     'Japon'
 );
 
 --Axel
 INSERT INTO Partenaire(nom, pays) VALUES (
+  9
     'MAKL',
     'France'
 );
