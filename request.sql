@@ -194,7 +194,7 @@ WHERE idScientifique IN (
     ON ParticipationCount.nbProjets = ProjectCount.nbTotalProjets
 );
 
--- Yasmine QUESTION 19 Testé
+-- Yasmine QUESTION 19 Testé AVEC 25 AU LIEU DE 50
 
 SELECT idEtablissement, Count(Distinct idEnseignant)
 FROM Enseignant_chercheur
