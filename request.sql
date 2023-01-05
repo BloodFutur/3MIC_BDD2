@@ -75,7 +75,7 @@ WHERE idPersonnel IN (
 );
 
 --Yasmine QUESTION 8 tested
-SELECT EC.idEnseignant,P.nom,P.prenom
+SELECT P.nom,P.prenom
 FROM enseignant_chercheur EC, Personnel P
 WHERE P.idPersonnel=EC.idEnseignant and idEnseignant 
 NOT IN ( (SELECT idScientifique
