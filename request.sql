@@ -3,11 +3,11 @@
 -- --------+---+---+---+---+---+---+---+---+---+----+----+----+----+----+----+----+----+----+----+----+----+
 -- Axel    |   |   | O | O |   |   |   |   |   |    |    | O  | O  |    |    |    |    |    |    |    |    |
 -- --------+---+---+---+---+---+---+---+---+---+----+----+----+----+----+----+----+----+----+----+----+----+
--- Ronan   |   | O |   |   |   | O |   |   |   | O  |    |    |    |    |    | x  |    |    |    |    |    |
+-- Ronan   |   | O |   |   |   | O |   |   |   | O  |    |    |    |    |    | x  |    |  O |    |    |    |
 -- --------+---+---+---+---+---+---+---+---+---+----+----+----+----+----+----+----+----+----+----+----+----+
 -- Yasmine |   |   |   |   | O |   |   | O |   |    |    |    |    | O  | O  |    |    |    | O  |    | O  |
 -- --------+---+---+---+---+---+---+---+---+---+----+----+----+----+----+----+----+----+----+----+----+----+
--- Nathan  | O |   |   |   |   |   | O |   | O |    | O  |    |    |    |    |    | O  | O  |    |    |    |
+-- Nathan  | O |   |   |   |   |   | O |   | O |    | O  |    |    |    |    |    | O  |    |    |    |    |
 -- --------+---+---+---+---+---+---+---+---+---+----+----+----+----+----+----+----+----+----+----+----+----+
 --                                                              ^                        ^         ^
 --                                                              |                        |         |
@@ -181,14 +181,14 @@ WHERE idScientifique IN (
     WHERE nbProjets = 1
 );
 
--- Nathan QUESTION 18 (celle de Ronan) tested
+-- Ronan QUESTION 18 tested
 SELECT * from Scientifique
 WHERE idScientifique IN (
     SELECT idScientifique FROM (
         SELECT idScientifique, COUNT(DISTINCT idProjet) AS nbProjets FROM Participe
         GROUP BY idScientifique
     ) AS ParticipationCount
-    RIGHT JOIN (
+    JOIN (
         SELECT COUNT(DISTINCT idProjet) AS nbTotalProjets FROM Projet
     ) AS ProjectCount
     ON ParticipationCount.nbProjets = ProjectCount.nbTotalProjets
