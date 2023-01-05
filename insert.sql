@@ -1053,17 +1053,17 @@ INSERT INTO Publie_Externe VALUES (
 --                                                                  --
 ----------------------------------------------------------------------
 INSERT INTO  participe_externe VALUES (
-    4,
+    2,
     5
 );
 
 INSERT INTO  participe_externe VALUES (
-    5,
+    3,
     5
 );
 
 INSERT INTO participe_externe VALUES (
-    6,
+    1,
     5
 );
 
