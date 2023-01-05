@@ -1005,12 +1005,6 @@ INSERT INTO Publie_Doctorant VALUES (
     4
 );
 
-INSERT INTO  publie_doctorant VALUES (
-    3,
-    2
-);
-
-
 ----------------------------------------------------------------------
 --                                                                  --
 --                    Publie Externe                                --
