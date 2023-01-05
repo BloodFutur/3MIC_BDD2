@@ -1136,9 +1136,17 @@ INSERT INTO Encadrement VALUES (
     5
 );
 
+INSERT INTO Encadrement VALUES (
+    1,
+    2
+);
+
+INSERT INTO Encadrement VALUES (
+    3,
+    2
+);
 
 INSERT INTO Encadrement VALUES (
     8,
     2
 );
-
