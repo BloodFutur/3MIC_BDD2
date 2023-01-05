@@ -50,15 +50,14 @@ WHERE perso.nom = 'Azi'
 --Axel Q3 tested
 SELECT COUNT(DISTINCT idAuteurExterne) AS nbCollab FROM Publie_Externe pe
 JOIN Publie_Scientifique ps ON pe.idPublication = ps.idPublication
---RIGHT JOIN Publie_Doctorant pdoc ON pe.idPublication = pdoc.idPublication
-RIGHT JOIN Enseignant_Chercheur ec ON ec.idEnseignant = ps.idScientifique
+JOIN Enseignant_Chercheur ec ON ec.idEnseignant = ps.idScientifique
 WHERE idScientifique = 2;
 
 
 -- Axel Q4 tested
 SELECT COUNT(DISTINCT pays) AS nbPaysCollab FROM Labo_Externe le
-RIGHT JOIN Auteur_Externe ae ON ae.idLabo = le.idLabo
-RIGHT JOIN Publie_Externe pe ON pe.idAuteurExterne = ae.idAuteur
+JOIN Auteur_Externe ae ON ae.idLabo = le.idLabo
+JOIN Publie_Externe pe ON pe.idAuteurExterne = ae.idAuteur
 JOIN Publication pub ON pub.idPublication = pe.idPublication
 WHERE pub.classeConf = 'A';
 
@@ -129,18 +128,15 @@ WHERE nbEtudiant >= 2 AND idPersonnel = idScientifique;
 
 -- Axel Q12
 SELECT DISTINCT idEnseignant FROM Enseignant_Chercheur ec
-RIGHT JOIN Publie_Scientifique ps ON ps.idScientifique = ec.idEnseignant
-RIGHT JOIN Publication pub ON pub.idPublication = ps.idScientifique
+JOIN Publie_Scientifique ps ON ps.idScientifique = ec.idEnseignant
+JOIN Publication pub ON pub.idPublication = ps.idScientifique
 WHERE pub.classeConf = 'A' AND pub.classeConf NOT IN ('A*', 'B', 'C');
---EXCEPT SELECT idEnseignant FROM Enseignant_Chercheur ec
---RIGHT JOIN Publie_Scientifique ps ON ps.idScientifique = ec.idScientifique
---RIGHT JOIN Publication pub ON pub.idPublication = ps.idScientifique
---WHERE pub.classeConf IN  'A*', 'A', 'B', 'C';
+
 
 -- Axel Q13 tested
 SELECT DISTINCT p.idPersonnel, p.nom, p.prenom FROM Personnel p
 JOIN Enseignant_Chercheur ec ON ec.idEnseignant = p.idPersonnel
-RIGHT JOIN Encadrement encad1 ON ec.idEnseignant = encad1.idScientifique
+JOIN Encadrement encad1 ON ec.idEnseignant = encad1.idScientifique
 WHERE ec.idEnseignant = encad1.idScientifique
 AND NOT EXISTS (SELECT * FROM Doctorant doc
                 WHERE NOT EXISTS(SELECT * FROM Encadrement encad2
