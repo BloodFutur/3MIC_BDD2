@@ -351,6 +351,162 @@ INSERT INTO Scientifique VALUES (
     'mcf'
 );
 
+INSERT INTO Scientifique VALUES (
+    11,
+    3,
+    '7'
+);
+
+INSERT INTO Scientifique VALUES (
+    12,
+    3,
+    '7'
+);
+
+INSERT INTO Scientifique VALUES (
+    13,
+    3,
+    '7'
+);
+
+INSERT INTO Scientifique VALUES (
+    14,
+    3,
+    '7'
+);
+
+INSERT INTO Scientifique VALUES (
+    15,
+    3,
+    '7'
+);
+
+INSERT INTO Scientifique VALUES (
+    16,
+    3,
+    '7'
+);
+
+INSERT INTO Scientifique VALUES (
+    17,
+    3,
+    '7'
+);
+
+INSERT INTO Scientifique VALUES (
+    18,
+    3,
+    '7'
+);
+
+INSERT INTO Scientifique VALUES (
+    19,
+    3,
+    '7'
+);
+
+INSERT INTO Enseignant_Chercheur VALUES (
+    20,
+    3,
+    '7'
+);
+
+INSERT INTO Enseignant_Chercheur VALUES (
+    21,
+    3,
+    '7'
+);
+
+INSERT INTO Enseignant_Chercheur VALUES (
+    22,
+    3,
+    '7'
+);
+
+INSERT INTO Enseignant_Chercheur VALUES (
+    23,
+    3,
+    '7'
+);
+
+INSERT INTO Enseignant_Chercheur VALUES (
+    24,
+    3,
+    '7'
+);
+
+INSERT INTO Enseignant_Chercheur VALUES (
+    25,
+    3,
+    '7'
+);
+
+INSERT INTO Enseignant_Chercheur VALUES (
+    26,
+    3,
+    '7'
+);
+
+INSERT INTO Enseignant_Chercheur VALUES (
+    27,
+    3,
+    '7'
+);
+
+INSERT INTO Enseignant_Chercheur VALUES (
+    28,
+    3,
+    '7'
+);
+
+INSERT INTO Enseignant_Chercheur VALUES (
+    29,
+    3,
+    '7'
+);
+
+INSERT INTO Enseignant_Chercheur VALUES (
+    30,
+    3,
+    '7'
+);
+
+INSERT INTO Enseignant_Chercheur VALUES (
+    31,
+    3,
+    '7'
+);
+
+INSERT INTO Enseignant_Chercheur VALUES (
+    32,
+    3,
+    '7'
+);
+
+INSERT INTO Enseignant_Chercheur VALUES (
+    33,
+    3,
+    '7'
+);
+
+INSERT INTO Enseignant_Chercheur VALUES (
+    34,
+    3,
+    '7'
+);
+
+INSERT INTO Enseignant_Chercheur VALUES (
+    35,
+    3,
+    '7'
+);
+
+INSERT INTO Enseignant_Chercheur VALUES (
+    36,
+    3,
+    '7'
+);
+
 ----------------------------------------------------------------------
 --                                                                  --
 --                    Etablissement                                 --
@@ -923,17 +1079,17 @@ INSERT INTO Publie_Externe VALUES (
 --                                                                  --
 ----------------------------------------------------------------------
 INSERT INTO  participe_externe VALUES (
-    4,
+    2,
     5
 );
 
 INSERT INTO  participe_externe VALUES (
-    5,
+    3,
     5
 );
 
 INSERT INTO participe_externe VALUES (
-    6,
+    1,
     5
 );
 
