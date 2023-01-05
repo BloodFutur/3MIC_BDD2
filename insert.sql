@@ -947,35 +947,30 @@ INSERT INTO participe_externe VALUES (
 
 --Axel
 INSERT INTO Partenaire(nom, pays) VALUES (
-  	5
     'GFGH',
     'Allemagne'
 );
 
 --Axel
 INSERT INTO Partenaire(nom, pays) VALUES (
-  6
     'LMC',
     'Australie'
 );
 
 --Axel
 INSERT INTO Partenaire(nom, pays) VALUES (
-  7
     'ESHT',
     'USA'
 );
 
 --Axel
 INSERT INTO Partenaire(nom, pays) VALUES (
-  8
     'HLMY',
     'Japon'
 );
 
 --Axel
 INSERT INTO Partenaire(nom, pays) VALUES (
-  9
     'MAKL',
     'France'
 );
