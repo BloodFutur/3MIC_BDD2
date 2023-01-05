@@ -7,7 +7,7 @@
 -- --------+---+---+---+---+---+---+---+---+---+----+----+----+----+----+----+----+----+----+----+----+----+
 -- Yasmine |   |   |   |   | O |   |   | O |   |    |    |    |    | O  | O  |    |    |    | O  |    | O  |
 -- --------+---+---+---+---+---+---+---+---+---+----+----+----+----+----+----+----+----+----+----+----+----+
--- Nathan  | O |   |   |   |   |   | O |   | O |    | O  |    |    |    |    |    | O  |    |    |    |    |
+-- Nathan  | O |   |   |   |   |   | O |   | O |    | O  |    |    |    |    |    | O  | O  |    |    |    |
 -- --------+---+---+---+---+---+---+---+---+---+----+----+----+----+----+----+----+----+----+----+----+----+
 --                                                              ^                        ^         ^
 --                                                              |                        |         |
@@ -181,6 +181,18 @@ WHERE idScientifique IN (
     WHERE nbProjets = 1
 );
 
+-- Nathan QUESTION 18 (celle de Ronan) tested
+SELECT * from Scientifique
+WHERE idScientifique IN (
+    SELECT idScientifique FROM (
+        SELECT idScientifique, COUNT(DISTINCT idProjet) AS nbProjets FROM Participe
+        GROUP BY idScientifique
+    ) AS ParticipationCount
+    RIGHT JOIN (
+        SELECT COUNT(DISTINCT idProjet) AS nbTotalProjets FROM Projet
+    ) AS ProjectCount
+    ON ParticipationCount.nbProjets = ProjectCount.nbTotalProjets
+);
 
 -- Yasmine QUESTION 19 Testé
 
@@ -196,11 +208,8 @@ SELECT Distinct P.Pays
 FROM Partenaire P, Participe_externe PEX
 where P.idpartenaire=PEX.idpartenaire
 and not exists (Select *
-
-		 From Projet PR
-		 Where not exists (Select *
-
-				      From Participe_externe PEX2
-				      Where PEX2.idPartenaire=P.idPartenaire and
-                                                      PEX2.idProjet=PR.idProjet));
-
+    From Projet PR
+    Where not exists (Select *
+        From Participe_externe PEX2
+        Where PEX2.idPartenaire=P.idPartenaire and
+            PEX2.idProjet=PR.idProjet));

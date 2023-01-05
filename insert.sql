@@ -732,7 +732,6 @@ INSERT INTO Publication(titre, annee, nomConf, classeConf, nbPages) VALUES(
 
 --Yasmine
 INSERT INTO Projet(titre, acronyme, annee_debut, annee_fin, duree, budget_Laas, cout, idMeneurProjet) VALUES(
-  4
     'BaseDeDonnee',
     'BDD',
     DATE '2022-12-07',
@@ -745,7 +744,6 @@ INSERT INTO Projet(titre, acronyme, annee_debut, annee_fin, duree, budget_Laas, 
 
 --Yasmine
 INSERT INTO Projet(titre, acronyme, annee_debut, annee_fin, duree, budget_Laas, cout, idMeneurProjet) VALUES(
-  5
     'langC',
     'C',
     DATE '2022-11-07',
@@ -758,7 +756,6 @@ INSERT INTO Projet(titre, acronyme, annee_debut, annee_fin, duree, budget_Laas, 
 
 --Yasmine
 INSERT INTO Projet(titre, acronyme, annee_debut, annee_fin, duree, budget_Laas, cout, idMeneurProjet) VALUES(
-  6
     'Programation web',
     'ProgWeb',
     DATE '2022-04-07',
@@ -778,6 +775,21 @@ INSERT INTO Projet(titre, acronyme, annee_debut, annee_fin, duree, budget_Laas, 
 INSERT INTO Participe VALUES (
     1,
     5
+);
+
+INSERT INTO Participe VALUES (
+    1,
+    2
+);
+
+INSERT INTO Participe VALUES (
+    2,
+    2
+);
+
+INSERT INTO Participe VALUES (
+    3,
+    2
 );
 
 ----------------------------------------------------------------------
