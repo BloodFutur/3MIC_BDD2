@@ -1,7 +1,7 @@
 
 --         | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12 | 13 | 14 | 15 | 16 | 17 | 18 | 19 | 20 | 21 |
 -- --------+---+---+---+---+---+---+---+---+---+----+----+----+----+----+----+----+----+----+----+----+----+
--- Axel    |   |   | O | O |   |   |   |   |   |    |    | O  | O  |    |    |    |    |    |    |    |    |
+-- Axel    |   |   | O | O |   |   |   |   |   |    |    | O  | O  |    |    |    |    |    |    | 0  |    |
 -- --------+---+---+---+---+---+---+---+---+---+----+----+----+----+----+----+----+----+----+----+----+----+
 -- Ronan   |   | O |   |   |   | O |   |   |   | O  |    |    |    |    |    | x  |    |  O |    |    |    |
 -- --------+---+---+---+---+---+---+---+---+---+----+----+----+----+----+----+----+----+----+----+----+----+
@@ -200,6 +200,21 @@ SELECT idEtablissement, Count(Distinct idEnseignant)
 FROM Enseignant_chercheur
 GROUP BY idEtablissement
 HAVING count(Distinct idEnseignant) >= 50;
+
+-- Axel Question 20 ecrite et testée
+
+SELECT idScientifique, nb_proj FROM 
+    (SELECT idScientifique, COUNT(DISTINCT idProjet) AS nb_proj FROM Participe
+    GROUP BY idScientifique) AS ScientPub
+
+JOIN (SELECT MAX(nb_proj) AS nbmax FROM
+    (SELECT idScientifique, COUNT(DISTINCT idProjet) AS nb_proj FROM Participe
+    GROUP BY idScientifique) AS Scient) AS Sc
+ON Sc.nbmax = ScientPub.nb_proj;
+
+--WHERE ScientPub.nb_publie_S = SC.nbmax ;
+
+
 
 --Yasmine QUESTION 21 Testé
 
