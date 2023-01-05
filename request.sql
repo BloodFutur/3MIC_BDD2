@@ -20,13 +20,6 @@
 
 
 
---Axel, question 3 et 4
---SELECT COUNT(id) 
---FROM SELECT idScientifique FROM Enseignant_Chercheur
---    WHERE idScientifique = 01;
---SELECT COUNT(idPublication) as nbCollab FROM Publication
---WHERE classeConf = 'A';
-
 -- Nathan Q1 tested
 SELECT Personnel.nom, Scientifique.grade FROM Personnel, Scientifique
 WHERE idPersonnel = idScientifique AND idPersonnel IN (
@@ -62,10 +55,6 @@ RIGHT JOIN Publie_Externe pe ON pe.idAuteurExterne = ae.idAuteur
 JOIN Publication pub ON pub.idPublication = pe.idPublication
 WHERE pub.classeConf = 'A';
 
--- Nathan Q5 tested
--- SELECT idDoctorant, COUNT(idPublication) FROM Publie_Doctorant
--- GROUP BY idDoctorant;
-
 --Yasmine QUESTION 5 Testé
 
 SELECT iddoctorant, count(distinct idPublication) as NombrePublication
@@ -92,9 +81,9 @@ WHERE P.idPersonnel=EC.idEnseignant and idEnseignant
 NOT IN ( (SELECT idScientifique
           FROM Publie_scientifique)
           UNION
-	  (SELECT idScientifique
+    (SELECT idScientifique
           FROM Encadrement)
-	);
+);
 
 
 -- Nathan Q9 tested
@@ -132,10 +121,6 @@ SELECT DISTINCT idEnseignant FROM Enseignant_Chercheur ec
 RIGHT JOIN Publie_Scientifique ps ON ps.idScientifique = ec.idEnseignant
 RIGHT JOIN Publication pub ON pub.idPublication = ps.idScientifique
 WHERE pub.classeConf = 'A' AND pub.classeConf NOT IN ('A*', 'B', 'C');
---EXCEPT SELECT idEnseignant FROM Enseignant_Chercheur ec
---RIGHT JOIN Publie_Scientifique ps ON ps.idScientifique = ec.idScientifique
---RIGHT JOIN Publication pub ON pub.idPublication = ps.idScientifique
---WHERE pub.classeConf IN  'A*', 'A', 'B', 'C';
 
 -- Axel Q13 tested
 SELECT DISTINCT p.idPersonnel, p.nom, p.prenom FROM Personnel p
@@ -206,14 +191,10 @@ HAVING count(Distinct idEnseignant) >= 50;
 SELECT idScientifique, nb_proj FROM 
     (SELECT idScientifique, COUNT(DISTINCT idProjet) AS nb_proj FROM Participe
     GROUP BY idScientifique) AS ScientPub
-
 JOIN (SELECT MAX(nb_proj) AS nbmax FROM
     (SELECT idScientifique, COUNT(DISTINCT idProjet) AS nb_proj FROM Participe
     GROUP BY idScientifique) AS Scient) AS Sc
 ON Sc.nbmax = ScientPub.nb_proj;
-
---WHERE ScientPub.nb_publie_S = SC.nbmax ;
-
 
 
 --Yasmine QUESTION 21 Testé
