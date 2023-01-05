@@ -1047,27 +1047,6 @@ INSERT INTO Publie_Externe VALUES (
     5
 );
 
-----------------------------------------------------------------------
---                                                                  --
---                    Participe Externe                                --
---                                                                  --
-----------------------------------------------------------------------
-INSERT INTO  participe_externe VALUES (
-    2,
-    5
-);
-
-INSERT INTO  participe_externe VALUES (
-    3,
-    5
-);
-
-INSERT INTO participe_externe VALUES (
-    1,
-    5
-);
-
-
 
 ----------------------------------------------------------------------
 --                                                                  --
@@ -1104,6 +1083,27 @@ INSERT INTO Partenaire(nom, pays) VALUES (
     'MAKL',
     'France'
 );
+
+----------------------------------------------------------------------
+--                                                                  --
+--                    Participe Externe                                --
+--                                                                  --
+----------------------------------------------------------------------
+INSERT INTO  participe_externe VALUES (
+    2,
+    5
+);
+
+INSERT INTO  participe_externe VALUES (
+    3,
+    5
+);
+
+INSERT INTO participe_externe VALUES (
+    1,
+    5
+);
+
 
 ----------------------------------------------------------------------
 --                                                                  --
