@@ -1005,12 +1005,6 @@ INSERT INTO Publie_Doctorant VALUES (
     4
 );
 
-INSERT INTO  publie_doctorant VALUES (
-    3,
-    2
-);
-
-
 ----------------------------------------------------------------------
 --                                                                  --
 --                    Publie Externe                                --
@@ -1142,9 +1136,17 @@ INSERT INTO Encadrement VALUES (
     5
 );
 
+INSERT INTO Encadrement VALUES (
+    1,
+    2
+);
+
+INSERT INTO Encadrement VALUES (
+    3,
+    2
+);
 
 INSERT INTO Encadrement VALUES (
     8,
     2
 );
-
