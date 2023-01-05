@@ -3,11 +3,11 @@
 -- --------+---+---+---+---+---+---+---+---+---+----+----+----+----+----+----+----+----+----+----+----+----+
 -- Axel    |   |   | O | O |   |   |   |   |   |    |    | O  | O  |    |    |    |    |    |    | 0  |    |
 -- --------+---+---+---+---+---+---+---+---+---+----+----+----+----+----+----+----+----+----+----+----+----+
--- Ronan   |   | O |   |   |   | O |   |   |   | O  |    |    |    |    |    | x  |    |    |    |    |    |
+-- Ronan   |   | O |   |   |   | O |   |   |   | O  |    |    |    |    |    | x  |    |  O |    |    |    |
 -- --------+---+---+---+---+---+---+---+---+---+----+----+----+----+----+----+----+----+----+----+----+----+
 -- Yasmine |   |   |   |   | O |   |   | O |   |    |    |    |    | O  | O  |    |    |    | O  |    | O  |
 -- --------+---+---+---+---+---+---+---+---+---+----+----+----+----+----+----+----+----+----+----+----+----+
--- Nathan  | O |   |   |   |   |   | O |   | O |    | O  |    |    |    |    |    | O  | O  |    |    |    |
+-- Nathan  | O |   |   |   |   |   | O |   | O |    | O  |    |    |    |    |    | O  |    |    |    |    |
 -- --------+---+---+---+---+---+---+---+---+---+----+----+----+----+----+----+----+----+----+----+----+----+
 --                                                              ^                        ^         ^
 --                                                              |                        |         |
@@ -19,13 +19,6 @@
 
 
 
-
---Axel, question 3 et 4
---SELECT COUNT(id) 
---FROM SELECT idScientifique FROM Enseignant_Chercheur
---    WHERE idScientifique = 01;
---SELECT COUNT(idPublication) as nbCollab FROM Publication
---WHERE classeConf = 'A';
 
 -- Nathan Q1 tested
 SELECT Personnel.nom, Scientifique.grade FROM Personnel, Scientifique
@@ -61,10 +54,6 @@ JOIN Publie_Externe pe ON pe.idAuteurExterne = ae.idAuteur
 JOIN Publication pub ON pub.idPublication = pe.idPublication
 WHERE pub.classeConf = 'A';
 
--- Nathan Q5 tested
--- SELECT idDoctorant, COUNT(idPublication) FROM Publie_Doctorant
--- GROUP BY idDoctorant;
-
 --Yasmine QUESTION 5 Testé
 
 SELECT iddoctorant, count(distinct idPublication) as NombrePublication
@@ -85,15 +74,15 @@ WHERE idPersonnel IN (
 );
 
 --Yasmine QUESTION 8 tested
-SELECT EC.idEnseignant,P.nom,P.prenom
+SELECT P.nom,P.prenom
 FROM enseignant_chercheur EC, Personnel P
 WHERE P.idPersonnel=EC.idEnseignant and idEnseignant 
 NOT IN ( (SELECT idScientifique
           FROM Publie_scientifique)
           UNION
-	  (SELECT idScientifique
+    (SELECT idScientifique
           FROM Encadrement)
-	);
+);
 
 
 -- Nathan Q9 tested
@@ -177,14 +166,14 @@ WHERE idScientifique IN (
     WHERE nbProjets = 1
 );
 
--- Nathan QUESTION 18 (celle de Ronan) tested
+-- Ronan QUESTION 18 tested
 SELECT * from Scientifique
 WHERE idScientifique IN (
     SELECT idScientifique FROM (
         SELECT idScientifique, COUNT(DISTINCT idProjet) AS nbProjets FROM Participe
         GROUP BY idScientifique
     ) AS ParticipationCount
-    RIGHT JOIN (
+    JOIN (
         SELECT COUNT(DISTINCT idProjet) AS nbTotalProjets FROM Projet
     ) AS ProjectCount
     ON ParticipationCount.nbProjets = ProjectCount.nbTotalProjets
@@ -202,14 +191,10 @@ HAVING count(Distinct idEnseignant) >= 50;
 SELECT idScientifique, nb_proj FROM 
     (SELECT idScientifique, COUNT(DISTINCT idProjet) AS nb_proj FROM Participe
     GROUP BY idScientifique) AS ScientPub
-
 JOIN (SELECT MAX(nb_proj) AS nbmax FROM
     (SELECT idScientifique, COUNT(DISTINCT idProjet) AS nb_proj FROM Participe
     GROUP BY idScientifique) AS Scient) AS Sc
 ON Sc.nbmax = ScientPub.nb_proj;
-
---WHERE ScientPub.nb_publie_S = SC.nbmax ;
-
 
 
 --Yasmine QUESTION 21 Testé
