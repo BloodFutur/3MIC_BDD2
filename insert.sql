@@ -4,7 +4,7 @@
 --                                                                  --
 ----------------------------------------------------------------------
 
--- Nathan
+
 INSERT INTO Personnel(nom, prenom, date_de_naissance, adress, date_de_recrutement) VALUES (
     'Billard',
     'Nathan',
@@ -299,7 +299,6 @@ INSERT INTO Personnel(nom, prenom, date_de_naissance, adress, date_de_recrutemen
 --                                                                  --
 ----------------------------------------------------------------------
 
--- Nathan
 INSERT INTO Doctorant(idDoctorant, date_debut_these, date_soutenance) VALUES (
     1,
     DATE '2020-06-23',
@@ -487,14 +486,12 @@ INSERT INTO Scientifique VALUES (
 --                                                                  --
 ----------------------------------------------------------------------
 
---Axel
 INSERT INTO Etablissement(nom, acronyme, adresse) VALUES (
     'Institut National des Sciences Appliquées',
     'INSA',
     'Toulouse'
 );
 
---Axel
 INSERT INTO Etablissement(nom, acronyme, adresse) VALUES (
     'Ecole Nationale de l Aviation Civile',
     'ENAC',
@@ -502,7 +499,6 @@ INSERT INTO Etablissement(nom, acronyme, adresse) VALUES (
 );
 
 
---Axel
 INSERT INTO Etablissement(nom, acronyme, adresse) VALUES (
     'Ecole Polytechnique',
     'X',
@@ -690,19 +686,18 @@ INSERT INTO Enseignant_Chercheur VALUES (
 --                                                                  --
 ----------------------------------------------------------------------
 
---Yasmine
+
 INSERT INTO Evenement(dateDebut, dateFin) VALUES (
     DATE '2022-07-07',
     DATE '2023-07-07'
 );
 
---Yasmine
+
 INSERT INTO Evenement(dateDebut, dateFin) VALUES (
     DATE '2022-01-07',
     DATE '2023-07-12'
 );
 
---Yasmine
 
 INSERT INTO Evenement(dateDebut, dateFin) VALUES (
     DATE '2022-02-10',
@@ -721,7 +716,7 @@ INSERT INTO Evenement(dateDebut, dateFin) VALUES (
 --                    Labo externe                                  --
 --                                                                  --
 ----------------------------------------------------------------------
--- Ronan
+
 INSERT INTO Labo_externe(nom, pays) VALUES (
     'BRBN',
     'Bresil'
@@ -819,7 +814,7 @@ INSERT INTO Publication(titre, annee, nomConf, classeConf, nbPages) VALUES(
     220
 );
 
---Yasmine
+
 INSERT INTO Publication(titre, annee, nomConf, classeConf, nbPages) VALUES(
     'Page rank',
     DATE '2022-07-07',
@@ -828,7 +823,7 @@ INSERT INTO Publication(titre, annee, nomConf, classeConf, nbPages) VALUES(
     220
 );
 
---Yasmine
+
 
 INSERT INTO Publication(titre, annee, nomConf, classeConf, nbPages) VALUES(
     'chaine de markov',
@@ -860,7 +855,7 @@ INSERT INTO Publication(titre, annee, nomConf, classeConf, nbPages) VALUES(
 --                                                                  --
 ----------------------------------------------------------------------
 
---Yasmine
+
 INSERT INTO Projet(titre, acronyme, annee_debut, annee_fin, duree, budget_Laas, cout, idMeneurProjet) VALUES(
     'BaseDeDonnee',
     'BDD',
@@ -872,7 +867,7 @@ INSERT INTO Projet(titre, acronyme, annee_debut, annee_fin, duree, budget_Laas, 
     5
 );
 
---Yasmine
+
 INSERT INTO Projet(titre, acronyme, annee_debut, annee_fin, duree, budget_Laas, cout, idMeneurProjet) VALUES(
     'langC',
     'C',
@@ -884,7 +879,7 @@ INSERT INTO Projet(titre, acronyme, annee_debut, annee_fin, duree, budget_Laas, 
     2
 );
 
---Yasmine
+
 INSERT INTO Projet(titre, acronyme, annee_debut, annee_fin, duree, budget_Laas, cout, idMeneurProjet) VALUES(
     'Programation web',
     'ProgWeb',
@@ -1058,31 +1053,31 @@ INSERT INTO Publie_Externe VALUES (
 --                                                                  --
 ----------------------------------------------------------------------
 
---Axel
+
 INSERT INTO Partenaire(nom, pays) VALUES (
     'GFGH',
     'Allemagne'
 );
 
---Axel
+
 INSERT INTO Partenaire(nom, pays) VALUES (
     'LMC',
     'Australie'
 );
 
---Axel
+
 INSERT INTO Partenaire(nom, pays) VALUES (
     'ESHT',
     'USA'
 );
 
---Axel
+
 INSERT INTO Partenaire(nom, pays) VALUES (
     'HLMY',
     'Japon'
 );
 
---Axel
+
 INSERT INTO Partenaire(nom, pays) VALUES (
     'MAKL',
     'France'

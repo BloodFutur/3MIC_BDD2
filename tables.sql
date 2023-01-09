@@ -14,6 +14,7 @@ CREATE TYPE T_GRADE AS ENUM (
     'mcf hors classe'
 );
 
+--Axel
 CREATE TYPE T_ECHELON AS ENUM (
     '1',
     '2',

@@ -115,7 +115,7 @@ SELECT idPersonnel, nom, prenom, nbEtudiant FROM Personnel, (
 ) AS Classe
 WHERE nbEtudiant >= 2 AND idPersonnel = idScientifique;
 
--- Axel Q12
+-- Axel Q12 tested
 SELECT DISTINCT idEnseignant FROM Enseignant_Chercheur ec
 JOIN Publie_Scientifique ps ON ps.idScientifique = ec.idEnseignant
 JOIN Publication pub ON pub.idPublication = ps.idPublication
@@ -192,7 +192,7 @@ FROM Enseignant_chercheur
 GROUP BY idEtablissement
 HAVING count(Distinct idEnseignant) >= 50;
 
--- Axel Question 20 ecrite et testée
+-- Axel Question 20 tested
 
 SELECT idScientifique, nb_proj FROM 
     (SELECT idScientifique, COUNT(DISTINCT idProjet) AS nb_proj FROM Participe
