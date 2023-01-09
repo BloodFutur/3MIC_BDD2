@@ -118,8 +118,14 @@ WHERE nbEtudiant >= 2 AND idPersonnel = idScientifique;
 -- Axel Q12
 SELECT DISTINCT idEnseignant FROM Enseignant_Chercheur ec
 JOIN Publie_Scientifique ps ON ps.idScientifique = ec.idEnseignant
-JOIN Publication pub ON pub.idPublication = ps.idScientifique
-WHERE pub.classeConf = 'A' AND pub.classeConf NOT IN ('A*', 'B', 'C');
+JOIN Publication pub ON pub.idPublication = ps.idPublication
+WHERE pub.classeConf = 'A' 
+EXCEPT 
+SELECT DISTINCT idEnseignant FROM Enseignant_Chercheur ec
+JOIN Publie_Scientifique ps ON ps.idScientifique = ec.idEnseignant
+JOIN Publication pub ON pub.idPublication = ps.idPublication
+WHERE pub.classeConf IN ('A*', 'B', 'C');
+
 
 
 -- Axel Q13 tested
