@@ -983,6 +983,11 @@ INSERT INTO Publie_Scientifique VALUES (
     9
 );
 
+INSERT INTO Publie_Scientifique VALUES (
+    5,
+    17
+);
+
 ----------------------------------------------------------------------
 --                                                                  --
 --                    Publie Doctorant                              --
